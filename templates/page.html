@@ -1,4 +1,7 @@
 {% extends "layout.html" %}
+{% block html_title %}
+    {{ page.title }} | ssg.evanchen.cc
+{% endblock html_title %}
 {% block content %}
     {{ page.content|safe }}
 {% endblock content %}
