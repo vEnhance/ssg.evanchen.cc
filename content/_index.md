@@ -9,14 +9,16 @@ working mostly from a terminal, using fairly primitive technology.
 I previously alluded to this in
 [post #364 on my microblog](https://wall.evanchen.cc/364/).
 
-This guide is specifically for a **static website**
-like a personal blog or small business page.
+This guide is specifically for a [**static site generator** (SSG)][ssg],
+suitable for say a personal site, blog, or product page.
 It's intentionally barebones, to make things as simple as possible.
 See [The Static Site Paradox by Loris Cro](https://kristoff.it/blog/static-site-paradox/)
 for why simpler is better for many use cases.
 
 This website itself is an example of something you could make following this guide.
 In total, the HTML templates and CSS are less than 150 lines of code.
+
+[ssg]: https://en.wikipedia.org/wiki/Static_site_generator
 
 ## Getting started
 
