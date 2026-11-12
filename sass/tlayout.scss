@@ -4,6 +4,8 @@
 
   max-width: 60rem; // maximum width of page to not overwhelm large displays
   margin: 0 auto; // center the wrapper relative to the entire page
+
+  font-size: 18px;
 }
 
 /* make the header go from the first column to the last column */
@@ -14,4 +16,13 @@
 
 body {
   background-color: #fff6f6; // slightly off-white background color
+}
+
+@media screen and (max-width: 650px) {
+  #wrapper {
+    grid-template-columns: 1fr;
+  }
+  #layout-nav {
+    order: 1;
+  }
 }
