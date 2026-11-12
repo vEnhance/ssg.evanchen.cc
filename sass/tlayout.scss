@@ -1,6 +1,6 @@
 #wrapper {
   display: grid; // make the top three elements form a grid
-  grid-template-columns: 150px 1fr; // allocate 150px to nav, rest to right col
+  grid-template-columns: 160px 1fr; // allocate 150px to nav, rest to right col
   column-gap: 20px; // add a small gap between the two columns of the grid
   max-width: 50rem; // maximum width of page to not overwhelm large displays
   margin: 0 auto; // center the wrapper relative to the entire page
@@ -18,8 +18,8 @@ body {
   font-size: 18px;
 }
 
-/* The next lines only affect small screens (< 650px width); mobile support */
-@media screen and (max-width: 650px) {
+/* The next lines only affect small screens (< 700px width); mobile support */
+@media screen and (max-width: 700px) {
   #wrapper {
     grid-template-columns: 1fr; // change to a single column
   }
