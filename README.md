@@ -26,7 +26,7 @@ Here's a rundown of all the files that are in here and what they do:
 
 This repository has three templates read by Zola:
 
-- [`layout.html`](templates/layout.html) (~50 lines of code):
+- [`layout.html`](templates/layout.html) (~60 lines of code):
   A base template with the top-level structure of the HTML page.
   Has two blocks `content` and `html_title` that are overridden.
 
