@@ -32,17 +32,28 @@
                 </p>
                 {# Loop through all the pages and make a link to each one #}
                 {% set root = get_section(path="_index.md") %}
-                {% for page in root.pages %}
+                {% for p in root.pages %}
                     <p>
-                        <a href="{{ page.permalink }}"
-                           class="nav-link{% if current_path == page.path %} active-nav-link{% endif %}">
-                            {% if page.extra.sec_number %}§{{ page.extra.sec_number }}.{% endif %}
-                            {{ page.title }}
+                        <a href="{{ p.permalink }}"
+                           class="nav-link{% if current_path == p.path %} active-nav-link{% endif %}">
+                            {% if p.extra.sec_number %}§{{ p.extra.sec_number }}.{% endif %}
+                            {{ p.title }}
                         </a>
                     </p>
                 {% endfor %}
                 <hr />
-                <a class="nav-link" href="https://github.com/vEnhance/ssg.evanchen.cc">Source code</a>
+                {# Link to full GitHub and to the specific page #}
+                <p>
+                    <a target="_blank" href="https://github.com/vEnhance/ssg.evanchen.cc">📂 Git Repo</a>
+                </p>
+                {% if page %}
+                    <p>
+                        <a target="_blank"
+                           href="https://github.com/vEnhance/ssg.evanchen.cc/blob/main/content/{{ page.relative_path }}?plain=1">
+                            📄 <code>{{ page.relative_path }}</code>
+                        </a>
+                    </p>
+                {% endif %}
             </aside>
             <article id="layout-content">
                 {% block content %}
