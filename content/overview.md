@@ -1,6 +1,6 @@
 +++
-title = "Overview"
-weight = 15
+title = "Getting Started"
+weight = 10
 +++
 
 # Overview

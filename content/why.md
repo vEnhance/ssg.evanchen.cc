@@ -1,6 +1,6 @@
 +++
 title = "Why SSG?"
-weight = 10
+weight = 5
 +++
 
 # Why use a SSG?
