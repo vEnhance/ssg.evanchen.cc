@@ -53,6 +53,12 @@ a.active-nav-link {
   text-decoration: underline;
 }
 
+/* Typeset blockquotes in a smaller sans font */
+blockquote {
+  font-family: Verdana, sans-serif; // Verdana is web-safe, available everywhere
+  font-size: 80%;
+}
+
 /* On smaller screens, change to a single column and move navigation to bottom */
 @media screen and (max-width: 650px) {
   #wrapper {
