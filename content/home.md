@@ -1,6 +1,8 @@
 +++
 title = "No place like ~"
 weight = 20
+[extra]
+sec_number = 2
 +++
 
 ## No place like ~
