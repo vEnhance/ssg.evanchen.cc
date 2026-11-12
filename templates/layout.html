@@ -14,9 +14,10 @@
             </header>
             <aside id="layout-nav">
                 <h2>Navigation</h2>
-                {# TODO: let's put some links here hardcoded, but we should make this better in a moment #}
-                <a href="/why">Why</a>
-                <a href="/overview">Overview</a>
+                {% set root = get_section(path="_index.md") %}
+                {% for page in root.pages %}
+                    <p><a href="{{ page.permalink }}">{{ page.title }}</a></p>
+                {% endfor %}
             </aside>
             <article id="layout-content">
                 {% block content %}
