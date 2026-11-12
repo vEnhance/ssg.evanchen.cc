@@ -21,7 +21,10 @@
                 <h2>Navigation</h2>
                 {% set root = get_section(path="_index.md") %}
                 {% for page in root.pages %}
-                    <p><a href="{{ page.permalink }}">{{ page.title }}</a></p>
+                    <p>
+                        <a href="{{ page.permalink }}"
+                           {% if current_path == page.path %}class="active-nav-link"{% endif %}>{{ page.title }}</a>
+                    </p>
                 {% endfor %}
             </aside>
             <article id="layout-content">

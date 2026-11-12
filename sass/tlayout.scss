@@ -36,6 +36,10 @@ a {
 a:hover {
   color: #33aaff;
 }
+/* Make the nav link for the current page bold */
+a.active-nav-link {
+  font-weight: bold;
+}
 
 /* On smaller screens, change to a single column and move navigation to bottom */
 @media screen and (max-width: 650px) {
