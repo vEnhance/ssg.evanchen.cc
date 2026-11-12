@@ -1,11 +1,11 @@
 +++
-title = "Getting Started"
+title = "Overview"
 weight = 10
 +++
 
-## Getting Started
+## Overview
 
-### Overview of the pieces
+### The pieces we'll use
 
 Here are the pieces of technology that were used to build this site.
 
@@ -25,7 +25,7 @@ Here are the pieces of technology that were used to build this site.
 [gh-pages]: https://docs.github.com/en/pages
 [cf]: https://cloudflare.com
 
-An important thing to note is that aside from Git
+An important thing to note is that
 **pretty much all these components can be swapped out**.
 If you have a friend helping you out, for example,
 they might decide Vim is ~~a trial by fire~~ too complicated for newbies,

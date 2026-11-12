@@ -10,15 +10,19 @@ I previously alluded to this in
 [post #364 on my microblog](https://wall.evanchen.cc/364/).
 
 This guide is specifically for a **static website**
-like a personal page or small blog:
-something that doesn't require maintaining a server.
+like a personal blog or small business page.
+It's intentionally barebones, to make things as simple as possible.
+See [The Static Site Paradox by Loris Cro](https://kristoff.it/blog/static-site-paradox/)
+for why simpler is better for many use cases.
 
-This website is an example of something you could make by following this guide.
-In total, the HTML and CSS given to Zola are less than 150 lines of code.
+This website itself is an example of something you could make following this guide.
+In total, the HTML templates and CSS are less than 150 lines of code.
 
-## Jumping in
+## Getting started
 
-If you want to get started right away, jump to [Getting Started](/overview).
+The pages at the right are meant to be read in order.
+So, start at [Overview](/overview) for your introductory briefing,
+then start getting your hands dirty from [No place like ~](/home).
 
 ## Video
 
