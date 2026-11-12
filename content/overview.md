@@ -1,8 +1,6 @@
 +++
-title = "Overview"
+title = "§1. Overview"
 weight = 10
-[extra]
-sec_number = 1
 +++
 
 ## Overview

@@ -35,10 +35,7 @@
                 {% for p in root.pages %}
                     <p>
                         <a href="{{ p.permalink }}"
-                           class="nav-link{% if current_path == p.path %} active-nav-link{% endif %}">
-                            {% if p.extra.sec_number %}§{{ p.extra.sec_number }}.{% endif %}
-                            {{ p.title }}
-                        </a>
+                           class="nav-link{% if current_path == p.path %} active-nav-link{% endif %}">{{ p.title }}</a>
                     </p>
                 {% endfor %}
                 <hr />

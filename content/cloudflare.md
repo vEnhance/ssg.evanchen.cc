@@ -1,8 +1,6 @@
 +++
-title = "CloudFlare"
+title = "§6. CloudFlare"
 weight = 60
-[extra]
-sec_number = 6
 +++
 
 ## Connecting CloudFlare

@@ -1,8 +1,6 @@
 +++
-title = "Home"
+title = "§2. Home"
 weight = 20
-[extra]
-sec_number = 2
 +++
 
 ## No place like ~

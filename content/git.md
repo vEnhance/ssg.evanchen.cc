@@ -1,8 +1,6 @@
 +++
-title = "Git"
+title = "§3. Git"
 weight = 30
-[extra]
-sec_number = 3
 +++
 
 ## Git
