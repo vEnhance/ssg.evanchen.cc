@@ -1,0 +1,10 @@
+#wrapper {
+  display: grid; // make the top three elements form a grid
+  grid-template-columns: 1fr 4fr; // 1:4 ratio of grid size
+}
+
+/* make the header go from the first column to the last column */
+#layout-header {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
