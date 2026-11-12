@@ -1,8 +1,9 @@
 #wrapper {
   display: grid; // make the top three elements form a grid
-  grid-template-columns: 1fr 4fr; // 1:4 ratio of grid size
+  grid-template-columns: 150px 1fr; // allocate 150px to nav, rest to right col
+  column-gap: 20px; // add a small gap between the two columns of the grid
 
-  max-width: 60rem; // maximum width of page to not overwhelm large displays
+  max-width: 50rem; // maximum width of page to not overwhelm large displays
   margin: 0 auto; // center the wrapper relative to the entire page
 }
 
