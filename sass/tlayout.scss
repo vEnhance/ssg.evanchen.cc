@@ -28,6 +28,15 @@ h6 {
   font-family: "Exo 2", sans-serif;
 }
 
+/* Link coloring: always blue, no underline, change color on hover */
+a {
+  color: #0033ff;
+  text-decoration: none;
+}
+a:hover {
+  color: #33aaff;
+}
+
 /* On smaller screens, change to a single column and move navigation to bottom */
 @media screen and (max-width: 650px) {
   #wrapper {
