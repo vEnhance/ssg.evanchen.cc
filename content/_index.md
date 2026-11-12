@@ -20,9 +20,9 @@ In total, the HTML templates and CSS are less than 150 lines of code.
 
 ## Getting started
 
-The pages at the right are meant to be read in order.
+The numbered sections at the left should be read in order.
 So, start at [Overview](/overview) for your introductory briefing,
-then start getting your hands dirty from [No place like ~](/home).
+then start getting your hands dirty from [Home](/home).
 
 ## Video
 
@@ -35,7 +35,7 @@ at TODO: INSERT YOUTUBE URL ONCE IT'S HERE.
 Here are some websites that were started
 either by following this workflow or something close to it.
 
-- [ssg.evanchen.cc](https://ssg.evanchen.cc),
-  source at [vEnhance/ssg.evanchen.cc](https://github.com/vEnhance/ssg.evanchen.cc)
-- [wall.evanchen.cc](https://wall.evanchen.cc),
-  source at [vEnhance/wall.evanchen.cc](https://github.com/vEnhance/wall.evanchen.cc)
+- [`ssg.evanchen.cc`](https://ssg.evanchen.cc), this website,
+  Source at [`vEnhance/ssg.evanchen.cc`](https://github.com/vEnhance/ssg.evanchen.cc).
+- [`wall.evanchen.cc`](https://wall.evanchen.cc), Evan's microblog.
+  Source at [`vEnhance/wall.evanchen.cc`](https://github.com/vEnhance/wall.evanchen.cc).
