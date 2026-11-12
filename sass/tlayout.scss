@@ -2,61 +2,20 @@
   display: grid; // make the top three elements form a grid
   grid-template-columns: 150px 1fr; // allocate 150px to nav, rest to right col
   column-gap: 20px; // add a small gap between the two columns of the grid
-
   max-width: 50rem; // maximum width of page to not overwhelm large displays
   margin: 0 auto; // center the wrapper relative to the entire page
 }
 
 /* make the header go from the first column to the last column */
 #layout-header {
-  grid-column-start: 1;
-  grid-column-end: -1;
+  grid-column: 1 / -1;
 }
 
-/* Set background color and fonts for body and headings */
+/* Set background color and fonts for main body */
 body {
   background-color: #fff6f6; // slightly off-white background color
   font-family: "Cardo", serif;
   font-size: 18px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Exo 2", sans-serif; // all headings use Exo 2
-}
-
-code,
-pre {
-  font-family: "Inconsolata", monospace; // all code uses Inconsolata
-}
-
-/* Link coloring: always blue, dotted underline, change color on hover */
-a {
-  color: #0033ff;
-  text-decoration: none;
-  text-decoration: underline dotted;
-}
-a:hover {
-  color: #33aaff;
-  text-decoration: underline;
-}
-/* Make the nav link for the current page bold */
-a.nav-link {
-  font-family: "Exo 2", sans-serif;
-}
-a.active-nav-link {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Typeset blockquotes in a smaller sans font */
-blockquote {
-  font-family: Verdana, sans-serif; // Verdana is web-safe, available everywhere
-  font-size: 80%;
 }
 
 /* The next lines only affect small screens (< 650px width); mobile support */
@@ -65,9 +24,43 @@ blockquote {
     grid-template-columns: 1fr; // change to a single column
   }
   #layout-nav {
-    order: 1; // this bumps the navigation down to the botthom
+    order: 1; // this bumps the navigation down to the bottom
   }
   #layout-header {
     font-size: 60%; // shrink the header on small displays
   }
+}
+
+/* Adjust fonts for headings, navigation links, and code */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a.nav-link {
+  font-family: "Exo 2", sans-serif; // all headings and nav-links use Exo 2
+}
+code,
+pre {
+  font-family: "Inconsolata", monospace; // all code uses Inconsolata
+}
+blockquote {
+  font-family: Verdana, sans-serif; // Verdana is web-safe, available everywhere
+  font-size: 80%;
+}
+
+/* Link coloring: always blue, dotted underline, change color on hover */
+a {
+  color: #0033ff;
+  text-decoration: underline dotted;
+}
+a:hover {
+  color: #33aaff;
+  text-decoration: underline;
+}
+/* Style active navigation links to be bold on active */
+a.active-nav-link {
+  font-weight: bold;
+  text-decoration: underline;
 }
