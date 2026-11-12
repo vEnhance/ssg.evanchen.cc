@@ -1,11 +1,26 @@
 <html>
     <head>
+        <meta charset="utf-8">
         <title>{% block title %}ssg.evanchen.cc{% endblock %}</title>
     </head>
     <body>
         <div id="wrapper">
-            {% block content %}
-            {% endblock content %}
+            <header id="layout-header">
+                <h1>
+                    <a href="/">ssg.evanchen.cc</a>
+                    — An SSG Tutorial
+                </h1>
+            </header>
+            <aside id="layout-nav">
+                <h2>Navigation</h2>
+                {# TODO: let's put some links here hardcoded, but we should make this better in a moment #}
+                <a href="/why">Why</a>
+                <a href="/overview">Overview</a>
+            </aside>
+            <article id="layout-content">
+                {% block content %}
+                {% endblock content %}
+            </article>
         </div>
     </body>
 </html>
