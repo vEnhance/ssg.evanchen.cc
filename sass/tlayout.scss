@@ -4,8 +4,6 @@
 
   max-width: 60rem; // maximum width of page to not overwhelm large displays
   margin: 0 auto; // center the wrapper relative to the entire page
-
-  font-size: 18px;
 }
 
 /* make the header go from the first column to the last column */
@@ -14,10 +12,23 @@
   grid-column-end: -1;
 }
 
+/* Set some fonts for body and headings */
 body {
   background-color: #fff6f6; // slightly off-white background color
+  font-family: "Cardo", serif;
+  font-size: 18px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Exo 2", sans-serif;
+}
+
+/* On smaller screens, change to a single column and move navigation to bottom */
 @media screen and (max-width: 650px) {
   #wrapper {
     grid-template-columns: 1fr;
