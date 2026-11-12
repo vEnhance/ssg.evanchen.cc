@@ -1,5 +1,5 @@
 +++
-title = "No place like ~"
+title = "Home"
 weight = 20
 [extra]
 sec_number = 2
