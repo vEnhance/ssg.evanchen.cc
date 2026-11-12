@@ -59,12 +59,15 @@ blockquote {
   font-size: 80%;
 }
 
-/* On smaller screens, change to a single column and move navigation to bottom */
+/* The next lines only affect small screens (< 650px width); mobile support */
 @media screen and (max-width: 650px) {
   #wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; // change to a single column
   }
   #layout-nav {
-    order: 1;
+    order: 1; // this bumps the navigation down to the botthom
+  }
+  #layout-header {
+    font-size: 60%; // shrink the header on small displays
   }
 }
