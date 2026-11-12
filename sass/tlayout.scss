@@ -34,17 +34,23 @@ pre {
   font-family: "Inconsolata", monospace; // all code uses Inconsolata
 }
 
-/* Link coloring: always blue, no underline, change color on hover */
+/* Link coloring: always blue, dotted underline, change color on hover */
 a {
   color: #0033ff;
   text-decoration: none;
+  text-decoration: underline dotted;
 }
 a:hover {
   color: #33aaff;
+  text-decoration: underline;
 }
 /* Make the nav link for the current page bold */
+a.nav-link {
+  font-family: "Exo 2", sans-serif;
+}
 a.active-nav-link {
   font-weight: bold;
+  text-decoration: underline;
 }
 
 /* On smaller screens, change to a single column and move navigation to bottom */

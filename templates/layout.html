@@ -22,22 +22,21 @@
                 </h1>
             </header>
             <aside id="layout-nav">
-                <h2>Navigation</h2>
                 {# Link to homepage, marked with active-nav-link on home #}
                 <p>
                     <a href="/"
-                       {% if current_path == "/" %}class="active-nav-link"{% endif %}>Home</a>
+                       class="nav-link{% if current_path == "/" %} active-nav-link{% endif %}">Home</a>
                 </p>
                 {# Loop through all the pages and make a link to each one #}
                 {% set root = get_section(path="_index.md") %}
                 {% for page in root.pages %}
                     <p>
                         <a href="{{ page.permalink }}"
-                           {% if current_path == page.path %}class="active-nav-link"{% endif %}>{{ page.title }}</a>
+                           class="nav-link{% if current_path == page.path %} active-nav-link{% endif %}">{{ page.title }}</a>
                     </p>
                 {% endfor %}
                 <hr />
-                <a href="https://github.com/vEnhance/ssg.evanchen.cc">Source code</a>
+                <a class="nav-link" href="https://github.com/vEnhance/ssg.evanchen.cc">Source code</a>
             </aside>
             <article id="layout-content">
                 {% block content %}
