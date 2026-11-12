@@ -28,7 +28,7 @@ This repository has three templates read by Zola:
 
 - [`layout.html`](templates/layout.html) (~50 lines of code):
   A base template with the top-level structure of the HTML page.
-  Has two blocks `content` and `html_title` that are overriden.
+  Has two blocks `content` and `html_title` that are overridden.
 
 - [`index.html`](templates/index.html) (4 lines of code):
   Uses `layout.html` to render the index page, overriding `content`.
