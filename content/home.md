@@ -114,4 +114,5 @@ This turns on the most basic features: syntax coloring,
 a line number, and mouse support.
 Save and quit the file.
 
-If you open Vim again, you should now have line numbers.
+If you open `~/.vimrc` again, you should now have line numbers,
+and see some colors on the keywords.
