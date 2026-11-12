@@ -11,21 +11,23 @@ sec_number = 1
 
 Here are the pieces of technology that were used to build this site.
 
-| Technology               | Kind of thing                | What it's for                                                  |
-| ------------------------ | ---------------------------- | -------------------------------------------------------------- |
-| [Git][git]               | Version control              | Manages and distributes source code including revision history |
-| [Vim][vim]               | Text editor                  | Edits text files                                               |
-| [Zola][zola]             | Static site generator        | Takes Markdown, SASS, and templates and generates HTML         |
-| [GitHub Pages][gh-pages] | Deployment system            | Publishes the generated HTML to `*.github.io`                  |
-| [Cloudflare][cf]         | All-around Internet servicer | Purchasing domains and pointing them to the deployment system  |
-| [Prek][prek] (optional)  | Pre-commit framework         | Sanity check guards on Git repository                          |
+- **[Git](https://git-scm.com/): Version control**.\
+  Manages and distributes source code including revision history.
 
-[git]: https://git-scm.com/
-[zola]: https://getzola.org/
-[prek]: https://prek.j178.dev
-[vim]: https://vim.org
-[gh-pages]: https://docs.github.com/en/pages
-[cf]: https://cloudflare.com
+- **[Vim](https://vim.org): Text editor**.\
+  Edits text files.
+
+- **[Zola](https://getzola.org/): Static site generator**.\
+  Takes Markdown, SASS, and templates and generates HTML.
+
+- **[GitHub Pages](https://docs.github.com/en/pages): Deployment system**.\
+  Publishes the generated HTML to `*.github.io`.
+
+- **[Cloudflare](https://cloudflare.com): All-around Internet servicer**.\
+  Purchasing domains and pointing them to the deployment system.
+
+- **[Prek](https://prek.j178.dev) (optional): Pre-commit framework**.\
+  Sanity check guards on Git repository.
 
 An important thing to note is that
 **pretty much all these components can be swapped out**.
