@@ -1,10 +1,10 @@
 +++
-title = "SSG Tutorial"
+title = "SSG Guide"
 sort_by = "weight"
 +++
 
 Welcome!
-This is a short tutorial on how to set up a website the old-fashioned way,
+This is a short guide on how to set up a website the old-fashioned way,
 working mostly from a terminal, using not too many moving parts.
 This is specifically for a *static website*
 (like a personal page or small blog),

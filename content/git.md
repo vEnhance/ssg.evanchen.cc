@@ -3,4 +3,4 @@ title = "Git"
 weight = 30
 +++
 
-# Using Git
+# Using Git (and optionally, prek)
