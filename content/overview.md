@@ -11,14 +11,14 @@ sec_number = 1
 
 Here are the pieces of technology that were used to build this site.
 
-| Technology               | Kind of thing                   | What it's for                                                  |
-| ------------------------ | ------------------------------- | -------------------------------------------------------------- |
-| [Git][git]               | Version control                 | Manages and distributes source code including revision history |
-| [Vim][vim]               | Text editor                     | Edits text files                                               |
-| [Prek][prek]             | Pre-commit framework (optional) | Sanity check guards on Git repository                          |
-| [Zola][zola]             | Static site generator           | Takes Markdown, SASS, and templates and generates HTML         |
-| [GitHub Pages][gh-pages] | Deployment system               | Publishes the generated HTML to `*.github.io`                  |
-| [Cloudflare][cf]         | All-around Internet servicer    | Purchasing domains and pointing them to the deployment system  |
+| Technology               | Kind of thing                | What it's for                                                  |
+| ------------------------ | ---------------------------- | -------------------------------------------------------------- |
+| [Git][git]               | Version control              | Manages and distributes source code including revision history |
+| [Vim][vim]               | Text editor                  | Edits text files                                               |
+| [Zola][zola]             | Static site generator        | Takes Markdown, SASS, and templates and generates HTML         |
+| [GitHub Pages][gh-pages] | Deployment system            | Publishes the generated HTML to `*.github.io`                  |
+| [Cloudflare][cf]         | All-around Internet servicer | Purchasing domains and pointing them to the deployment system  |
+| [Prek][prek] (optional)  | Pre-commit framework         | Sanity check guards on Git repository                          |
 
 [git]: https://git-scm.com/
 [zola]: https://getzola.org/
