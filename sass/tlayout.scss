@@ -1,8 +1,8 @@
 #wrapper {
   display: grid; // make the top three elements form a grid
-  grid-template-columns: 160px 1fr; // allocate 150px to nav, rest to right col
+  grid-template-columns: 160px 1fr; // allocate 160px to nav, rest to right col
   column-gap: 20px; // add a small gap between the two columns of the grid
-  max-width: 50rem; // maximum width of page to not overwhelm large displays
+  max-width: 56rem; // maximum width of page to not overwhelm large displays
   margin: 0 auto; // center the wrapper relative to the entire page
 }
 
@@ -44,6 +44,10 @@ a.nav-link {
 code,
 pre {
   font-family: "Inconsolata", monospace; // all code uses Inconsolata
+  overflow-x: auto; // separate scroll for long code blocks
+}
+#layout-content {
+  min-width: 0; // needed so the column can be narrower than code block
 }
 blockquote {
   font-family: Verdana, sans-serif; // Verdana is web-safe, available everywhere
