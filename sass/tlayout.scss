@@ -1,6 +1,9 @@
 #wrapper {
   display: grid; // make the top three elements form a grid
   grid-template-columns: 1fr 4fr; // 1:4 ratio of grid size
+
+  max-width: 60rem; // maximum width of page to not overwhelm large displays
+  margin: 0 auto; // center the wrapper relative to the entire page
 }
 
 /* make the header go from the first column to the last column */
