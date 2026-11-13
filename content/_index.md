@@ -34,9 +34,11 @@ at TODO: INSERT YOUTUBE URL ONCE IT'S HERE.
 
 ## Examples of websites built
 
-- [cathiexu.com](https://cathiexu.com), personal website.
-- [ssg.evanchen.cc](/), this website ([source code][repo]).
-- [wall.evanchen.cc](https://wall.evanchen.cc), Evan's microblog ([source code](https://github.com/vEnhance/wall.evanchen.cc)).
+- [anserena.com](https://anserena.com), personal academic page ([source code](https://github.com/anser0/anser-site))
+- [blog.anserena.com](https://blog.anserena.com), personal blog ([source code](https://github.com/anser0/blog.anserena.com))
+- [cathiexu.com](https://cathiexu.com), personal website
+- [ssg.evanchen.cc](/), this website ([source code][repo])
+- [wall.evanchen.cc](https://wall.evanchen.cc), Evan's microblog ([source code](https://github.com/vEnhance/wall.evanchen.cc))
 
 ## Contributing
 
