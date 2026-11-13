@@ -35,7 +35,7 @@ This repository has three templates read by Zola:
   Uses `layout.html` to render the index page, overriding `content`.
 
 - [`page.html`](templates/page.html) (7 lines of code):
-  Uses `layout.html` to render a normal page, overriding `content` and `title`.
+  Uses `layout.html` to render a normal page, overriding `content` and `html_title`.
 
 In addition, it has a single stylesheet:
 
