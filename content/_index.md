@@ -32,16 +32,11 @@ You can watch the first 30 minutes or so of the life of
 [ssg.evanchen.cc](https://ssg.evanchen.cc)
 at TODO: INSERT YOUTUBE URL ONCE IT'S HERE.
 
-## Examples of websites
+## Examples of websites built
 
-Some websites which were initially built with this general workflow.
-Drop me a line if you'd like to add your website too.
-
-- [`ssg.evanchen.cc`](/), this website.
-  Source at [`vEnhance/ssg.evanchen.cc`][repo].
-
-- [`wall.evanchen.cc`](https://wall.evanchen.cc), Evan's microblog.
-  Source at [`vEnhance/wall.evanchen.cc`](https://github.com/vEnhance/wall.evanchen.cc).
+- [cathiexu.com](https://cathiexu.com), personal website.
+- [ssg.evanchen.cc](/), this website ([source code][repo]).
+- [wall.evanchen.cc](https://wall.evanchen.cc), Evan's microblog ([source code](https://github.com/vEnhance/wall.evanchen.cc)).
 
 ## Contributing
 
