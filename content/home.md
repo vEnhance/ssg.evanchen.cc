@@ -57,7 +57,7 @@ $ which nonexistent_command
 which: no nonexistent_command in (/home/evan/.local/bin:…)
 ```
 
-### Launching vimtutor
+### Learning Vim
 
 Type `vimtutor` into your terminal
 to get a briefing on how to use the Vim text editor.
@@ -81,9 +81,11 @@ It looks like this at the beginning:
 The lessons go from 1.1 to 1.7 in here;
 but you could technically survive off just Lesson 1.1…
 not that I recommend this…
-
 After completing `vimtutor`, you should be able to open a file,
 edit it, save it, and quit Vim.
+
+There are also interactive games that can work instead of `vimtutor`.
+See, e.g., <https://vimventure.dev/learn> (free browser game).
 
 ### Writing a `.vimrc`
 
