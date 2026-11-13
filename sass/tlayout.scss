@@ -58,6 +58,7 @@ blockquote {
 a {
   color: #0033ff;
   text-decoration: underline dotted;
+  text-decoration-thickness: from-font;
 }
 a:hover {
   color: #33aaff;
