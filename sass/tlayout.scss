@@ -1,17 +1,17 @@
 /* === T-SHAPE LAYOUT: Full-row header and 160px nav bar on left === */
 #wrapper {
   display: grid; // make the top three elements form a grid
-  grid-template-columns: 160px 1fr; // allocate 160px to nav, rest to right col
-  column-gap: 20px; // add a small gap between the two columns of the grid
-  max-width: 56rem; // maximum width of page to not overwhelm large displays
+  grid-template-columns: 8em 1fr; // allocate 8em to nav, rest to right col
+  column-gap: 1em; // add a small gap between the two columns of the grid
+  max-width: 45em; // maximum width of page to not overwhelm large displays
   margin: 0 auto; // center the wrapper relative to the entire page
 }
 #layout-header {
-  grid-column: 1 / -1; /* from the first column to the last column */
+  grid-column: 1 / -1; // from the first column to the last column
 }
 
-/* === MOBILE SUPPORT: For < 700px width, 1 column, nav at bottom === */
-@media screen and (max-width: 700px) {
+/* === MOBILE SUPPORT: For narrow width, 1 column, nav at bottom === */
+@media screen and (max-width: 50rem) {
   #wrapper {
     grid-template-columns: 1fr; // revert to a single column
   }
@@ -26,8 +26,8 @@
 /* === FONTS AND COLORS === */
 body {
   background-color: #fff6f6; // slightly off-white background color
-  font-family: "Cardo", serif;
-  font-size: 18px;
+  font-family: "Cardo", serif; // default font for everything
+  font-size: 1.25rem; // 20px with a default browser setting of rem=16px
 }
 h1,
 h2,
