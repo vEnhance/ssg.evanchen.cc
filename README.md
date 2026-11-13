@@ -13,10 +13,11 @@ Here's a rundown of all the files that are in here and what they do:
 | -------------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------------- |
 | [`content/*.md`](content/)                                     | Markdown pages  | The actual text of all the pages                                                    |
 | [`sass/tlayout.scss`](sass/tlayout.scss)                       | SCSS            | Generates <https://ssg.evanchen.cc/tlayout.css>, used to style the site. See below. |
-| [`static/favicon.ico`](static/favicon.ico)                     | Icon            | Copied directly to <https://ssg.evanchen.cc/favicon.ico>, website icon              |
+| [`static/`](static/)                                           | Static files    | Files copied directly as-is, like <https://ssg.evanchen.cc/favicon.ico>.            |
 | [`templates/*.html`](templates/)                               | Tera templates  | Used by Zola to specify how HTML is built for each page. See below.                 |
 | [`zola.toml`](zola.toml)                                       | Zola config     | Options read by Zola                                                                |
-| [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) | Github workflow | Used by GitHub to tell how to deploy the website to `venhance.github.io`            |
+| [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) | Github workflow | Used by GitHub Pages to set up deployment to `venhance.github.io`                   |
+| [`.gitignore`](.gitignore)                                     | gitignore       | Tells Git about files to ignore. No effect on deployed website.                     |
 | [README.md](README.md)                                         | README          | This file. Documentation for the contents here. No effect on deployed website.      |
 | [LICENSE](LICENSE)                                             | LICENSE         | [Open source license][osl] for using this code. No effect on deployed website.      |
 
