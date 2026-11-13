@@ -1,3 +1,4 @@
+/* === T-SHAPE LAYOUT: Full-row header and 160px nav bar on left === */
 #wrapper {
   display: grid; // make the top three elements form a grid
   grid-template-columns: 160px 1fr; // allocate 160px to nav, rest to right col
@@ -5,23 +6,14 @@
   max-width: 56rem; // maximum width of page to not overwhelm large displays
   margin: 0 auto; // center the wrapper relative to the entire page
 }
-
-/* make the header go from the first column to the last column */
 #layout-header {
-  grid-column: 1 / -1;
+  grid-column: 1 / -1; /* from the first column to the last column */
 }
 
-/* Set background color and fonts for main body */
-body {
-  background-color: #fff6f6; // slightly off-white background color
-  font-family: "Cardo", serif;
-  font-size: 18px;
-}
-
-/* The next lines only affect small screens (< 700px width); mobile support */
+/* === MOBILE SUPPORT: For < 700px width, 1 column, nav at bottom === */
 @media screen and (max-width: 700px) {
   #wrapper {
-    grid-template-columns: 1fr; // change to a single column
+    grid-template-columns: 1fr; // revert to a single column
   }
   #layout-nav {
     order: 1; // this bumps the navigation down to the bottom
@@ -31,7 +23,12 @@ body {
   }
 }
 
-/* Adjust fonts for headings, navigation links, and code */
+/* === FONTS AND COLORS === */
+body {
+  background-color: #fff6f6; // slightly off-white background color
+  font-family: "Cardo", serif;
+  font-size: 18px;
+}
 h1,
 h2,
 h3,
@@ -54,17 +51,16 @@ blockquote {
   font-size: 80%;
 }
 
-/* Link coloring: always blue, dotted underline, change color on hover */
+/* === RESTYLE LINKS: dotted underline, change color on hover === */
 a {
   color: #0033ff;
   text-decoration: underline dotted;
-  text-decoration-thickness: from-font;
+  text-decoration-thickness: from-font; // FF and chrome differ without this
 }
 a:hover {
   color: #33aaff;
   text-decoration: underline;
 }
-/* Style active navigation links to be bold on active */
 a.active-nav-link {
   font-weight: bold;
   text-decoration: underline;
