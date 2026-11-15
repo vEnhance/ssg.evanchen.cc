@@ -29,7 +29,7 @@
                     <a href="/"
                        class="nav-link{% if current_path == "/" %} active-nav-link{% endif %}">Welcome</a>
                 </p>
-                {# Loop through all the pages and make a link to each one #}
+                {# Loop through all the normal pages (not _index.md) and make a link to each one #}
                 {% set root = get_section(path="_index.md") %}
                 {% for p in root.pages %}
                     <p>
@@ -39,17 +39,16 @@
                 {% endfor %}
                 <hr />
                 {# Link to full GitHub and to the specific page #}
+                {% set current = page or section %} {# hack so that _index.md and normal pages both covered #}
                 <p>
                     <a target="_blank" href="https://github.com/vEnhance/ssg.evanchen.cc">📂 Git Repo</a>
                 </p>
-                {% if page %}
-                    <p>
-                        <a target="_blank"
-                           href="https://github.com/vEnhance/ssg.evanchen.cc/blob/main/content/{{ page.relative_path }}?plain=1">
-                            📄 <code>{{ page.relative_path }}</code>
-                        </a>
-                    </p>
-                {% endif %}
+                <p>
+                    <a target="_blank"
+                       href="https://github.com/vEnhance/ssg.evanchen.cc/blob/main/content/{{ current.relative_path }}?plain=1">
+                        📄 <code>{{ current.relative_path }}</code>
+                    </a>
+                </p>
             </aside>
             <article id="layout-content">
                 {% block content %}
