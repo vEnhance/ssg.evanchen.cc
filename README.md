@@ -39,7 +39,7 @@ This repository has three templates read by Zola:
 
 In addition, it has a single stylesheet:
 
-- [`sass/tlayout.scss`](sass/tlayout.scss) (~70 lines of code):
+- [`sass/tlayout.scss`](sass/tlayout.scss) (~80 lines of code):
   Sets up the T-shaped page layout, margins, colors, and fonts.
   Also switches the layout on a smaller screen.
 

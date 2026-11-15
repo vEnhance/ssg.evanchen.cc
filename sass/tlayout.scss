@@ -27,7 +27,7 @@
 body {
   background-color: #fff6f6; // slightly off-white background color
   font-family: "Source Serif 4", serif; // default font for everything
-  font-size: 1.15rem; // 18.4px with a default browser setting of rem=16px
+  font-size: 1.2rem; // 19.2px with a default browser setting of rem=16px
 }
 h1,
 h2,
@@ -41,10 +41,6 @@ a.nav-link {
 code,
 pre {
   font-family: "Inconsolata", monospace; // all code uses Inconsolata
-  overflow-x: auto; // separate scroll for long code blocks
-}
-#layout-content {
-  min-width: 0; // needed so the column can be narrower than code block
 }
 blockquote {
   font-family: Verdana, sans-serif; // Verdana is web-safe, available everywhere
@@ -64,4 +60,26 @@ a:hover {
 a.active-nav-link {
   font-weight: bold;
   text-decoration: underline;
+}
+
+/* == https://www.getzola.org/documentation/content/syntax-highlighting/ == */
+.giallo-ln {
+  user-select: none; // don't copy line numbers along with the code
+  margin-right: 2ch; // spacing between line number and code
+}
+pre > code[data-name]::before {
+  content: attr(data-name);
+  float: right;
+  color: #fff;
+  font-weight: bold;
+  border: 2px white solid;
+  border-radius: 8px;
+  padding: 4px;
+}
+/* Stylize the code blocks */
+pre {
+  overflow-x: auto; // separate scroll for long code blocks
+  contain: inline-size; // don't let long lines widen the parent column
+  padding: 1em; // add a lot of breathing room inside the blocks
+  font-size: 85%; // slightly smaller font so 80char fits comfortably
 }
