@@ -8,20 +8,17 @@
         {# the next line is important for mobile browsers to work correctly #}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block html_title %}ssg.evanchen.cc{% endblock html_title %}</title>
-        {# load fonts from google fonts #}
+        {# load fonts from google fonts, then main stylesheet #}
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&display=swap"
               rel="stylesheet">
-        {# load the main layout stylesheet #}
         <link rel="stylesheet" href="/tlayout.css" />
     </head>
     <body>
         <div id="wrapper">
             <header id="layout-header">
-                <h1>
-                    <a href="/">ssg.evanchen.cc</a> — An SSG Guide
-                </h1>
+                <h1><a href="/">ssg.evanchen.cc</a> — An SSG Guide</h1>
             </header>
             <aside id="layout-nav">
                 {# Link to homepage, marked with active-nav-link on home #}
