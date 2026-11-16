@@ -117,7 +117,7 @@ hooks = [{ id = "codespell" }]
 [[repos]]
 repo = "https://github.com/JoC0de/pre-commit-prettier"
 rev = "v3.10.1"
-hooks = [{ id = "prettier", types_or = ["css", "javascript", "json", "scss", "ts", "yaml"] }]
+hooks = [{ id = "prettier", types_or = ["javascript", "css", "scss"] }]
 
 [[repos]]
 repo = "https://github.com/djlint/djLint"
