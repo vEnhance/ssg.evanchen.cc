@@ -9,17 +9,17 @@ and the parts used to put this together.
 
 Here's a rundown of all the files that are in here and what they do:
 
-| File or directory                                              | Type of files   | What they're for                                                                    |
-| -------------------------------------------------------------- | --------------- | ----------------------------------------------------------------------------------- |
-| [`content/*.md`](content/)                                     | Markdown pages  | The actual text of all the pages                                                    |
-| [`sass/tlayout.scss`](sass/tlayout.scss)                       | SCSS            | Generates <https://ssg.evanchen.cc/tlayout.css>, used to style the site. See below. |
-| [`static/`](static/)                                           | Static files    | Files copied directly as-is, like <https://ssg.evanchen.cc/favicon.ico>.            |
-| [`templates/*.html`](templates/)                               | Tera templates  | Used by Zola to specify how HTML is built for each page. See below.                 |
-| [`zola.toml`](zola.toml)                                       | Zola config     | Options read by Zola                                                                |
-| [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) | Github workflow | Used by GitHub Pages to set up deployment to `venhance.github.io`                   |
-| [`.gitignore`](.gitignore)                                     | gitignore       | Tells Git about files to ignore. No effect on deployed website.                     |
-| [README.md](README.md)                                         | README          | This file. Documentation for the contents here. No effect on deployed website.      |
-| [LICENSE](LICENSE)                                             | LICENSE         | [Open source license][osl] for using this code. No effect on deployed website.      |
+| File or directory                                              | Type of files   | What they're for                                                               |
+| -------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------ |
+| [`content/*.md`](content/)                                     | Markdown pages  | The actual text of all the pages                                               |
+| [`sass/*.scss`](sass/)                                         | SCSS            | Generates stylesheets. See below.                                              |
+| [`static/`](static/)                                           | Static files    | Files copied directly as-is, like <https://ssg.evanchen.cc/favicon.ico>.       |
+| [`templates/*.html`](templates/)                               | Tera templates  | Used by Zola to specify how HTML is built for each page. See below.            |
+| [`zola.toml`](zola.toml)                                       | Zola config     | Options read by Zola                                                           |
+| [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) | Github workflow | Used by GitHub Pages to set up deployment to `venhance.github.io`              |
+| [`.gitignore`](.gitignore)                                     | gitignore       | Tells Git about files to ignore. No effect on deployed website.                |
+| [README.md](README.md)                                         | README          | This file. Documentation for the contents here. No effect on deployed website. |
+| [LICENSE](LICENSE)                                             | LICENSE         | [Open source license][osl] for using this code. No effect on deployed website. |
 
 [osl]: https://en.wikipedia.org/wiki/Open-source_license
 
@@ -37,11 +37,13 @@ This repository has three templates read by Zola:
 - [`page.html`](templates/page.html) (7 lines of code):
   Uses `layout.html` to render a normal page, overriding `content` and `html_title`.
 
-In addition, it has a single stylesheet:
+In addition, it has two stylesheets
 
-- [`sass/tlayout.scss`](sass/tlayout.scss) (~80 lines of code):
+- [`sass/tlayout.scss`](sass/tlayout.scss) (~70 lines of code):
   Sets up the T-shaped page layout, margins, colors, and fonts.
   Also switches the layout on a smaller screen.
+- [`sass/codeblocks.scss`](sass/codeblocks.scss) (~35 lines of code):
+  Small stylistic tweaks to made the inline code blocks look a little nicer.
 
 ## Prek files
 

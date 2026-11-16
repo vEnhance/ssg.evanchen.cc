@@ -21,7 +21,7 @@ This tutorial will be written assuming you are either using
 
 We also assume you have figured out how to use a shell, so you can do things like
 
-```shellscript
+```console
 $ cd ~
 
 $ pwd
@@ -43,7 +43,7 @@ To see what's working, the `which` command lets you see, for a given command,
 where the system can find it, or if the command doesn't exist at all.
 For example on my computer:
 
-```shellscript
+```console
 $ which git
 /usr/bin/git
 
@@ -96,7 +96,7 @@ You probably want to get those for your sanity.
 Let's see if you remember what you learned from `vimtutor`.
 We're going to open the file `~/.vimrc` in Vim (which may not exist yet):
 
-```shellscript
+```console
 $ vim ~/.vimrc
 ```
 

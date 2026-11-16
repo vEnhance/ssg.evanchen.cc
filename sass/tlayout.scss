@@ -65,25 +65,3 @@ a.active-nav-link {
   font-weight: bold;
   text-decoration: underline;
 }
-
-/* == https://www.getzola.org/documentation/content/syntax-highlighting/ == */
-.giallo-ln {
-  user-select: none; // don't copy line numbers along with the code
-  margin-right: 2ch; // spacing between line number and code
-}
-pre.giallo > code[data-name]::before {
-  content: attr(data-name);
-  float: right;
-  color: #fff;
-  font-weight: bold;
-  border: 2px white solid;
-  border-radius: 8px;
-  padding: 4px;
-}
-/* Stylize the code blocks */
-pre {
-  overflow-x: auto; // separate scroll for long code blocks
-  contain: inline-size; // don't let long lines widen the parent column
-  padding: 1em; // add a lot of breathing room inside the blocks
-  font-size: 85%; // slightly smaller font so 80char fits comfortably
-}
