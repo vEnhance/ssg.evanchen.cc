@@ -25,3 +25,6 @@ style = "aligned"
 enabled = true
 normalize-quotes = true
 normalize-dashes = false
+
+[MD014]
+show-output = false # some silent commands
