@@ -14,16 +14,10 @@ I just write whatever is technically correct (if ugly), press save,
 and let the computer handle making the indentation look nice.
 
 Here, I'll give four examples of tools that this project uses.
-Then I'll describe
+Then I'll describe the two places you can put these:
 
 - How to integrate these tools into `prek`, and
-
-Arguably, these tools belong in Vim, not (just) pre-commit.
-But let's start with pre-commit hooks, since it's the last guard.
-That way even if your Vim configuration hiccups,
-your committed code does what you want.
-(If you want Vim integration, you want to look into something like
-[ALE](https://github.com/dense-analysis/ale).)
+- How to integrate them into Vim.
 
 ### Four examples of tools
 
@@ -103,8 +97,8 @@ show-output = false # some silent commands
 
 ### Adding linters and formatters into prek
 
-Here are four examples of tools you might consider adding into `prek.toml`
-(at least, these are the ones I'm using):
+The four tools above all have pre-commit support,
+so you can add whichever sections directly into `prek.toml`:
 
 ```toml,linenos,filename=prek.toml
 [[repos]]
@@ -135,4 +129,4 @@ Here's a rundown of each one.
 Note that each one has a configuration file,
 that you'll need to `git add` as well.
 
-### Adding linters into ALE
+### Adding linters into Vim via ALE
