@@ -42,8 +42,8 @@ In addition, it has two stylesheets
 - [`sass/tlayout.scss`](sass/tlayout.scss) (~70 lines of code):
   Sets up the T-shaped page layout, margins, colors, and fonts.
   Also switches the layout on a smaller screen.
-- [`sass/codeblocks.scss`](sass/codeblocks.scss) (~35 lines of code):
-  Small stylistic tweaks to made the inline code blocks look a little nicer.
+- [`sass/codeblocks.scss`](sass/codeblocks.scss) (~40 lines of code):
+  Stylistic tweaks to made the inline code blocks look nicer.
 
 ## Prek files
 

@@ -6,26 +6,35 @@
   margin-right: 2ch; // spacing between line number and code
 }
 
-/* Filenames in a circle in the upper right */
+/* Style filename as a tab sitting on top of the upper-left corner */
 pre.giallo > code[data-name]::before {
   content: attr(data-name);
-  float: right;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  border-radius: 0.5em 0.5em 0 0; // round top corners
+  padding: 0.3em 0.8em;
+  background-color: #009;
   color: #fff;
   font-weight: bold;
-  border: 2px white solid;
-  border-radius: 8px;
-  padding: 4px;
+}
+pre.giallo:has(> code[data-name]) {
+  margin-top: 2.5em; // leave room above for the tab
 }
 
 /* Stylize the code blocks */
 pre.giallo {
-  overflow-x: auto; // separate scroll for long code blocks
-  contain: inline-size; // don't let long lines widen the parent column
   padding: 1em; // add a lot of breathing room inside the blocks
+  contain: inline-size; // don't let long lines widen the parent column
+  position: relative;
   font-size: 85%; // slightly smaller font so 80char fits comfortably
+  > code {
+    display: block;
+    overflow-x: auto; // scroll here, not on <pre>, so the tab isn't clipped
+  }
 }
 
-/* Micromanage weight and color for bash transcripts */
+/* Further micromanage weight and color for bash transcripts */
 code[data-lang="shellsession"] .giallo-l:has(> [style]:first-child) {
   font-weight: bold;
 }
