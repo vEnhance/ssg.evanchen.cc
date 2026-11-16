@@ -42,6 +42,10 @@ code,
 pre {
   font-family: "Inconsolata", monospace; // all code uses Inconsolata
 }
+:not(pre) > code {
+  color: #b1b; // inline code only (not inside code blocks) pink-ish
+  font-weight: 600; // also make it slightly bold
+}
 blockquote {
   font-family: Verdana, sans-serif; // Verdana is web-safe, available everywhere
   font-size: 80%;
@@ -67,7 +71,7 @@ a.active-nav-link {
   user-select: none; // don't copy line numbers along with the code
   margin-right: 2ch; // spacing between line number and code
 }
-pre > code[data-name]::before {
+pre.giallo > code[data-name]::before {
   content: attr(data-name);
   float: right;
   color: #fff;

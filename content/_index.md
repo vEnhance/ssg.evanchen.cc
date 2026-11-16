@@ -16,7 +16,7 @@ See [The Static Site Paradox by Loris Cro](https://kristoff.it/blog/static-site-
 for why simpler is better for many use cases.
 
 This website itself is an example of something you could make following this guide.
-In total, the HTML templates and CSS are less than 150 lines of code.
+In total, the HTML templates and CSS are about 150 lines of code.
 
 [ssg]: https://en.wikipedia.org/wiki/Static_site_generator
 
