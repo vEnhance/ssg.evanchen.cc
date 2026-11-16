@@ -4,4 +4,13 @@
 {% endblock html_title %}
 {% block content %}
     {{ page.content|safe }}
+    <hr />
+    <nav id="prev-next">
+        <span>
+            {% if page.lower %}<a href="{{ page.lower.permalink }}">← {{ page.lower.title }}</a>{% endif %}
+        </span>
+        <span>
+            {% if page.higher %}<a href="{{ page.higher.permalink }}">{{ page.higher.title }} →</a>{% endif %}
+        </span>
+    </nav>
 {% endblock content %}

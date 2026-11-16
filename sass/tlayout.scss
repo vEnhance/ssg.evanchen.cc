@@ -65,3 +65,11 @@ a.active-nav-link {
   font-weight: bold;
   text-decoration: underline;
 }
+
+/* === PREV/NEXT LINKS at the bottom of each page === */
+#prev-next {
+  display: flex; // put the two links side by side
+  justify-content: space-between; // push them to opposite edges
+  font-weight: bold;
+  margin: 1em 0;
+}
