@@ -1,100 +1,33 @@
 +++
-title = "§3. Git"
-weight = 30
+title = "§4. Git"
+weight = 40
 +++
 
-## Git
-
-### Setting up Git for first use
-
-If you've never used Git before, you need to tell it who you are:
-
-```console
-$ git config --global user.name "Your Name"
-
-$ git config --global user.email "public.email@example.org"
-```
-
-Treat the email address as public, as if anyone can find it.
-(I think the email address isn't used for anything other than display,
-so it doesn't actually have to work.
-If you don't want people to contact you,
-I think [GitHub provides noreply email addresses you can use][gh-noreply]
-although I've never tried doing this before.)
-
-[gh-noreply]: https://docs.github.com/en/account-and-profile/reference/email-addresses-reference#your-noreply-email-address
-
-If you trust me, here are a few settings that I think you should just turn on.
-
-```console
-$ git config --global init.defaultBranch main
-
-$ git config --global pull.rebase true
-
-$ git config --global push.default current
-
-$ git config --global push.autoSetupRemote true
-```
-
-### Start a new repository
-
-Make sure that you're in `~/mysite`, then type `git init`:
-
-```console
-$ pwd
-/home/evan/mysite
-
-$ git init
-Initialized empty Git repository in /home/evan/mysite/.git/
-```
-
-You can now see the hidden folder `.git` when you run `ls -la`.
-That's where `.git` stores its work; you don't need to look inside yourself.
-
-```console
-$ ls -la
-total 16
-drwxrwx---  3 evan evan 4096 Nov 15 20:02 .
-drwx------ 62 evan evan 4096 Nov 15 20:47 ..
-drwxrwx---  8 evan evan 4096 Nov 15 20:47 .git
-```
-
-Personally, I like to start with an initial totally empty commit,
-which you can do with:
-
-```console
-$ git commit -m "root: Initial commit" --allow-empty
-[main (root-commit) 054b8b5] root: Initial commit
-```
-
-You can see the history of your commits with the following command
-(right now, just that one first commit):
-
-```console
-$ git log --oneline
-054b8b5 (HEAD -> main) root: Initial commit
-```
-
-### Using Git
+## Using Git
 
 Okay, so Git has a bit of a reputation,
 [as you can see from xkcd](https://xkcd.com/1597/).
 Here's my attempt to summarize the
-[official tutorial](https://git-scm.com/docs/gittutorial),
-into 100 words:
+[official tutorial](https://git-scm.com/docs/gittutorial) into 100 words:
 
 - Git tracks history in _commits_ and only takes responsibility for committed code.
   Every commit gets a user-specified message and assigned hash.
-  **Best practice is making a commit for every _logical_ change**.
+- **Best practice is making a commit for every _logical_ change**.
   A good litmus test is whether it's easy to write the commit message.
   ([Here's xkcd again](https://xkcd.com/1296/).)
 - To start a commit, use `git add` or `git add -p` to _stage_ desired changes.
-- After staging, type `git commit` to _commit_ the staged into the repository.
+- After staging, type `git commit` to _commit_ staged changes into the repository.
 - At any time, to get your bearings:
   - `git log` or `git log --oneline` shows past commits;
   - `git status` shows a summary of the current directory;
   - `git diff` shows changes not yet staged;
   - `git diff --staged` to see changes staged but not yet committed.
+
+For the rest of the tutorial,
+**I'll actually include the Git commands too,
+so you can see this happening in practice**.
+
+### About commit messages
 
 For commit messages, a lot of people (including me) use
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/),
@@ -102,10 +35,6 @@ which prefaces each commit message with `fix:` (bugfix) or `feat:` (new function
 or other word (like `root`, `refactor`, …)
 to indicate what "kind" of commit it is.
 We'll follow that for this tutorial.
-
-For the rest of the tutorial,
-**I'll actually include the Git commands too,
-so you can see this happening in practice**.
 
 There are two ways to specify commit messages:
 
@@ -189,8 +118,8 @@ Changes to be committed:
 
 $ git commit -m "chore: add gitignore"
 [main eb7aafd] chore: add gitignore
- 1 file changed, 2 insertions(+)
- create mode 100644 .gitignore
+  1 file changed, 2 insertions(+)
+  create mode 100644 .gitignore
 
 $ git log --oneline
 eb7aafd (HEAD -> main) chore: add gitignore
@@ -220,3 +149,7 @@ If so, some options:
   I often choose target as `HEAD~10`, say, to pull up the 10 most recent commits.
 
 - `git reset` is a bit more complicated. Use with caution.
+
+### Preventing mistakes in git
+
+One thing you can do to minimize the

@@ -1,6 +1,6 @@
 +++
-title = "§5. Styling"
-weight = 50
+title = "§6. Styling"
+weight = 60
 +++
 
 ## More styling with SASS/CSS

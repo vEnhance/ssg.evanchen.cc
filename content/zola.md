@@ -1,6 +1,6 @@
 +++
-title = "§4. Zola"
-weight = 40
+title = "§5. Zola"
+weight = 50
 +++
 
 ## Using Zola

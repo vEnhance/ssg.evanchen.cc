@@ -1,6 +1,6 @@
 +++
-title = "§7. CloudFlare"
-weight = 70
+title = "§8. CloudFlare"
+weight = 80
 +++
 
 ## Connecting CloudFlare

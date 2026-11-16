@@ -115,22 +115,3 @@ Save and quit the file.
 
 If you open `~/.vimrc` again, you should now have line numbers,
 and see some colors on the keywords.
-
-### Making a new folder for your website
-
-For this demo I'll put the website in `~/mysite`,
-though you're obviously free to pick any other path.
-
-```console
-$ mkdir mysite
-
-$ cd ~/mysite
-
-$ pwd
-/home/evan/mysite
-```
-
-**For the rest of the tutorial,
-please ensure you're always working in `~/mysite`**.
-If you open a new terminal window, it might spawn in the home folder `~` instead.
-You can always use `pwd` to show where you are.
