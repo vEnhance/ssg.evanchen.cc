@@ -19,7 +19,9 @@ This tutorial will be written assuming you are either using
 - Mac OSX; or
 - any standard Linux distribution.
 
-We also assume you have figured out how to use a shell, so you can do things like
+If you've never seen a shell before, you might check the
+["Filesys concepts" page on my website first](https://web.evanchen.cc/filesys.html).
+We'll assume you're okay typing commands in like
 
 ```console
 $ cd ~
@@ -28,9 +30,8 @@ $ pwd
 /home/evan
 ```
 
-(where your username should show instead of `evan`).
-If you've never seen a shell before, you might check the
-["Filesys concepts" page on my website first](https://web.evanchen.cc/filesys.html).
+(Remember that the tilde `~` is an abbreviation for `/home/evan/`, your home folder.
+Of course, on your computer it will show your username, not `evan`.)
 
 ### Packages, and checking your computer can find them
 
@@ -116,3 +117,22 @@ Save and quit the file.
 
 If you open `~/.vimrc` again, you should now have line numbers,
 and see some colors on the keywords.
+
+### Making a new folder for your website
+
+For this demo I'll put the website in `~/mysite`,
+though you're obviously free to pick any other path.
+
+```console
+$ mkdir mysite
+
+$ cd ~/mysite
+
+$ pwd
+/home/evan/mysite
+```
+
+**For the rest of the tutorial,
+please ensure you're always working in `~/mysite`**.
+If you open a new terminal window, it might spawn in the home folder `~` instead.
+You can always use `pwd` to show where you are.

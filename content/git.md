@@ -5,9 +5,6 @@ weight = 30
 
 ## Git
 
-We'll start by putting together the pieces of our repository,
-and then talk about how to continue using Git afterwards.
-
 ### Setting up Git for first use
 
 If you've never used Git before, you need to tell it who you are:
@@ -27,8 +24,6 @@ although I've never tried doing this before.)
 
 [gh-noreply]: https://docs.github.com/en/account-and-profile/reference/email-addresses-reference#your-noreply-email-address
 
-While you're here, you should make the following default settings:
-
 If you trust me, here are a few settings that I think you should just turn on.
 
 ```console
@@ -43,32 +38,37 @@ $ git config --global push.autoSetupRemote true
 
 ### Start a new repository
 
-We can now go to the directory and make our website.
-For this demo I'll put the website in `~/mysite`,
-though you're obviously free to pick any other path.
+Make sure that you're in `~/mysite`, then type `git init`:
 
 ```console
-$ mkdir mysite
-
-$ cd ~/mysite
+$ pwd
+/home/evan/mysite
 
 $ git init
 Initialized empty Git repository in /home/evan/mysite/.git/
 ```
 
-This creates an empty repository, which has no commits.
-The first thing we should do is create a new commit.
-Personally, I like to make the very first commit totally empty,
-because the root commit is one that you can't change later
-if you change your mind about something.
+You can now see the hidden folder `.git` when you run `ls -la`.
+That's where `.git` stores its work; you don't need to look inside yourself.
+
+```console
+$ ls -la
+total 16
+drwxrwx---  3 evan evan 4096 Nov 15 20:02 .
+drwx------ 62 evan evan 4096 Nov 15 20:47 ..
+drwxrwx---  8 evan evan 4096 Nov 15 20:47 .git
+```
+
+Personally, I like to start with an initial totally empty commit,
+which you can do with:
 
 ```console
 $ git commit -m "root: Initial commit" --allow-empty
-[main (root-commit) c333c0b] root: Initial commit
+[main (root-commit) 054b8b5] root: Initial commit
 ```
 
 You can see the history of your commits with the following command
-(right now, we have just one commit):
+(right now, just that one first commit):
 
 ```console
 $ git log --oneline
@@ -116,7 +116,7 @@ There are two ways to specify commit messages:
   to specify the message on the command line.
 
 ```console
-git commit -m "feat: enable sharks with lasers on their heads"
+$ git commit -m "feat: enable sharks with lasers on their heads"
 ```
 
 For the tutorial, I'll use the second form to make the steps easier to follow,
@@ -124,7 +124,7 @@ but in real life (and on video) I usually use Vim to write the commit message.
 
 ### Writing .gitignore
 
-Our first commit will be to make a file called `.gitignore`.
+Our first substantial commit will be to make a file called `.gitignore`.
 The `.gitignore` is a special file meant to prevent unwanted files
 from accidentally getting committed.
 
@@ -133,7 +133,7 @@ This is a file that Mac's automatically generate in every folder
 for [reasons unknown to humankind](https://en.wikipedia.org/wiki/.DS_Store).
 There is no reason you want this file in your Git history,
 but it could get added accidentally if you're not paying attention
-(and I have [made fun of people on Instagram before for this](https://www.instagram.com/p/DIcujMcO80Q/)).
+(and I have [made fun of people on Instagram for this](https://www.instagram.com/p/DIcujMcO80Q/)).
 
 A second thing we'll want to exclude is the `public/` folder.
 It hasn't happened yet, but later Zola will generate this folder with output files.
@@ -142,6 +142,9 @@ We only want Git to track the source code files, not folders like `public/`.
 So, let's create that file in Vim:
 
 ```console
+$ pwd
+/home/evan/mysite
+
 $ vim .gitignore
 ```
 
@@ -153,11 +156,21 @@ Put the following two lines in it:
 ```
 
 That's a single logical change. Let's commit it.
-I've inserted some `git status` so you can see how Git is keeping track of things,
-but really the only two things you need to do are `git add .gitignore`
-and `git commit`.
+I've inserted some `ls` and `git status` to help you keep track,
+but the two commands actually doing things are just
+`git add .gitignore` and `git commit`.
 
 ```console
+$ pwd
+/home/evan/mysite
+
+$ ls -la
+total 16
+drwxrwx---  3 evan evan 4096 Nov 15 20:51 .
+drwx------ 62 evan evan 4096 Nov 15 20:47 ..
+drwxrwx---  8 evan evan 4096 Nov 15 20:51 .git
+-rw-rw----  1 evan evan   22 Nov 15 20:51 .gitignore
+
 $ git status
 On branch main
 Untracked files:
@@ -184,4 +197,26 @@ eb7aafd (HEAD -> main) chore: add gitignore
 054b8b5 root: Initial commit
 ```
 
-### (Optional) Pre-commit via prek
+Alright! That's our first substantial commit.
+
+### Undoing mistakes in git
+
+Although I won't emphasize this in the tutorial,
+if you make a mistake with a commit, you can often fix it.
+Maybe you committed a file you didn't mean to,
+or missed a file from the stage you meant to add, or just saw a typo.
+If so, some options:
+
+- If you do `git commit --amend` instead of `git commit`,
+  instead of creating a new commit,
+  it'll combine the staged changes into the most recent commit.
+  So if you notice a typo right after committing something,
+  you would fix it, `git add`, and then run `git commit --amend`.
+
+- If you need to do something more complicated like amending an older commit
+  or changing the order of commits,
+  `git rebase --interactive [target]`
+  will let interactively modify all the commits _target_ the hash.
+  I often choose target as `HEAD~10`, say, to pull up the 10 most recent commits.
+
+- `git reset` is a bit more complicated. Use with caution.
