@@ -8,7 +8,7 @@ weight = 20
 You should start by making sure you have a terminal working and can install packages!
 This tutorial will be written assuming you are either using
 
-- [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/setup/environment),
+- [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/setup/environment) (abbr. WSL),
 - the terminal in Mac OSX; or
 - the terminal in any standard Linux distribution.
 
@@ -31,26 +31,33 @@ If you want a quick refresher or cheat sheet:
 - Remember the tilde `~` is an abbreviation for `/home/yourusername/`,
   your home folder.
 
-### Packages, and checking your computer can find them
+### Packages, and checking with `which`
 
-At minimum, you'll want to install `git`, `vim`, and `zola`.
-For Zola, follow the
-[Zola installation instructions](https://www.getzola.org/documentation/getting-started/installation/).
-Git and Vim are likely to be installed already.
+You'll want to install `vim`, `git`, `prek`, and `zola`.
+Vim and Git are likely to be installed already; if not, search the web.
+Here are [prek installation instructions](https://prek.j178.dev/installation/)
+and [Zola installation instructions](https://www.getzola.org/documentation/getting-started/installation/).
+(For Mac users, the easiest approach is to install
+the [Homebrew package manager](https://brew.sh/);
+then you just type `brew install zola` and `brew install prek`.
+I think these days Homebrew works on WSL too.)
 
 To see what's working, the `which` command lets you see, for a given command,
 where the system can find it, or if the command doesn't exist at all.
 For example on my computer:
 
 ```console
-$ which git
-/usr/bin/git
-
 $ which vim
 /usr/bin/vim
 
+$ which git
+/usr/bin/git
+
 $ which zola
 /usr/bin/zola
+
+$ which prek
+/usr/bin/prek
 
 $ which nonexistent_command
 which: no nonexistent_command in (/home/evan/.local/bin:…)

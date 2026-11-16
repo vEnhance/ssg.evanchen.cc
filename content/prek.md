@@ -3,10 +3,10 @@ title = "§4½. Prek"
 weight = 45
 +++
 
-## Prek (optional)
+## Prek
 
 Undoing committed mistakes is tough, so we want to avoid it if we can.
-A **pre-commit hook** is a guard that helps prevent mistakes from sneaking in to begin with.
+In Git, a **pre-commit hook** is a guard that helps prevent mistakes from sneaking in to begin with.
 It runs automatically every time you try to "git commit";
 if it notices something wrong, it'll yell at you and abort the commit.
 
@@ -17,8 +17,8 @@ But _I_ can see them, and like `.DS_Store`, this annoys the heck out of me.
 You will look less noob-ish if you never let trailing whitespace into your work.
 
 For this tutorial,
-we'll use the [prek framework](https://prek.j178.dev/) to manage pre-commit hooks.
-You'll need to [install prek](https://prek.j178.dev/installation/) for this.
+we'll use the [prek framework](https://prek.j178.dev/),
+which manages pre-commit hooks in an organized fashion.
 
 Once `prek` is installed (and `which prek` confirms this)
 you can run `prek init` inside `~/mysite`
@@ -28,9 +28,6 @@ That can then be edited to specify what which kinds hooks you want.
 ```console
 $ pwd
 /home/evan/mysite
-
-$ which prek
-/usr/bin/prek
 
 $ prek init
 Created `prek.toml`

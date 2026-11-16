@@ -9,11 +9,14 @@ weight = 10
 
 Here are the pieces of technology that were used to build this site.
 
+- **[Vim](https://vim.org): Text editor**.\
+  Edits text files.
+
 - **[Git](https://git-scm.com/): Version control**.\
   Manages and distributes source code including revision history.
 
-- **[Vim](https://vim.org): Text editor**.\
-  Edits text files.
+- **[Prek](https://prek.j178.dev): Pre-commit framework**.\
+  Sanity check guards on Git repository.
 
 - **[Zola](https://getzola.org/): Static site generator**.\
   Takes Markdown, SASS, and templates and generates HTML.
@@ -23,9 +26,6 @@ Here are the pieces of technology that were used to build this site.
 
 - **[Cloudflare](https://cloudflare.com): All-around Internet servicer**.\
   Purchasing domains and pointing them to the deployment system.
-
-- **[Prek](https://prek.j178.dev) (optional): Pre-commit framework**.\
-  Sanity check guards on Git repository.
 
 An important thing to note is that
 **pretty much all these components can be swapped out**.

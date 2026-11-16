@@ -7,19 +7,19 @@ weight = 40
 
 Okay, so Git has a bit of a reputation,
 [as you can see from xkcd](https://xkcd.com/1597/).
-Here's my attempt to summarize the
-[official tutorial](https://git-scm.com/docs/gittutorial) into 100 words:
+
+### A 100-word TL;DR
 
 - Git tracks history in _commits_ and only takes responsibility for committed code.
   Every commit gets a user-specified message and assigned hash.
-- **Best practice is making a commit for every _logical_ change**.
+- **Best practice is making a commit for each _logical_ change**.
   A good litmus test is whether it's easy to write the commit message.
   ([Here's xkcd again](https://xkcd.com/1296/).)
 - To start a commit, use `git add` or `git add -p` to _stage_ desired changes.
-- After staging, type `git commit` to _commit_ staged changes into the repository.
+- After staging, type `git commit` to _commit_ to the staged changes.
 - At any time, to get your bearings:
   - `git log` or `git log --oneline` shows past commits;
-  - `git status` shows a summary of the current directory;
+  - `git status` shows a summary of what's happening;
   - `git diff` shows changes not yet staged;
   - `git diff --staged` to see changes staged but not yet committed.
 
