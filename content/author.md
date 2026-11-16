@@ -1,6 +1,6 @@
 +++
 title = "Author notes"
-weight = 100
+weight = 110
 +++
 
 ## Author's notes

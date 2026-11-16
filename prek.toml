@@ -24,27 +24,14 @@ hooks = [
 [[repos]]
 repo = "builtin"
 hooks = [
-  { id = "check-executables-have-shebangs" },
-  { id = "check-json" },
   { id = "check-merge-conflict" },
-  { id = "check-symlinks" },
   { id = "check-toml" },
-  { id = "check-yaml", args = ["--allow-multiple-documents"] },
   { id = "detect-private-key" },
   { id = "end-of-file-fixer" },
   { id = "fix-byte-order-marker" },
   { id = "mixed-line-ending" },
   { id = "trailing-whitespace" },
 ]
-
-[[repos]]
-repo = "meta"
-hooks = [{ id = "check-useless-excludes" }]
-
-[[repos]]
-repo = "https://github.com/astral-sh/ruff-pre-commit"
-rev = "v0.17.5"
-hooks = [{ id = "ruff-check" }, { id = "ruff-format" }]
 
 [[repos]]
 repo = "https://github.com/codespell-project/codespell"
@@ -62,14 +49,14 @@ rev = "v0.3.4"
 hooks = [{ id = "rumdl" }, { id = "rumdl-fmt" }]
 
 [[repos]]
-repo = "https://github.com/zizmorcore/zizmor-pre-commit"
-rev = "v1.32.0"
-hooks = [{ id = "zizmor" }]
-
-[[repos]]
 repo = "https://github.com/djlint/djLint"
 rev = "v1.50.0"
 hooks = [
   { id = "djlint-reformat", types = ["html"], files = "templates/" },
   { id = "djlint", types = ["html"], files = "templates/" }
 ]
+
+[[repos]]
+repo = "https://github.com/zizmorcore/zizmor-pre-commit"
+rev = "v1.32.0"
+hooks = [{ id = "zizmor" }]

@@ -128,13 +128,13 @@ eb7aafd (HEAD -> main) chore: add gitignore
 
 Alright! That's our first substantial commit.
 
-### Undoing mistakes in git
+### Undoing mistakes in Git
 
-Although I won't emphasize this in the tutorial,
-if you make a mistake with a commit, you can often fix it.
-Maybe you committed a file you didn't mean to,
-or missed a file from the stage you meant to add, or just saw a typo.
-If so, some options:
+Just an FYI: if you make a mistake with a commit,
+and you haven't run `git push` yet, you can often repair it.
+(Maybe you committed a file you didn't mean to,
+or forgot to stage a file, or saw a typo.)
+Here's how:
 
 - If you do `git commit --amend` instead of `git commit`,
   instead of creating a new commit,
@@ -144,12 +144,14 @@ If so, some options:
 
 - If you need to do something more complicated like amending an older commit
   or changing the order of commits,
-  `git rebase --interactive [target]`
+  `git rebase -i [target]`
   will let interactively modify all the commits _target_ the hash.
+  (Here `-i` is short for `--interactive`.)
   I often choose target as `HEAD~10`, say, to pull up the 10 most recent commits.
 
-- `git reset` is a bit more complicated. Use with caution.
+- `git reset` and `git reflog` are also there,
+  but a bit more complicated. Read about these if you want, and use with caution.
 
-### Preventing mistakes in git
-
-One thing you can do to minimize the
+All of these actions are destructive;
+they will destroy (and re-create, with new hashes) the past commits.
+The [Git manual has more on undoing things](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things).

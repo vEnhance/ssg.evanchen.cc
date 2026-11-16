@@ -57,18 +57,14 @@ Anyway, I tried.
 
 ### This isn't a cookbook!
 
-Accordingly, this guide will _not_ be written as a step-by-step tutorial,
-where I tell you every command to type and you copy and paste it in line by line.
-I'm worried about people just blindly pressing `Ctrl-V` with no understanding
-of what the commands are doing; that's not so good for learning.
-
+Accordingly, this guide will _not_ be just a list of commands to copy and paste.
 I want to do this more with broad strokes, like,
 this is roughly what this piece does and what you should be trying to do.
-Then you can ask the friend or LLM to fill in the details and debug issues.
+Then you can ask the friend or LLM to fill-in the details and debug issues.
 
-So, overall I'd say this guide is more like
+Overall I'd say this guide is more like
 
 1. a lesson plan for your friend; or
 2. a starting place for your own research
 
-instead of something like a cookbook to follow.
+than something you should follow exactly as written.
