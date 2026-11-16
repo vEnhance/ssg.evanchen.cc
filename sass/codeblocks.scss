@@ -1,6 +1,4 @@
 /* CODE BLOCKS: see https://www.getzola.org/documentation/content/syntax-highlighting/ */
-
-/* Line numbers */
 .giallo-ln {
   user-select: none; // don't copy line numbers along with the code
   margin-right: 2ch; // spacing between line number and code
@@ -36,7 +34,7 @@ pre.giallo {
 
 /* Further micromanage weight and color for bash transcripts */
 code[data-lang="shellsession"] .giallo-l:has(> [style]:first-child) {
-  font-weight: bold;
+  font-weight: bold; // use bold for actual commands (not output)
 }
 code[data-lang="shellsession"] .giallo-l > [style]:first-child {
   color: #f9e2af !important; // catppuccin-mocha yellow for the yellow $ sign
