@@ -20,9 +20,7 @@ For this tutorial,
 we'll use the [prek framework](https://prek.j178.dev/),
 which manages pre-commit hooks in an organized fashion.
 
-Once `prek` is installed (and `which prek` confirms this)
-you can run `prek init` inside `~/mysite`
-which creates a file called `prek.toml`.
+To start, run `prek init` inside `~/mysite` which creates `prek.toml`.
 That can then be edited to specify what which kinds hooks you want.
 
 ```console
