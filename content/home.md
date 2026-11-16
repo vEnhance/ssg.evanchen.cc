@@ -6,22 +6,13 @@ weight = 20
 ## No place like ~
 
 You should start by making sure you have a terminal working and can install packages!
-If you're on Linux, use whatever you're used to.
-Mac users can use the built-in one too.
-For Windows, the correct long-term approach is
-[Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/setup/environment),
-but you might be able to get away with Windows Powershell
-(which should be built-in).
-
 This tutorial will be written assuming you are either using
 
-- Windows Subsystem for Linux;
-- Mac OSX; or
-- any standard Linux distribution.
+- [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/setup/environment),
+- the terminal in Mac OSX; or
+- the terminal in any standard Linux distribution.
 
-If you've never seen a shell before, you might check the
-["Filesys concepts" page on my website first](https://web.evanchen.cc/filesys.html).
-We'll assume you're okay typing commands in like
+So you should be able to do something like this:
 
 ```console
 $ cd ~
@@ -30,8 +21,15 @@ $ pwd
 /home/evan
 ```
 
-(Remember that the tilde `~` is an abbreviation for `/home/evan/`, your home folder.
-Of course, on your computer it will show your username, not `evan`.)
+If you don't know what `cd` and `pwd` are,
+check the ["Filesys concepts" page on my website first](https://web.evanchen.cc/filesys.html).
+If you want a quick refresher or cheat sheet:
+
+- `cd` changes the current directory, and you can use tab-completion for it.
+- `pwd` prints the current directory.
+- `ls -la` prints the contents of the current directory.
+- Remember the tilde `~` is an abbreviation for `/home/yourusername/`,
+  your home folder.
 
 ### Packages, and checking your computer can find them
 
