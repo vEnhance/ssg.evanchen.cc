@@ -64,7 +64,7 @@ They just see a monolith that does everything from
 editing to linting to committing to pushing.
 I've seen the same thing with [Overleaf](https://overleaf.com)
 which is so idiot-friendly that it also
-[kills the user's conceptual understanding of LaTeX](https://git-scm.com/docs/gittutorial).
+[killed conceptual understanding of LaTeX](https://blog.evanchen.cc/auto-carrot/).
 The following is a real question I got from such a victim:
 
 > I'm confused, why do people use GitHub? Why not just use Overleaf?
