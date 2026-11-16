@@ -16,8 +16,11 @@ and let the computer handle making the indentation look nice.
 Here, I'll give four examples of tools that this project uses.
 Then I'll describe the two places you can put these:
 
-- How to integrate these tools into `prek`, and
-- How to integrate them into Vim.
+- How to integrate these tools into `prek`.
+  This way you ensure that committed code always conforms to your rules
+  (regardless of which editor).
+- How to integrate these tools into Vim,
+  so that while editing files, you can get changes applied live.
 
 ### Four examples of tools
 
@@ -98,7 +101,7 @@ show-output = false # some silent commands
 ### Adding linters and formatters into prek
 
 The four tools above all have pre-commit support,
-so you can add whichever sections directly into `prek.toml`:
+so you can add whichever sections you want at the bottom of your `prek.toml`:
 
 ```toml,linenos,filename=prek.toml
 [[repos]]
