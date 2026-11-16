@@ -12,7 +12,7 @@ and then talk about how to continue using Git afterwards.
 
 If you've never used Git before, you need to tell it who you are:
 
-```shell
+```console
 $ git config --global user.name "Your Name"
 
 $ git config --global user.email "public.email@example.org"
@@ -31,7 +31,7 @@ While you're here, you should make the following default settings:
 
 If you trust me, here are a few settings that I think you should just turn on.
 
-```shell
+```console
 $ git config --global init.defaultBranch main
 
 $ git config --global pull.rebase true
@@ -47,7 +47,7 @@ We can now go to the directory and make our website.
 For this demo I'll put the website in `~/mysite`,
 though you're obviously free to pick any other path.
 
-```shell
+```console
 $ mkdir mysite
 
 $ cd ~/mysite
@@ -62,7 +62,7 @@ Personally, I like to make the very first commit totally empty,
 because the root commit is one that you can't change later
 if you change your mind about something.
 
-```shell
+```console
 $ git commit -m "root: Initial commit" --allow-empty
 [main (root-commit) c333c0b] root: Initial commit
 ```
@@ -70,9 +70,9 @@ $ git commit -m "root: Initial commit" --allow-empty
 You can see the history of your commits with the following command
 (right now, we have just one commit):
 
-```shell
+```console
 $ git log --oneline
-c333c0b (HEAD -> main) root: Initial commit
+054b8b5 (HEAD -> main) root: Initial commit
 ```
 
 ### Using Git
@@ -112,16 +112,70 @@ There are two ways to specify commit messages:
 - If you run `git commit` normally, it'll open up a Vim editor
   where you can type the commit message and write it out.
 - If you prefer not to open Vim for this,
-  you can also specify the message on the command line like this:
+  you can also specify the message on the command line like this,
+  to specify the message on the command line.
 
-```shell
+```console
 git commit -m "feat: enable sharks with lasers on their heads"
 ```
 
-to specify the message on the command line.
 For the tutorial, I'll use the second form to make the steps easier to follow,
 but in real life (and on video) I usually use Vim to write the commit message.
 
 ### Writing .gitignore
+
+Our first commit will be to make a file called `.gitignore`.
+The `.gitignore` is a special file meant to prevent unwanted files
+from accidentally getting committed.
+
+An example of a file you'd want to include in this if you're a Mac user is `.DS_Store`.
+This is a file that Mac's automatically generate in every folder
+for [reasons unknown to humankind](https://en.wikipedia.org/wiki/.DS_Store).
+There is no reason you want this file in your Git history,
+but it could get added accidentally if you're not paying attention
+(and I have [made fun of people on Instagram before for this](https://www.instagram.com/p/DIcujMcO80Q/)).
+
+A second thing we'll want to exclude is the `public/` folder.
+It hasn't happened yet, but later Zola will generate this folder with output files.
+We only want Git to track the source code files, not folders like `public/`.
+
+So, run `vim .gitignore` and put the following two lines in it:
+
+```gitignore,linenos,name=.gitignore
+**/.DS_Store
+/public/
+```
+
+That's a single logical change. Let's commit it.
+I've inserted some `git status` so you can see how Git is keeping track of things,
+but really the only two things you need to do are `git add .gitignore`
+and `git commit`.
+
+```console
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+  .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+$ git add .gitignore
+
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+  new file:   .gitignore
+
+$ git commit -m "chore: add gitignore"
+[main eb7aafd] chore: add gitignore
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+$ git log --oneline
+eb7aafd (HEAD -> main) chore: add gitignore
+054b8b5 root: Initial commit
+```
 
 ### (Optional) Pre-commit via prek
