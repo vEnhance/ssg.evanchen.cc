@@ -7,8 +7,8 @@ weight = 50
 
 ### Fonts
 
+### Mobile support
+
 ### Link colors
 
 ### Active link
-
-### Mobile support

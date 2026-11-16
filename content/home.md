@@ -98,7 +98,6 @@ We're going to open the file `~/.vimrc` in Vim (which may not exist yet):
 
 ```shellscript
 $ vim ~/.vimrc
-(… opens the Vim editor on ~/.vimrc)
 ```
 
 Then, you should type the following contents into this file:
