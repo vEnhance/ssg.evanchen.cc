@@ -1,11 +1,13 @@
 +++
-title = "Author notes"
+title = "FAQ"
 weight = 110
 +++
 
-## Author's notes
+## FAQ
 
-### Why static sites?
+My defense of some decisions made in writing this tutorial.
+
+### 1. Why static sites?
 
 I like how Loris Cro describes it in the post
 [The Static Site Paradox](https://kristoff.it/blog/static-site-paradox/):
@@ -39,3 +41,30 @@ Besides, if you are reading this guide, you're probably new to this kind of thin
 In that case, I think your learning will go much better
 starting from an empty repository with parts added in one at a time,
 so you can understand every step of the process.
+
+### 2. Why teach caveman technology in 2026? Why not an IDE?
+
+Because most of the people who read my stuff are math students,
+and **math students learn bottom-up, not top-down**.
+That is: _start_ from atomic principles,
+_then_ learn how to compose them or add abstraction layers.
+
+For example, in this tutorial, I make the student edit files in Vim,
+then do Git operations like add and commit in the command line.
+That's because I want the student to understand that any text file
+can be edited by any editor, and also Git isn't tied to any particular editor.
+_Then_, when they are using VSCode three months later,
+and VSCode is doing Git operations with mouse clicks on some giant menu,
+they understand how VSCode is automating the operations they _used_ to do by hand,
+because they actually typed `git commit` by hand before.
+
+If you do this the other way around where you start the beginner in VSCode,
+these poor souls don't get any chance to form first principles.
+They just see a monolith that does everything from
+editing to linting to committing to pushing.
+I've seen the same thing with [Overleaf](https://overleaf.com)
+which is so idiot-friendly that it also
+[killed the user's conceptual understanding of LaTeX](https://git-scm.com/docs/gittutorial).
+The following is a real question I got from such a victim:
+
+> I'm confused, why do people use GitHub? Why not just use Overleaf?
