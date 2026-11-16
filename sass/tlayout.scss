@@ -1,4 +1,4 @@
-/* === T-SHAPE LAYOUT: Full-row header and 160px nav bar on left === */
+/* === T-SHAPE LAYOUT: Full-row header and 8em nav bar on left === */
 #wrapper {
   display: grid; // make the top three elements form a grid
   grid-template-columns: 8em 1fr; // allocate 8em to nav, rest to right col
@@ -11,7 +11,7 @@
 }
 
 /* === MOBILE SUPPORT: For narrow width, 1 column, nav at bottom === */
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 55rem) {
   #wrapper {
     grid-template-columns: 1fr; // revert to a single column
   }
@@ -19,7 +19,7 @@
     order: 1; // this bumps the navigation down to the bottom
   }
   #layout-header {
-    font-size: 60%; // shrink the header on small displays
+    font-size: 0.75rem; // shrink the header on small displays
   }
 }
 
@@ -27,7 +27,7 @@
 body {
   background-color: #fff6f6; // slightly off-white background color
   font-family: "Source Serif 4", serif; // default font for everything
-  font-size: 1.2rem; // 19.2px with a default browser setting of rem=16px
+  font-size: 1.3rem; // 20.8px with a default browser setting of rem=16px
 }
 h1,
 h2,
