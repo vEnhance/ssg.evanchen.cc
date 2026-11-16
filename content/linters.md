@@ -103,7 +103,7 @@ show-output = false # some silent commands
 The four tools above all have pre-commit support,
 so you can add whichever sections you want at the bottom of your `prek.toml`:
 
-```toml,linenos,filename=prek.toml
+```toml,linenos,name=prek.toml
 [[repos]]
 repo = "https://github.com/codespell-project/codespell"
 rev = "v2.4.3"
