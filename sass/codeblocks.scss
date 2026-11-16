@@ -8,8 +8,8 @@
 
 /* Style filename as a tab sitting on top of the upper-left corner */
 pre.giallo > code[data-name]::before {
-  content: attr(data-name);
-  position: absolute;
+  content: attr(data-name); // prints the specified filename in the tab
+  position: absolute; // anchors the tab relative to pre.giallo
   bottom: 100%;
   left: 0;
   border-radius: 0.5em 0.5em 0 0; // round top corners
@@ -26,7 +26,7 @@ pre.giallo:has(> code[data-name]) {
 pre.giallo {
   padding: 1em; // add a lot of breathing room inside the blocks
   contain: inline-size; // don't let long lines widen the parent column
-  position: relative;
+  position: relative; // solely so the styled tab anchors to here; no other use
   font-size: 85%; // slightly smaller font so 80char fits comfortably
   > code {
     display: block;
