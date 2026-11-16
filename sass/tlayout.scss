@@ -71,5 +71,10 @@ a.active-nav-link {
   display: flex; // put the two links side by side
   justify-content: space-between; // push them to opposite edges
   font-weight: bold;
-  margin: 1em 0;
+  a {
+    display: block; // needed for the hitbox to work correctly
+    padding: 1.5em 1em; // pad a rounded hitbox around each of the links
+    border: 1px solid gray;
+    border-radius: 1em;
+  }
 }
