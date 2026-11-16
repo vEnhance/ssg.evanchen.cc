@@ -24,11 +24,13 @@ Then I'll describe the two places you can put these:
 
 ### Four examples of tools
 
+Note that each tool has a configuration file that you should `git add`
+if you are planning to use it.
+
 #### codespell: the spell-checker
 
-[`codespell`](https://github.com/codespell-project/codespell)
-is a spellchecker.
-It uses a _list of common misspellings_ rather than a dictionary of bad ones,
+[codespell](https://github.com/codespell-project/codespell)
+uses a _list of common misspellings_ rather than a dictionary of bad ones,
 so it doesn't tend to generate as many false-positives.
 
 If you did hit a false-positive, you'll need to tell codespell to ignore it.
@@ -42,10 +44,10 @@ ignore-words-list=foo,bar
 #### prettier: the JavaScript and CSS formatter
 
 [prettier](https://prettier.io/)
-is a formatter which I typically use JavaScript and CSS.
-The default settings work fine for me.
+works pretty well with default settings;
+I usually don't add a configuration file for this one.
 
-#### djlint: the HTML template formatter
+#### djlint: the Tera HTML template formatter
 
 [djlint](https://djlint.com/) is a formatter for the Tera HTML templates
 that we'll be using with Zola.
@@ -58,16 +60,20 @@ profile = "tera"
 
 #### rumdl: the Markdown formatter
 
-[rumdl](https://rumdl.dev/) is an extremely opinionated Markdown formatter.
+[rumdl](https://rumdl.dev/) is a comprehensive Markdown formatter.
 It is controlled using the configuration `rumdl.toml`.
 
 There are a _lot_ of rules used in this one.
-You'll probably want to turn some of the rules on and off.
-Here's the configuration this project is using:
+You'll probably want to turn some of the rules on and off to taste.
+Here's the configuration this project is using.
+This configuration disables some builtin rules that I personally don't like,
+then enables two optional rules (MD060, MD088)
+and then tweaks some knobs on some other rules
 
 ```toml,linenose,name=rumdl.toml
 [global]
 disable = [
+  "MD014", # Permit $ with no output in code listings
   "MD025", # Allow multiple h1 headings
   "MD026", # Permit punctuation in heading
   "MD033", # Permit inline HTML
@@ -93,9 +99,6 @@ style = "aligned"
 enabled = true
 normalize-quotes = true
 normalize-dashes = false
-
-[MD014]
-show-output = false # some silent commands
 ```
 
 ### Adding linters and formatters into prek
@@ -103,7 +106,9 @@ show-output = false # some silent commands
 The four tools above all have pre-commit support,
 so you can add whichever sections you want at the bottom of your `prek.toml`:
 
-```toml,linenos,name=prek.toml
+```toml,linenos,linenostart=15,name=prek.toml
+# … earlier lines not shown …
+
 [[repos]]
 repo = "https://github.com/codespell-project/codespell"
 rev = "v2.4.3"
@@ -127,9 +132,5 @@ repo = "https://github.com/rvben/rumdl-pre-commit"
 rev = "v0.3.4"
 hooks = [{ id = "rumdl" }, { id = "rumdl-fmt" }]
 ```
-
-Here's a rundown of each one.
-Note that each one has a configuration file,
-that you'll need to `git add` as well.
 
 ### Adding linters into Vim via ALE

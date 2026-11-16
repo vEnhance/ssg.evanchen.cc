@@ -29,7 +29,7 @@ I like how Loris Cro describes it in the post
 > second option as their personal website, and almost all normal users are stuck
 > with overcomplicated solutions.
 
-**You shouldn't pay for complexity that you don't need**.
+_You shouldn't pay for complexity that you don't need_.
 If you are going to build a big multi-user application or an online marketplace,
 then yeah, get a server.
 But most people's first website shouldn't be something that complicated.
@@ -37,7 +37,7 @@ If you just want a personal blog, or a website for your small business,
 then there's a good chance all you need to do is put some text on the Internet.
 In that case, you can use a static site.
 
-Besides, if you are reading this guide, you're probably new to this kind of thing.
+Besides, a lot of readers are probably new to this kind of thing.
 In that case, I think your learning will go much better
 starting from an empty repository with parts added in one at a time,
 so you can understand every step of the process.
@@ -64,7 +64,11 @@ They just see a monolith that does everything from
 editing to linting to committing to pushing.
 I've seen the same thing with [Overleaf](https://overleaf.com)
 which is so idiot-friendly that it also
-[killed the user's conceptual understanding of LaTeX](https://git-scm.com/docs/gittutorial).
+[kills the user's conceptual understanding of LaTeX](https://git-scm.com/docs/gittutorial).
 The following is a real question I got from such a victim:
 
 > I'm confused, why do people use GitHub? Why not just use Overleaf?
+
+### 3. AI??
+
+¯\\\_(ツ)\_/¯

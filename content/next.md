@@ -5,6 +5,17 @@ weight = 90
 
 ## Where to go from here
 
+### What to write on your website
+
+- <https://blog.vero.site/post/blogging-advice>
+- <https://stackingthebricks.com/how-blogs-broke-the-web/>
+
+### Frameworks
+
+Bootstrap / Tailwind
+
+### Comments and email lists
+
 ### Upgrading your tools
 
 - Git config (e.g. delta)

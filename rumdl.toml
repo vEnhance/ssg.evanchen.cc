@@ -1,5 +1,6 @@
 [global]
 disable = [
+  "MD014", # Permit $ with no output in code listings
   "MD025", # Allow multiple h1 headings
   "MD026", # Permit punctuation in heading
   "MD033", # Permit inline HTML
@@ -25,6 +26,3 @@ style = "aligned"
 enabled = true
 normalize-quotes = true
 normalize-dashes = false
-
-[MD014]
-show-output = false # some silent commands
