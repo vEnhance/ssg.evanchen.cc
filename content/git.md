@@ -139,7 +139,13 @@ A second thing we'll want to exclude is the `public/` folder.
 It hasn't happened yet, but later Zola will generate this folder with output files.
 We only want Git to track the source code files, not folders like `public/`.
 
-So, run `vim .gitignore` and put the following two lines in it:
+So, let's create that file in Vim:
+
+```console
+$ vim .gitignore
+```
+
+Put the following two lines in it:
 
 ```gitignore,linenos,name=.gitignore
 **/.DS_Store
