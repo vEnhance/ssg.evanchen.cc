@@ -8,7 +8,8 @@ weight = 20
 You should start by making sure you have a terminal working and can install packages!
 This tutorial will be written assuming you are either using
 
-- [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/setup/environment) (abbr. WSL);
+- [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
+  (abbr. WSL; if you are a Windows user, set that up now);
 - the terminal in Mac OSX; or
 - the terminal in any standard Linux distribution.
 
