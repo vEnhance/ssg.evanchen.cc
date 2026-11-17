@@ -53,11 +53,11 @@ $ which vim
 $ which git
 /usr/bin/git
 
-$ which zola
-/usr/bin/zola
-
 $ which prek
 /usr/bin/prek
+
+$ which zola
+/usr/bin/zola
 
 $ which nonexistent_command
 which: no nonexistent_command in (/home/evan/.local/bin:…)
