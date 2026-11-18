@@ -10,19 +10,6 @@
   grid-column: 1 / -1; // from the first column to the last column
 }
 
-/* === MOBILE SUPPORT: For narrow width, 1 column, nav at bottom === */
-@media screen and (max-width: 55rem) {
-  #wrapper {
-    grid-template-columns: 1fr; // revert to a single column
-  }
-  #layout-nav {
-    order: 1; // this bumps the navigation down to the bottom
-  }
-  #layout-header {
-    font-size: 0.75rem; // shrink the header on small displays
-  }
-}
-
 /* === FONTS AND COLORS === */
 body {
   background-color: #fff6f6; // slightly off-white background color
@@ -64,6 +51,19 @@ a:hover {
 a.active-nav-link {
   font-weight: bold;
   text-decoration: underline;
+}
+
+/* === MOBILE SUPPORT: For narrow width, 1 column, nav at bottom === */
+@media screen and (max-width: 55rem) {
+  #wrapper {
+    grid-template-columns: 1fr; // revert to a single column
+  }
+  #layout-nav {
+    order: 1; // this bumps the navigation down to the bottom
+  }
+  #layout-header {
+    font-size: 0.75rem; // shrink the header on small displays
+  }
 }
 
 /* === PREV/NEXT LINKS at the bottom of each page === */
