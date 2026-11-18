@@ -53,7 +53,7 @@ See [StackOverflow](https://stackoverflow.com/a/609561).)
 
 If you point your browser at <http://127.0.0.1:1111/tlayout.css>,
 you'll see Zola has now created a new (compressed) version of this file.
-We need to go back to our base template and add a `link` to it in.
+We need to go back to our base template and add a `link` to it.
 Update the `<head>` block with the new line:
 
 ```html-derivative,linenos,linenostart=3,name=templates/layout.html
@@ -66,7 +66,7 @@ Update the `<head>` block with the new line:
 </head>
 ```
 
-The `get_url` is a another Zola built-in.
+The `get_url` is another Zola built-in.
 You could just type `href="/tlayout.css"`, but using `get_url`
 has the advantage that Zola will yell at you if you typo the file name
 or it otherwise can't find the file.
@@ -79,10 +79,10 @@ We're also going to change the `for` loop to have the links in paragraphs `p`,
 so they all lie on a new line.
 Update that loop to have a surrounding `<p>` tag as well.
 
-```jinja,linenos,linenostart=18,name=templates/layout.html
+```jinja,linenos,linenostart=17,name=templates/layout.html
 {% for p in root.pages %}
     <p>
-        <a href="{{ p.permalink }}" class="nav-link">{{ p.title }}</a>
+        <a href="{{ p.permalink }}">{{ p.title }}</a>
     </p>
 {% endfor %}
 ```
@@ -124,13 +124,13 @@ fix utf-8 byte order marker..........................Passed
 mixed line ending....................................Passed
 trim trailing whitespace.............................Passed
 [main fd2c440] feat: T-shaped layout
-  2 files changed, 20 insertions(+), 1 deletion(-)
+  2 files changed, 16 insertions(+), 1 deletion(-)
   create mode 100644 sass/tlayout.scss
 ```
 
 ### Colors and fonts
 
-We can go back to `sass/tlayout.css` and add in some more things
+We can go back to `sass/tlayout.scss` and add in some more things
 to do things like stylizing with colors and picking fonts.
 Here's something close to what `ssg.evanchen.cc` is using;
 feel free to tweak the font size, colors, font names to your taste.
@@ -211,13 +211,13 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 $ git commit -a -m "feat: fonts and colors"
-check for merge conflicts................................................Passed
-check toml...........................................(no files to check)Skipped
-detect private key.......................................................Passed
-fix end of files.........................................................Passed
-fix utf-8 byte order marker..............................................Passed
-mixed line ending........................................................Passed
-trim trailing whitespace.................................................Passed
+check for merge conflicts............................Passed
+check toml.......................(no files to check)Skipped
+detect private key...................................Passed
+fix end of files.....................................Passed
+fix utf-8 byte order marker..........................Passed
+mixed line ending....................................Passed
+trim trailing whitespace.............................Passed
 [main 8228a46] feat: fonts and colors
   2 files changed, 30 insertions(+)
 ```
@@ -229,7 +229,7 @@ Drives me nuts, but that's how it is.
 Since phones and laptops are nothing alike,
 you probably want to make the website display differently on a phone.
 
-So we add a few more lines into `sass/tlayout.scss`
+So we add a few more lines into `sass/tlayout.scss`:
 
 ```sass,linenos,linenostart=39,name=sass/tlayout.scss
 /* === MOBILE SUPPORT: For narrow width, 1 column, nav at bottom === */
@@ -265,13 +265,13 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 $ git commit -a -m "feat: only use one column on mobile"
-check for merge conflicts................................................Passed
-check toml...........................................(no files to check)Skipped
-detect private key.......................................................Passed
-fix end of files.........................................................Passed
-fix utf-8 byte order marker..............................................Passed
-mixed line ending........................................................Passed
-trim trailing whitespace.................................................Passed
+check for merge conflicts............................Passed
+check toml.......................(no files to check)Skipped
+detect private key...................................Passed
+fix end of files.....................................Passed
+fix utf-8 byte order marker..........................Passed
+mixed line ending....................................Passed
+trim trailing whitespace.............................Passed
 [main ba666af] feat: only use one column on mobile
   1 file changed, 10 insertions(+)
 ```

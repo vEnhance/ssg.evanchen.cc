@@ -33,7 +33,7 @@ If you have a friend helping you out, for example,
 they might decide Vim is ~~a trial by fire~~ too complicated for newbies,
 and tell you to use VSCode instead.
 Or, there are an [ocean of static site generators][ssg-basin] (Jekyll, Hugo, …)
-and you friend might prefer a different one.
+and your friend might prefer a different one.
 
 [ssg-basin]: https://rakhim.org/honestly-undefined/19/
 
@@ -60,7 +60,7 @@ Anyway, I tried.
 Accordingly, this guide will _not_ be just a list of commands to copy and paste.
 I want to do this more with broad strokes, like,
 this is roughly what this piece does and what you should be trying to do.
-Then you can ask the friend or LLM to fill-in the details and debug issues.
+Then you can ask the friend or LLM to fill in the details and debug issues.
 
 Overall I'd say this guide is more like
 

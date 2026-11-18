@@ -6,7 +6,7 @@ weight = 50
 ## Using Zola
 
 Now we can get to the part about actually setting up the site!
-There are an ocean of different generators out there,
+There is an ocean of different generators out there,
 but the one we're going to use is [Zola](https://www.getzola.org/documentation/getting-started/overview/).
 
 There are three types of files we'll use within Zola:
@@ -15,7 +15,7 @@ There are three types of files we'll use within Zola:
 - **Tera HTML templates**, for specifying an HTML layout
 - **SASS stylesheets**, for styling the HTML.
 
-We'll handle the first two now and then move on to style next page.
+We'll handle the first two now and then move on to styling on the next page.
 
 ### Getting `zola serve` running
 
@@ -44,7 +44,7 @@ Get started by moving into the directory and using the built-in server: `zola se
 Visit https://www.getzola.org for the full documentation.
 
 $ ls
-content  prek.toml  public  sass  static  templates  themes  zola.toml
+content  prek.toml  sass  static  templates  themes  zola.toml
 
 $ zola serve
 Building site...
@@ -96,10 +96,11 @@ trim trailing whitespace.............................Passed
 
 ### Pages in `content/`
 
-We'll start by creating an index page,
+We'll start by creating an index page.
 Zola uses [Markdown](https://commonmark.org/),
-which is so easy to learn that you can probably just look
-at this repository for examples and never need a manual.
+which is so easy to learn that you can probably
+[just look at this repository for examples](https://github.com/vEnhance/ssg.evanchen.cc/tree/main/content)
+and never need a manual.
 (It's basically plain text with some self-explanatory embellishments.)
 If you do want a cheat sheet anyway,
 [here's the 60-second one](https://commonmark.org/help/).
@@ -243,8 +244,8 @@ There are two things Tera is doing here worth noting.
 First, there are two `block` regions.
 A `block` region can be overridden by child templates, as we'll see soon.
 The second is the navigation thing; this is a bit of Zola's black magic,
-`get_section` is a predefined filter in Zola that looks up where `_index.md` is,
-and Tera then lets us do `for` loop over its pages, outputting the link and the title.
+`get_section` is a predefined function in Zola that looks up where `_index.md` is,
+and Tera then lets us do a `for` loop over its pages, outputting the link and the title.
 
 The templating language is pretty powerful.
 I won't dig into it during this tutorial,
@@ -297,7 +298,8 @@ Changes to be committed:
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-  templates/index.html templates/page.html
+  templates/index.html
+  templates/page.html
 
 
 $ git commit -m "feat: create base layout template"
@@ -323,7 +325,7 @@ fix utf-8 byte order marker..........................Passed
 mixed line ending....................................Passed
 trim trailing whitespace.............................Passed
 [main 7d44f4c] feat: create child templates
-  2 files changed, 9 insertions(+)
+  2 files changed, 11 insertions(+)
   create mode 100644 templates/index.html
   create mode 100644 templates/page.html
 ```

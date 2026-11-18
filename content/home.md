@@ -10,7 +10,7 @@ This tutorial will be written assuming you are either using
 
 - [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
   (abbr. WSL; if you are a Windows user, set that up now);
-- the terminal in Mac OSX; or
+- the terminal in macOS; or
 - the terminal in any standard Linux distribution.
 
 So you should be able to do something like this:
@@ -30,7 +30,7 @@ If you want a quick refresher or cheat sheet:
 - `pwd` prints the current directory.
 - `ls -la` prints the contents of the current directory.
 - Remember the tilde `~` is an abbreviation for `/home/yourusername/`,
-  your home folder.
+  your home folder. (Might be `/Users/yourusername` on macOS.)
 
 ### Packages, and checking with `which`
 
@@ -63,6 +63,9 @@ $ which zola
 $ which nonexistent_command
 which: no nonexistent_command in (/home/evan/.local/bin:…)
 ```
+
+(Depending on your distribution, `which nonexistent_command`
+may just print empty output rather than an error message.)
 
 ### Learning Vim
 

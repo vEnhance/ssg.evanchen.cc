@@ -13,7 +13,7 @@ For this demo I'll put the website in `~/mysite`,
 though you're obviously free to pick any other path.
 
 ```console
-$ mkdir mysite
+$ mkdir ~/mysite
 
 $ cd ~/mysite
 
@@ -24,7 +24,7 @@ $ pwd
 If you've never heard of tab-completion before, now's a good place to learn that.
 You don't have to actually keep typing things like `mysite` over and over.
 If you type just `cd ~/m` and then hit Tab, the shell will give you a list of
-completions (i.e. folders who start with m) to finish the command.
+completions (i.e. folders that start with m) to finish the command.
 This will generally save you a lot of typing,
 where you only type the first few letters of a file or folder.
 (If you're using a more sophisticated shell like `zsh` or `fish`,
@@ -79,7 +79,7 @@ Initialized empty Git repository in /home/evan/mysite/.git/
 ```
 
 You can now see the hidden folder `.git` when you run `ls -la`.
-That's where `.git` stores its work; you don't need to look inside yourself.
+That's where Git stores its work; you don't need to look inside yourself.
 
 ```console
 $ ls -la

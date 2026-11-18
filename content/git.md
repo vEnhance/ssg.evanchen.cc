@@ -31,7 +31,7 @@ so you can see this happening in practice**.
 
 For commit messages, a lot of people (including me) use
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/),
-which prefaces each commit message with `fix:` (bugfix) or `feat:` (new function)
+which prefaces each commit message with `fix:` (bugfix) or `feat:` (new feature)
 or other word (like `root`, `refactor`, …)
 to indicate what "kind" of commit it is.
 We'll follow that for this tutorial.
@@ -41,8 +41,7 @@ There are two ways to specify commit messages:
 - If you run `git commit` normally, it'll open up a Vim editor
   where you can type the commit message and write it out.
 - If you prefer not to open Vim for this,
-  you can also specify the message on the command line like this,
-  to specify the message on the command line.
+  you can also specify the message on the command line like this:
 
 ```console
 $ git commit -m "feat: enable sharks with lasers on their heads"
@@ -58,7 +57,7 @@ The `.gitignore` is a special file meant to prevent unwanted files
 from accidentally getting committed.
 
 An example of a file you'd want to include in this if you're a Mac user is `.DS_Store`.
-This is a file that Mac's automatically generate in every folder
+This is a file that Macs automatically generate in every folder
 for [reasons unknown to humankind](https://en.wikipedia.org/wiki/.DS_Store).
 There is no reason you want this file in your Git history,
 but it could get added accidentally if you're not paying attention
@@ -145,7 +144,7 @@ Here's how:
 - If you need to do something more complicated like amending an older commit
   or changing the order of commits,
   `git rebase -i [target]`
-  will let interactively modify all the commits _target_ the hash.
+  will let you interactively modify all the commits after the _target_ hash.
   (Here `-i` is short for `--interactive`.)
   I often choose target as `HEAD~10`, say, to pull up the 10 most recent commits.
 
