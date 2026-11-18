@@ -122,7 +122,7 @@ Update that loop to have a surrounding `<p>` tag as well.
 
 Now, <http://127.0.0.1:1111> should pick up those changes!
 
-![The CSS layout starting to take shape](/screenshots/tlayout.png)
+![The CSS layout starting to take shape](/screenshots/tlayout.webp)
 
 This is a single logical change, so we commit it.
 Here, I'm going to mention that there's actually a shortcut
@@ -224,7 +224,7 @@ The very long URL is truncated above, but it has the fonts you chose.
 So you have to make sure that URL matches the font names you picked in your stylesheet.
 If all goes well:
 
-![With a few color and font choices](/screenshots/colored.png)
+![With a few color and font choices](/screenshots/colored.webp)
 
 We commit this change.
 Since I just taught you about `git add -A`,
@@ -283,7 +283,7 @@ only apply for screens whose width is at most `55rem`
 It gets rid of the T-shape altogether and moves the navigation to the bottom.
 So you might get something that looks like this on a phone display:
 
-![Mobile layout: navigation moves to bottom](/screenshots/mobile.png)
+![Mobile layout: navigation moves to bottom](/screenshots/mobile.webp)
 
 That's good enough for now.
 Let's commit all this before we go on to deploying.

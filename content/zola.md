@@ -283,7 +283,7 @@ you should have a little personal page!
 It's real!
 No styling yet, though.
 
-![Raw HTML website is alive. CSS forthcoming.](/screenshots/basehtml.png)
+![Raw HTML website is alive. CSS forthcoming.](/screenshots/basehtml.webp)
 
 Let's commit these changes.
 Here (and this is subjective) I would argue that the `layout.html`
