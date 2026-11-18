@@ -7,6 +7,9 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
+# Don't run Tera over Markdown content itself
+skip_content_templating = ["**/*.md"]
+
 [markdown]
 
 [markdown.highlighting]
