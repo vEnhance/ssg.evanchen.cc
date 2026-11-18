@@ -25,7 +25,7 @@ pre.giallo {
   padding: 1em; // add a lot of breathing room inside the blocks
   contain: inline-size; // don't let long lines widen the parent column
   position: relative; // solely so the styled tab anchors to here; no other use
-  font-size: 85%; // slightly smaller font so 80char fits comfortably
+  font-size: 80%; // slightly smaller font so 80char fits comfortably
   > code {
     display: block;
     overflow-x: auto; // scroll here, not on <pre>, so the tab isn't clipped
