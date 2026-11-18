@@ -21,6 +21,15 @@ $ pwd
 /home/evan/mysite
 ```
 
+If you've never heard of tab-completion before, now's a good place to learn that.
+You don't have to actually keep typing things like `mysite` over and over.
+If you type just `cd ~/m` and then hit Tab, the shell will give you a list of
+completions (i.e. folders who start with m) to finish the command.
+This will generally save you a lot of typing,
+where you only type the first few letters of a file or folder.
+(If you're using a more sophisticated shell like `zsh` or `fish`,
+the autocompletion can do even more than this.)
+
 **For the rest of the tutorial,
 please ensure you're always working in `~/mysite`**.
 If you open a new terminal window, it might spawn in the home folder `~` instead.
