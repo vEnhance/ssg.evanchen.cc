@@ -1,0 +1,8 @@
+/* These rules are specifically for the screenshot images */
+
+#layout-content img {
+  display: block;
+  margin: 0 auto; // center
+  border: 5px solid #55c; // draw a clear border
+  width: min(20em, 80vw); // make small
+}
