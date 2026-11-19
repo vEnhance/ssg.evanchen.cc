@@ -13,13 +13,16 @@ There are three types of files we'll use within Zola:
 
 - **Markdown content**, where you write your prose
 - **Tera HTML templates**, for specifying an HTML layout
-- **SASS stylesheets**, for styling the HTML.
+- **Sass stylesheets**, for styling the HTML.
 
 We'll handle the first two now and then move on to styling on the next page.
 
 ### Getting `zola serve` running
 
-To kick things off, in `~/mysite`, run `zola init -f` and accept the defaults.
+To kick things off, in `~/mysite`, run `zola init -f`,
+type in the target website name
+(if you haven't decided on a domain name yet,
+change this later) and accept the defaults for the two questions.
 This will create a bunch of empty folders and a `zola.toml`.
 Then, finally type `zola serve`.
 
@@ -34,7 +37,7 @@ $ zola init -f
 Welcome to Zola!
 Please answer a few questions to get started quickly.
 Any choices made can be changed by modifying the `zola.toml` file later.
-> What is the URL of your site? (https://example.com):
+> What is the URL of your site? (https://example.com): https://mysite.dev
 > Do you want to enable Sass compilation? [Y/n]:
 > Do you want to build a search index of the content? [y/N]:
 
@@ -238,14 +241,15 @@ Most of this is just boilerplate HTML.
 you write, in my opinion.)
 The parts special to Tera are the things in curly braces.
 Basically, `{% … %}` is an actual command,
-while `{{ … }}` is an expression that prints a certain value.
+while `{{ … }}` is an expression that prints a value.
+There are two things Tera is doing here:
 
-There are two things Tera is doing here worth noting.
-First, there are two `block` regions.
-A `block` region can be overridden by child templates, as we'll see soon.
-The second is the navigation thing; this is a bit of Zola's black magic,
-`get_section` is a predefined function in Zola that looks up where `_index.md` is,
-and Tera then lets us do a `for` loop over its pages, outputting the link and the title.
+- First, there are two `block` regions, with user-chosen names
+  `html_title` and `content`.
+  These `block` regions can be overridden by child templates, as we'll see soon.
+- The second is the navigation thing; this is a bit of Zola's black magic.
+  Here `get_section` is a predefined function that looks up where `_index.md` is,
+  then we can `for`-loop over pages, outputting the link and the title.
 
 The templating language is pretty powerful.
 I won't dig into it during this tutorial,
@@ -271,8 +275,7 @@ With this layout, designing `index.html` and `page.html` is easy:
 ```
 
 In `index.html` and `page.html`,
-Zola automatically provides the `section` and `page` variables,
-which provide the content.
+Zola automatically provides the `section` and `page` context variables.
 The `safe` filter is necessary in order to prevent HTML-escaping.
 
 At this point, if you look in the browser again,

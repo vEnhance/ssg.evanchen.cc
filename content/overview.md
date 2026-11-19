@@ -19,7 +19,7 @@ Here are the pieces of technology that were used to build this site.
   Sanity check guards on Git repository.
 
 - **[Zola](https://getzola.org/): Static site generator**.\
-  Takes Markdown, SASS, and templates and generates HTML.
+  Takes Markdown, Sass, and templates and generates HTML.
 
 - **[GitHub Pages](https://docs.github.com/en/pages): Deployment system**.\
   Publishes the generated HTML to `*.github.io`.

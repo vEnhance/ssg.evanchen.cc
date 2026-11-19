@@ -3,41 +3,71 @@ title = "§6. Styling"
 weight = 60
 +++
 
-## Styling with SASS/CSS
+## Styling with Sass and CSS
 
 We now can generate HTML pages.
 That's cool and all, but it'd be nice
 if we could add some more customization on top of this.
 
-Zola allows us to use SASS, which the SASS website advertises as "CSS with superpowers".
+Historically, styling has been done with [CSS](https://en.wikipedia.org/wiki/CSS).
+Zola allows us to use [Sass](https://sass-lang.com/): "CSS with superpowers".
 That sounds about right to me.
-Since Zola is supporting SASS for us out of the box anyway,
-we're going to just use that,
-even though for the really basic stuff we're doing we won't use the extra power.
+Since Zola is supporting Sass for us out of the box anyway, we'll use it;
+the file extension we'll use for Sass is `*.scss`.
+(The really basic stuff we're doing won't actually use the extra power,
+but there's no real cost here to using Sass,
+since all valid CSS is also valid SCSS.)
 
-I am going to do only a few small things here as a proof-of-principle.
+**I am going to do only a few small things here as a proof-of-principle.**
 CSS is a real beast; you can do a _lot_ with CSS.
-I'm only going to show
-the first 3-ish things I did when building `ssg.evanchen.cc`.
+Again, this should be treated more like
+"this is what a few lines of CSS can do as a demo",
+not even "an introduction to CSS".
 
 ### A T-shaped layout
 
-Text is most readable with at most 80 or so characters per line.
+**Text is most readable with no more than 80 or so characters per line.**
+If you look at any website I've built,
+you'll notice it's narrower than many other websites or documents.
+But by default, if you have no styling,
+an HTML document just runs the entire width of the browser page.
+
 So the first thing I'm going to do is put a bit of CSS that arranges
 the navigation into a sidebar at the left,
 with a header running the full top.
 I'm also going to constrain the wrapper to not be too wide,
 and center it.
 
+Recall the overall skeleton of `templates/layout.html`:
+
+```html
+<div id="wrapper">
+    <header id="layout-header">
+        …
+    </header>
+    <aside id="layout-nav">
+        …
+    </aside>
+    <article id="layout-content">
+        …
+    </article>
+</div>
+```
+
+We gave four elements unique ID's that will let us refer to them as
+`#wrapper`, `#layout-header`, and so on.
+Those are the selectors we'll use in our stylesheet.
+
 The stylesheets live in `sass/`; let's make a file in there called `tlayout.scss`.
-We'll also need to edit `templates/layout.html`.
+We'll also need to point to `tlayout` from `templates/layout.html`.
 (At this point I'm going to stop typing `pwd` and `vim …` everywhere;
 you know the drill by now.)
+Here are the lines that give this style, full of comments:
 
 ```sass,linenos,name=sass/tlayout.scss
 /* === T-SHAPE LAYOUT: Full-row header and 8em nav bar on left === */
 #wrapper {
-  display: grid; // make the top three elements form a grid
+  display: grid; // make the three elements of #wrapper form a grid
   grid-template-columns: 8em 1fr; // allocate 8em to nav, rest to right col
   column-gap: 1em; // add a small gap between the two columns of the grid
   max-width: 45em; // maximum width of page to not overwhelm large displays
@@ -48,15 +78,18 @@ you know the drill by now.)
 }
 ```
 
-(`em` is one of the many units of CSS, which scales with font size.
-See [StackOverflow](https://stackoverflow.com/a/609561).)
+(To explain the units:
+`em` is one of the many units of CSS; it represents the height of the font.
+I remember it as "width of capital M", even though that's not literally true.
+See [StackOverflow](https://stackoverflow.com/a/609561).
+And `1fr` means "everything left over".)
 
 If you point your browser at <http://127.0.0.1:1111/tlayout.css>,
 you'll see Zola has now created a new (compressed) version of this file.
 We need to go back to our base template and add a `link` to it.
 Update the `<head>` block with the new line:
 
-```html-derivative,linenos,linenostart=3,name=templates/layout.html
+```html-derivative,linenos,linenostart=3,name=templates/layout.html,hl_lines=5-6
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -97,7 +130,7 @@ Here, I'm going to mention that there's actually a shortcut
 So instead of typing `git add templates/layout.html sass/`,
 if you're sure you've made no other changes,
 `git add -A` will do the job.
-Use with caution, though; this is how `.DS_Store` is born.
+(Use with caution, though; this is how `.DS_Store` is born.)
 
 ```console
 $ git status
@@ -172,14 +205,14 @@ that loads the fonts you like.
 When you get the fonts you want, you paste `link` code that Google gives you
 above your existing stylesheet.
 
-```html-derivative,linenos,linenostart=3,name=templates/layout.html
+```html-derivative,linenos,linenostart=3,name=templates/layout.html,hl_lines=5-8
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block html_title %}MySite{% endblock html_title %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=…"
+    <link href="https://fonts.googleapis.com/css2?…[long URL goes here]…"
           rel="stylesheet">
     <link rel="stylesheet"
           href="{{ get_url(path='tlayout.css', cachebust=true) }}" />
@@ -188,7 +221,7 @@ above your existing stylesheet.
 
 The very long URL is truncated above, but it has the fonts you chose.
 So you have to make sure that URL matches the font names you picked in your stylesheet.
-If all goes well, you should get something like this:
+If all goes well:
 
 ![With a few color and font choices](/screenshots/colored.png)
 
