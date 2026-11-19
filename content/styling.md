@@ -3,7 +3,7 @@ title = "§6. Styling"
 weight = 60
 +++
 
-## Styling with Sass and CSS
+## Styling with SCSS
 
 We now can generate HTML pages.
 That's cool and all, but it'd be nice
@@ -163,8 +163,8 @@ trim trailing whitespace.............................Passed
 
 ### Colors and fonts
 
-We can go back to `sass/tlayout.scss` and add in some more things
-to do things like stylizing with colors and picking fonts.
+We can go back to `sass/tlayout.scss` and add more.
+Let's do colors and fonts.
 Here's something close to what `ssg.evanchen.cc` is using;
 feel free to tweak the font size, colors, font names to your taste.
 
@@ -197,8 +197,9 @@ a:hover {
 ```
 
 The first section is just tweaking the fonts and colors of the main body.
-However, to make this work we have to actually provide the fonts to the user.
 
+Colors will work right away, but **fonts require an actual provider**.
+(Chances are a random web user doesn't have, say, "Source Serif 4" installed.)
 I usually just use [Google Fonts](https://fonts.google.com) for this,
 where you can browse a selection of fonts and get a code snippet
 that loads the fonts you like.
