@@ -31,19 +31,23 @@ This repository has three templates read by Zola:
   A base template with the top-level structure of the HTML page.
   Has two blocks `content` and `html_title` that are overridden.
 
-- [`index.html`](templates/index.html) (4 lines of code):
+- [`index.html`](templates/index.html) (~5 lines of code):
   Uses `layout.html` to render the index page, overriding `content`.
 
-- [`page.html`](templates/page.html) (7 lines of code):
+- [`page.html`](templates/page.html) (~15 lines of code):
   Uses `layout.html` to render a normal page, overriding `content` and `html_title`.
 
-In addition, it has two stylesheets
+In addition, it has three stylesheets:
 
-- [`sass/tlayout.scss`](sass/tlayout.scss) (~70 lines of code):
+- [`sass/tlayout.scss`](sass/tlayout.scss) (~80 lines of code):
   Sets up the T-shaped page layout, margins, colors, and fonts.
   Also switches the layout on a smaller screen.
+
 - [`sass/codeblocks.scss`](sass/codeblocks.scss) (~40 lines of code):
   Stylistic tweaks to made the inline code blocks look nicer.
+
+- [`sass/images.scss`](sass/images.scss) (~5 lines of code):
+  Styles the screenshots shown in the tutorial.
 
 ## Prek files
 
