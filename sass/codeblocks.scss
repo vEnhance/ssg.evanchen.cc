@@ -1,4 +1,9 @@
 /* CODE BLOCKS: see https://www.getzola.org/documentation/content/syntax-highlighting/ */
+.giallo-l {
+  display: inline-block;
+  min-height: 1lh;
+  width: 100%;
+}
 .giallo-ln {
   user-select: none; // don't copy line numbers along with the code
   margin-right: 2ch; // spacing between line number and code
