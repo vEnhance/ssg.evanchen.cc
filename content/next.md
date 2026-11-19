@@ -14,6 +14,8 @@ weight = 90
 
 Bootstrap / Tailwind
 
+<https://idlewords.com/talks/website_obesity.htm>>
+
 ### Comments and email lists
 
 ### Upgrading your tools
