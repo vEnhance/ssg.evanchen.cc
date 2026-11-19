@@ -6,8 +6,8 @@ sort_by = "weight"
 Welcome!
 This is a short guide on how to set up a website the old-fashioned way,
 working mostly from a terminal, using old-school technology.
-I previously alluded to this in
-[post #364 on my microblog](https://wall.evanchen.cc/364/).
+(I alluded to this before in
+[post #364 on my microblog](https://wall.evanchen.cc/364/).)
 
 This guide is specifically for a [**static site generator** (SSG)][ssg],
 suitable for say a personal site, blog, or product page.
@@ -16,14 +16,14 @@ See [The Static Site Paradox by Loris Cro](https://kristoff.it/blog/static-site-
 for why simpler is better for many use cases.
 
 This website itself is an example of something you could make following this guide.
-In total, the HTML templates and CSS are under 200 lines of code.
+In total, [the HTML templates and CSS are around 200 lines of code][repo].
 
 [ssg]: https://en.wikipedia.org/wiki/Static_site_generator
 
 ## Getting started
 
-The numbered sections at the left should be read in order.
-So, start at [Overview](/overview) for your introductory briefing,
+The numbered sections should be read in order.
+So, start at [Overview](/overview) for your intro briefing,
 then start getting your hands dirty from [Home](/home).
 
 ## Video
@@ -34,9 +34,9 @@ at TODO: INSERT YOUTUBE URL ONCE IT'S HERE.
 
 ## Examples of websites built
 
-- [anserena.com](https://anserena.com), personal academic page ([source code](https://github.com/anser0/anser-site))
-- [blog.anserena.com](https://blog.anserena.com), personal blog ([source code](https://github.com/anser0/blog.anserena.com))
-- [cathiexu.com](https://cathiexu.com), personal website
+- [anserena.com](https://anserena.com), academic page ([source code](https://github.com/anser0/anser-site))
+- [blog.anserena.com](https://blog.anserena.com), blog ([source code](https://github.com/anser0/blog.anserena.com))
+- [cathiexu.com](https://cathiexu.com), personal site
 - [ssg.evanchen.cc](/), this website ([source code][repo])
 - [wall.evanchen.cc](https://wall.evanchen.cc), Evan's microblog ([source code](https://github.com/vEnhance/wall.evanchen.cc))
 
