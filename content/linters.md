@@ -238,7 +238,7 @@ Open one of the Markdown files and see if `:ALEInfo` shows you anything.
 
 Formatters take extra configuration in `~/.vimrc`:
 
-```vimscript,linenostart=7,name=~./vimrc
+```vimscript,linenostart=7,name=~/.vimrc
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'htmldjango': ['djlint'],
