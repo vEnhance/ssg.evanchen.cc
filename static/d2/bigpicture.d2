@@ -9,6 +9,16 @@ vars: {
 (** -> **)[*].style: {
   font-color: "#700"
   bold: true
+  font-size: 24
+}
+
+**: {
+  &leaf: false
+  style.font-size: 36
+}
+**: {
+  &leaf: true
+  style.font-size: 24
 }
 
 classes: {
@@ -85,7 +95,7 @@ github: {
   }
   zola: {
     class: waypoint
-    label: zola build\nvia GitHub action
+    label: zola build\nvia GitHub Pages
     icon: logo-zola.svg
     width: 80
     height: 30
