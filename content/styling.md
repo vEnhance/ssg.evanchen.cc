@@ -24,7 +24,7 @@ Again, this should be treated more like
 "this is what a few lines of CSS can do as a demo",
 not even "an introduction to CSS".
 
-### A T-shaped layout
+### §6.A. A T-shaped layout
 
 **Text is most readable with no more than 80 or so characters per line.**
 If you look at any website I've built,
@@ -170,7 +170,7 @@ trim trailing whitespace.............................Passed
   create mode 100644 sass/tlayout.scss
 ```
 
-### Colors and fonts
+### §6.B. Colors and fonts
 
 We can go back to `sass/tlayout.scss` and add more.
 Let's do colors and fonts.
@@ -265,7 +265,7 @@ trim trailing whitespace.............................Passed
   2 files changed, 30 insertions(+)
 ```
 
-### Mobile support
+### §6.C. Mobile support
 
 People view websites on cell phones.
 Drives me nuts, but that's how it is.

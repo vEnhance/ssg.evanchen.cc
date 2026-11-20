@@ -1,6 +1,6 @@
 +++
 title = "§L. Linters"
-weight = 85
+weight = 110
 +++
 
 ## Linters and formatters
@@ -22,7 +22,7 @@ Then I'll describe the two places you can put these:
 - How to integrate these tools into Vim,
   so that while editing files, you can get changes applied live.
 
-### Four examples of tools
+### §L.A. Four examples of tools
 
 Note that each tool has a configuration file that you should `git add`
 if you are planning to use it.
@@ -101,7 +101,7 @@ normalize-quotes = true
 normalize-dashes = false
 ```
 
-### Adding linters and formatters into prek
+### §L.B. Adding linters and formatters into prek
 
 The four tools above all have pre-commit support,
 so you can add whichever sections you want at the bottom of your `prek.toml`:
@@ -133,7 +133,7 @@ rev = "v0.3.4"
 hooks = [{ id = "rumdl" }, { id = "rumdl-fmt" }]
 ```
 
-### Adding linters into Vim via ALE
+### §L.C. Adding linters into Vim via ALE
 
 In [§2½ on Vim](@/vim.md), I recommended installing the
 [ALE](https://github.com/dense-analysis/ale) plugin.

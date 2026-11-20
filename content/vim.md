@@ -8,7 +8,7 @@ weight = 25
 Before going on to start the project, let's make sure you can edit files
 in the world's best text editor.
 
-### Learning Vim
+### §2½.A. Learning Vim
 
 You can launch a Vim instance, together with a builtin tutor, by using
 
@@ -86,7 +86,7 @@ you can use <https://vimventure.dev/learn> (free browser game) instead.
 That will also teach you a lot of normal mode commands.
 (There are some other similar games out there.)
 
-### Writing a `.vimrc`
+### §2½.B. Writing a `.vimrc`
 
 By default, Vim doesn't enable some very basic QoL features
 such as syntax highlighting (on Mac) or line numbers.
@@ -131,7 +131,7 @@ Save and quit the file.
 
 If you open `~/.vimrc` again, you should now have line numbers and colors.
 
-### Installing Vim plugins
+### §2½.C. Installing Vim plugins
 
 Vim has a builtin plugin system.
 If you put plugins in `~/.vim/pack/git-plugins/start/`

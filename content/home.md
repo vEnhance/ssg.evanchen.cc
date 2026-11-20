@@ -36,7 +36,7 @@ If you want a quick refresher or cheat sheet:
 - Remember the tilde `~` is an abbreviation for `/home/yourusername/`,
   your home folder. (Might be `/Users/yourusername` on macOS.)
 
-### Package manager
+### §2.A. Package manager
 
 To work through this tutorial, you'll need to be able to install things.
 If you are using any of WSL, macOS, or Ubuntu,
@@ -54,7 +54,7 @@ you probably already have a package manager you're used to,
 like Arch Linux's `pacman`.
 Feel free to use that instead of `brew` in that case.
 
-### System packages, and checking with `which`
+### §2.B. System packages, and checking with `which`
 
 You'll want to install `vim`, `git`, `prek`, and `zola`.
 Vim and Git are likely to be installed already.
