@@ -15,4 +15,11 @@
             </ul>
         {% endif %}
     {% endfor %}
+    {% set p = root.pages[0] %} {# get the first page #}
+    <nav id="prev-next">
+        <span class="bottom-nav-link"></span>
+        <span class="bottom-nav-link">
+            <a href="{{ p.permalink }}">{{ p.title }} →</a>
+        </span>
+    </nav>
 {% endblock content %}
