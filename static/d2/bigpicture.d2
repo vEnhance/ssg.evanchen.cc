@@ -11,6 +11,15 @@ vars: {
   bold: true
 }
 
+classes: {
+  waypoint: {
+    shape: image
+    style: {
+      font-color: "#700"
+      bold: true
+    }
+  }
+}
 
 computer: {
   direction: right
@@ -31,27 +40,36 @@ computer: {
     icon: https://icons.d2lang.com/dev%2Fvim.svg
   }
   html: {
-    label: |
+    label: |md
       ## HTML output
       `http://127.0.0.1:1111`
     |
     shape: page
     # icon: https://icons.d2lang.com/tech%2Fbrowser-2.svg
   }
-  mysite -> html: zola serve {
+  zola: {
+    class: waypoint
+    label: zola serve
     icon: logo-zola.svg
+    width: 80
+    height: 30
   }
-  repo <- mysite: git commit\nguarded by prek {
+  mysite -> zola -> html
+  prek: {
+    class: waypoint
+    label: git commit\nguarded by prek
     icon: logo-prek.webp
+    width: 160
+    height: 60
   }
+  mysite -> prek -> repo
 }
-
 
 github: {
   icon: https://icons.d2lang.com/social%2F039-github.svg
-  label: GitHub server\n(vEnhance/ssg.evanchen.cc)
+  label: GitHub\n(vEnhance/ssg.evanchen.cc)
   icon.near: outside-top-left
-  label.near: outside-top-center
+  label.near: outside-top-right
   shape: cylinder
   repo: {
     label: Remote Git repository
@@ -59,27 +77,34 @@ github: {
     icon: https://icons.d2lang.com/dev%2Fgit.svg
   }
   html: {
-    label: |
+    label: |md
       ## HTML output
       `https://venhance.github.io`
     |
     shape: page
-    # icon: https://icons.d2lang.com/tech%2Fbrowser-2.svg
   }
-  repo -> html: zola build\nvia GitHub action {
+  zola: {
+    class: waypoint
+    label: zola build\nvia GitHub action
     icon: logo-zola.svg
+    width: 80
+    height: 30
   }
+  repo -> zola -> html
 }
 
 computer.repo -> github.repo: git push
 github.repo -> computer.repo: git pull
 
-hostname {
+hostname: {
+  shape: cloud
   label: https://ssg.evanchen.cc
-  shape: callout
-  # icon: https://icons.d2lang.com/essentials%2F140-internet.svg
-  near: bottom-center
 }
-hostname -> github.html: CloudFlare DNS {
+cloudflare: {
+  class: waypoint
+  label: CloudFlare DNS
   icon: logo-cloudflare.svg
+  width: 120
+  height: 45
 }
+hostname -> cloudflare -> github.html
