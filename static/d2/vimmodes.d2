@@ -1,0 +1,40 @@
+vars: {
+  d2-config: {
+    layout-engine: dagre
+    theme-id: 105
+  }
+}
+
+direction: right
+
+command: |md
+  ## Commands
+  `:w` save\
+  `:q` quit\
+  `:wq` save & quit\
+  `:q!` force quit
+|
+command.shape: callout
+
+command <- normal: "[:] key"
+normal <- command: Enter/Esc
+
+normal: |md
+  ## Normal
+  ```
+    k
+  h   l
+    j
+  ```
+  and _MANY_ more
+|
+normal.shape: rectangle
+
+insert <- normal: "[i] key"
+normal <- insert: Esc
+
+insert: |md
+  ## Insert mode
+  Type text normally
+|
+insert.shape: callout

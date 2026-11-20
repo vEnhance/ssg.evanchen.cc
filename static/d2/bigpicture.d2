@@ -1,0 +1,85 @@
+vars: {
+  d2-config: {
+    layout-engine: tala
+    theme-id: 105
+  }
+}
+
+# the arrows are really important, make them bold in different color
+(** -> **)[*].style: {
+  font-color: "#700"
+  bold: true
+}
+
+
+computer: {
+  direction: right
+  top: 0
+  left: 0
+  icon: https://icons.d2lang.com/tech%2Flaptop.svg
+  label: Your Computer
+  icon.near: outside-top-left
+  label.near: outside-top-center
+  repo: {
+    label: Local Git repository
+    shape: stored_data
+    icon: https://icons.d2lang.com/dev%2Fgit.svg
+  }
+  mysite: {
+    label: ~/mysite\nEdited with Vim
+    shape: package
+    icon: https://icons.d2lang.com/dev%2Fvim.svg
+  }
+  html: {
+    label: |
+      ## HTML output
+      `http://127.0.0.1:1111`
+    |
+    shape: page
+    # icon: https://icons.d2lang.com/tech%2Fbrowser-2.svg
+  }
+  mysite -> html: zola serve {
+    icon: logo-zola.svg
+  }
+  repo <- mysite: git commit\nguarded by prek {
+    icon: logo-prek.webp
+  }
+}
+
+
+github: {
+  icon: https://icons.d2lang.com/social%2F039-github.svg
+  label: GitHub server\n(vEnhance/ssg.evanchen.cc)
+  icon.near: outside-top-left
+  label.near: outside-top-center
+  shape: cylinder
+  repo: {
+    label: Remote Git repository
+    shape: stored_data
+    icon: https://icons.d2lang.com/dev%2Fgit.svg
+  }
+  html: {
+    label: |
+      ## HTML output
+      `https://venhance.github.io`
+    |
+    shape: page
+    # icon: https://icons.d2lang.com/tech%2Fbrowser-2.svg
+  }
+  repo -> html: zola build\nvia GitHub action {
+    icon: logo-zola.svg
+  }
+}
+
+computer.repo -> github.repo: git push
+github.repo -> computer.repo: git pull
+
+hostname {
+  label: https://ssg.evanchen.cc
+  shape: callout
+  # icon: https://icons.d2lang.com/essentials%2F140-internet.svg
+  near: bottom-center
+}
+hostname -> github.html: CloudFlare DNS {
+  icon: logo-cloudflare.svg
+}
