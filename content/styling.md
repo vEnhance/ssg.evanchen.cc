@@ -86,7 +86,7 @@ And `1fr` means "everything left over".)
 
 If you point your browser at <http://127.0.0.1:1111/tlayout.css>,
 you'll see Zola has now created a new (compressed) version of this file.
-We need to go back to our base template and add a `link` to it.
+We need to go back to our base template and add a `<link />` to it.
 Update the `<head>` block with the new line:
 
 ```html-derivative,linenos,linenostart=3,name=templates/layout.html,hl_lines=5-6
