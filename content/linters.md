@@ -135,18 +135,18 @@ hooks = [{ id = "rumdl" }, { id = "rumdl-fmt" }]
 
 ### Adding linters into Vim via ALE
 
-This is possible, but I think it's quite a bit of installation headache.
-I'm going to give an approach that uses only Vim,
-but truthfully you might want to start using something like
-[Neovim](https://neovim.io/) at this point.
+In [§2½ on Vim](@/vim.md), I recommended installing the
+[ALE](https://github.com/dense-analysis/ale) plugin.
+ALE lets you talk to the tools above directly within Vim.
+If you haven't already, run the install command there.
 
-We're going to use the Vim plugin [ALE](https://github.com/dense-analysis/ale).
 ALE has two different functionalities:
-for _linters_ (which provide diagnostics if you make mistakes)
-and for _formatters_ (which run the formatter whenever you save).
-ALE configures linters automatically,
-but formatters have to be turned on in your configuration file.
-ALE has the following setup:
+
+- _linters_, which provide diagnostics if you make mistakes
+- _formatters_, which run the formatter whenever you save.
+
+ALE doesn't support every tool in both capacaties.
+For the four tools above, here is the support chart:
 
 | Tool      | Linter        | Formatter     |
 | --------- | ------------- | ------------- |
@@ -155,15 +155,10 @@ ALE has the following setup:
 | prettier  | Not supported | Supported     |
 | rumdl     | Supported     | Supported     |
 
-To get this setup to work,
-
-- Install the Tools into your _system_, and then
-- Install ALE itself and turn on the formatters.
-
-#### Installing the tools
-
-We won't bother installing `codespell` since ALE doesn't support it.
-The others are all on Homebrew too:
+In any case, we start by installing the tools onto the computer itself.
+(Prek doesn't do this: it manages the tools separately.)
+All of them are on Homebrew, although we skip `codespell` since ALE doesn't
+support it anyway:
 
 ```console
 $ brew install prettier rumdl djlint
@@ -175,30 +170,9 @@ If so, you probably want to bump the versions in `prek.toml` to match.
 Otherwise, the editor and pre-commit hooks may have subtly different results,
 which can be fairly annoying.
 
-#### ALE and configuration
-
-[ALE](https://github.com/dense-analysis/ale) is a popular plugin for Vim
-that will handle IDE-like things for you.
-You can install it like this:
-
-```console
-$ mkdir -p ~/.vim/pack/git-plugins/start
-
-$ git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
-Cloning into '/home/evan/.vim/pack/git-plugins/start/ale'...
-remote: Enumerating objects: 2678, done.
-remote: Counting objects: 100% (2678/2678), done.
-remote: Compressing objects: 100% (1812/1812), done.
-remote: Total 2678 (delta 601), reused 1909 (delta 447), pack-reused 0 (from 0)
-Receiving objects: 100% (2678/2678), 1.16 MiB | 7.87 MiB/s, done.
-Resolving deltas: 100% (601/601), done.
-```
-
-If this works correctly, linters should already be working when you open Vim.
-Open one of the Markdown files and see if `:ALEInfo` shows you anything.
-
+Linters will start working right away once they're installed on the computer.
 Formatters are more disruptive, since they'll actually change your file,
-so those need configuration in`~/.vimrc`.
+so those need configuration in `~/.vimrc`, which you can add:
 
 ```vimscript,linenostart=12,name=~/.vimrc
 let g:ale_fixers = {
@@ -211,3 +185,7 @@ let g:ale_fix_on_save = 1
 ```
 
 That should enable format-on-save.
+
+If set up correctly, Vim will now provide diagnostics from `djlint` and `rumdl`
+directly inside the editor, and apply all the formatters on save.
+You can use `:ALEInfo` in command line mode to get a pulse on if ALE is working.
