@@ -70,7 +70,7 @@ This configuration disables some builtin rules that I personally don't like,
 then enables two optional rules (MD060, MD088)
 and then tweaks some knobs on some other rules
 
-```toml,linenose,name=rumdl.toml
+```toml,linenos,name=rumdl.toml
 [global]
 disable = [
   "MD014", # Permit $ with no output in code listings
