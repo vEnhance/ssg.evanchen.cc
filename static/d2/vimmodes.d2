@@ -8,7 +8,7 @@ vars: {
 direction: right
 
 command: |md
-  ## Commands
+  ## Command mode
   `:w` save\
   `:q` quit\
   `:wq` save & quit\
@@ -20,13 +20,15 @@ command <- normal: "[:] key"
 normal <- command: Enter/Esc
 
 normal: |md
-  ## Normal
+  ## Normal mode
   ```
     k
-  h   l
+  h   l to move
     j
   ```
-  and _MANY_ more
+  and _MANY MANY_ more.
+
+  seriously you have no idea.
 |
 normal.shape: rectangle
 
@@ -35,6 +37,6 @@ normal <- insert: Esc
 
 insert: |md
   ## Insert mode
-  Type text normally
+  Type text normally.
 |
 insert.shape: callout
