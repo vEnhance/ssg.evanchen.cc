@@ -133,11 +133,33 @@ rev = "v0.3.4"
 hooks = [{ id = "rumdl" }, { id = "rumdl-fmt" }]
 ```
 
+Since `prek` usually only analyzes changed files each commit,
+after adding these lines,
+you likely have violations you don't already know about.
+You can use `prek run --all-files` to see what it picks up.
+
+```console
+$ prek run --all-files
+check for merge conflicts............................Passed
+check toml...........................................Passed
+detect private key...................................Passed
+fix end of files.....................................Passed
+fix utf-8 byte order marker..........................Passed
+mixed line ending....................................Passed
+trim trailing whitespace.............................Passed
+codespell............................................Passed
+prettier.............................................Passed
+rumdl check..........................................Passed
+rumdl fmt............................................Passed
+djLint formatting....................................Passed
+djLint linting.......................................Passed
+```
+
 ### §L.C. Adding linters into Vim via ALE
 
 In [§2½ on Vim](@/vim.md), I recommended installing the
 [ALE](https://github.com/dense-analysis/ale) plugin.
-ALE lets you talk to the tools above directly within Vim.
+ALE lets you talk to linters and formatters directly within Vim.
 If you haven't already, run the install command there.
 
 ALE has two different functionalities:
@@ -155,8 +177,9 @@ For the four tools above, here is the support chart:
 | prettier  | Not supported | Supported     |
 | rumdl     | Supported     | Supported     |
 
-In any case, we start by installing the tools onto the computer itself.
-(Prek doesn't do this: it manages the tools separately.)
+In any case, we start by installing the tools onto the computer itself,
+where Vim/ALE can find them.
+(Prek doesn't do this for you: it manages the tools separately.)
 All of them are on Homebrew, although we skip `codespell` since ALE doesn't
 support it anyway:
 
@@ -174,13 +197,13 @@ Linters will start working right away once they're installed on the computer.
 Formatters are more disruptive, since they'll actually change your file,
 so those need configuration in `~/.vimrc`, which you can add:
 
-```vimscript,linenostart=12,name=~/.vimrc
+```viml,linenos,linenostart=12,name=~/.vimrc
 let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'htmldjango': ['djlint'],
-\   'scss': ['prettier'],
-\   'markdown': ['rumdl'],
-\}
+      \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \ 'htmldjango': ['djlint'],
+      \ 'scss': ['prettier'],
+      \ 'markdown': ['rumdl'],
+      \ }
 let g:ale_fix_on_save = 1
 ```
 
