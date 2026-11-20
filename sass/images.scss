@@ -1,8 +1,12 @@
-/* These rules are specifically for the screenshot images */
-
+/* These rules are specifically for screenshots and D2 figures */
 #layout-content img {
   display: block;
   margin: 0 auto; // center
+}
+#layout-content img[src^="/screenshots/"] {
   border: 5px solid #55c; // draw a clear border
   width: min(20em, 80vw); // make small
+}
+#layout-content img[src^="/d2/"] {
+  max-width: 100%;
 }

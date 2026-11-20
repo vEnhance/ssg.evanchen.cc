@@ -27,6 +27,12 @@ Here are the pieces of technology that were used to build this site.
 - **[Cloudflare](https://cloudflare.com): All-around Internet servicer**.\
   Purchasing domains and pointing them to the deployment system.
 
+And here is a picture showing how they all fit together.
+(You should [download the full-size diagram](/d2/bigpicture.svg);
+it's likely to small to read inline.)
+
+[![Overview of the entire system](/d2/bigpicture.svg)](/d2/bigpicture.svg)
+
 An important thing to note is that
 **pretty much all these components can be swapped out**.
 If you have a friend helping you out, for example,

@@ -31,33 +31,25 @@ The three modes we'll focus on are:
   But in fact, pretty much _every_ key on your keyboard does something different,
   case-sensitively.
   (Random examples: `x` deletes a character, `u` is undo,
-  `$` jumps to the end of line, `q` records a sequence of keys for playback, …)
+  `$` jumps to the end of line, `q` records a macro, …)
   The way you become really fast with Vim is internalizing
   which keys let you do which operations.
+  In principle, you rarely if ever need a mouse.
 - **Insert mode**: Keys type text into the document directly.
   This is what you're used to.
   Typing Esc returns to normal mode.
   (Arrow keys work in here, but their usage is discouraged;
   most users switch back to normal mode.)
-- **Command mode**: Entering named commands into Vim.
+- **Command mode**: Vim has its own internal command line.
   You press Enter after typing a command, or Esc to abort.
   The most important ones for us are `:q` to quit
   (`:q!` without saving), `:w` to save, `:wq` for both.
 
 Here's a survival chart showing the information above.
 This is sort of the _absolute minimum_ that you could use to type in Vim.
+([Download full-size diagram](/d2/vimmodes.svg).)
 
-```text
-+===COMMAND===+       +===NORMAL===+       +===INSERT===+
-| :q quit     |   :   | move with  |   i   |            |
-| :w save     | <==== |     k      | ====> |  type      |
-| :wq save    |       |   h   l    |       |  directly  |
-|     &quit   |       |     j      |       |            |
-| :q! force   | ====> |            | <==== |            |
-|      quit   | ENTER | … and MANY |  ESC  |            |
-|             |       |   more     |       |            |
-+=============+       +============+       +============+
-```
+[![Survival chart for Vim](/d2/vimmodes.svg)](/d2/vimmodes.svg)
 
 However, **I don't recommend using only the survival chart**.
 Rather, I think it's worth learning at least a few more normal mode keys.

@@ -13,7 +13,7 @@ Here's a rundown of all the files that are in here and what they do:
 | -------------------------------------------------------------- | --------------- | ------------------------------------------------------------------------------ |
 | [`content/*.md`](content/)                                     | Markdown pages  | The actual text of all the pages                                               |
 | [`sass/*.scss`](sass/)                                         | SCSS            | Generates stylesheets. See below.                                              |
-| [`static/`](static/)                                           | Static files    | Files copied directly as-is, like <https://ssg.evanchen.cc/favicon.ico>.       |
+| [`static/`](static/)                                           | Static files    | Files copied as-is; images like <https://ssg.evanchen.cc/d2/bigpicture.svg>.   |
 | [`templates/*.html`](templates/)                               | Tera templates  | Used by Zola to specify how HTML is built for each page. See below.            |
 | [`zola.toml`](zola.toml)                                       | Zola config     | Options read by Zola                                                           |
 | [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) | Github workflow | Used by GitHub Pages to set up deployment to `venhance.github.io`              |
