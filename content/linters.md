@@ -1,11 +1,11 @@
 +++
-title = "Linters"
+title = "§L. Linters"
 weight = 85
 +++
 
 ## Linters and formatters
 
-As mentioned in the [section on Prek](@/prek.md),
+As mentioned in [§4½ on Prek](@/prek.md),
 linters and formatters provide a way to automatically
 check for errors and enforce a consistent code style.
 For example, these days if I'm writing code,

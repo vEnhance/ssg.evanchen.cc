@@ -20,6 +20,8 @@ For this tutorial,
 we'll use the [prek framework](https://prek.j178.dev/),
 which manages pre-commit hooks in an organized fashion.
 
+### Setting up Prek
+
 To start, run `prek init` inside `~/mysite` which creates `prek.toml`.
 That can then be edited to specify which kinds of hooks you want.
 
@@ -93,5 +95,6 @@ You can broadly sort these into **linters**
 and **formatters** (which handle things like indentation style).
 
 If that sounds enticing to you,
-you can check the [linters and formatters](@/linters.md) page
+you can check [§L on linters and formatters](@/linters.md) page
 for examples used by `ssg.evanchen.cc` that you might want to borrow.
+You can do that now, later, or not at all; this is optional.
