@@ -22,25 +22,27 @@ The three modes we'll focus on are:
 
 - **Normal mode**: Keys perform movement or direct operations.
   (You begin in this mode when Vim starts up.)
-  For example:
+  The most basic ones are:
+
   - The `hjkl` work like arrow keys ←↓↑→ for moving the cursor.
   - Typing `i` switches to insert mode.
   - Typing `:` switches to command mode.
-  - In fact, pretty much _every_ key on your keyboard does something different.
-    The way you become really fast with Vim is internalizing
-    which keys let you do which operations.
-- **Insert mode**: keys type text into the document directly.
+
+  But in fact, pretty much _every_ key on your keyboard does something different,
+  case-sensitively.
+  (Random examples: `x` deletes a character, `u` is undo,
+  `$` jumps to the end of line, `q` records a sequence of keys for playback, …)
+  The way you become really fast with Vim is internalizing
+  which keys let you do which operations.
+- **Insert mode**: Keys type text into the document directly.
   This is what you're used to.
   Typing Esc returns to normal mode.
   (Arrow keys work in here, but their usage is discouraged;
   most users switch back to normal mode.)
 - **Command mode**: Entering named commands into Vim.
   You press Enter after typing a command, or Esc to abort.
-  The most important ones for us are:
-  - `:q` to quit
-  - `:w` to save the file
-  - `:wq` to save the file and quit
-  - `:q!` to quit without saving.
+  The most important ones for us are `:q` to quit
+  (`:q!` without saving), `:w` to save, `:wq` for both.
 
 Here's a survival chart showing the information above.
 This is sort of the _absolute minimum_ that you could use to type in Vim.
@@ -52,7 +54,7 @@ This is sort of the _absolute minimum_ that you could use to type in Vim.
 | :wq save    |       |   h   l    |       |  directly  |
 |     &quit   |       |     j      |       |            |
 | :q! force   | ====> |            | <==== |            |
-|      quit   | ENTER | … and many |  ESC  |            |
+|      quit   | ENTER | … and MANY |  ESC  |            |
 |             |       |   more     |       |            |
 +=============+       +============+       +============+
 ```
