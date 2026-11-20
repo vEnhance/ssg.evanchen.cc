@@ -2,7 +2,7 @@
 {% block content %}
     {{ section.content|safe }}
     <hr />
-    <h2>Full table of Contents</h2>
+    <h2>Full table of contents</h2>
     {% set root = get_section(path="_index.md") %}
     {% for p in root.pages %}
         {% set h2 = p.toc[0] %} {# get the h2 that starts every page #}
