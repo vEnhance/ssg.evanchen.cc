@@ -1,4 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
     {{ section.content|safe }}
+    <hr />
+    <h2>Full table of Contents</h2>
+    {% set root = get_section(path="_index.md") %}
+    {% for p in root.pages %}
+        {% set h2 = p.toc[0] %} {# get the h2 that starts every page #}
+        {% if h2 %}
+            <h4><a href="{{ h2.permalink }}">{{ p.title }}</a></h4>
+            <ul>
+                {% for h3 in h2.children %}
+                    <li><a href="{{ h3.permalink }}">{{ h3.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endfor %}
 {% endblock content %}
