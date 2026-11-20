@@ -1,6 +1,6 @@
 +++
-title = "§7. GitHub"
-weight = 70
+title = "§6. GitHub"
+weight = 60
 +++
 
 ## Wiring up GitHub

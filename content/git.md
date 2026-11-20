@@ -1,6 +1,6 @@
 +++
-title = "§4. Git"
-weight = 40
+title = "§3. Git"
+weight = 30
 +++
 
 ## Using Git
@@ -8,7 +8,7 @@ weight = 40
 Okay, so Git has a bit of a reputation,
 [as you can see from xkcd](https://xkcd.com/1597/).
 
-### §4.A. A 100-word TL;DR
+### §3.A. A 100-word TL;DR
 
 - Git tracks history in _commits_ and only takes responsibility for committed code.
   Every commit gets a user-specified message and assigned hash.
@@ -27,7 +27,7 @@ For the rest of the tutorial,
 **I'll actually include the Git commands too,
 so you can see this happening in practice**.
 
-### §4.B. About commit messages
+### §3.B. About commit messages
 
 For commit messages, a lot of people (including me) use
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/),
@@ -50,7 +50,7 @@ $ git commit -m "feat: enable sharks with lasers on their heads"
 For the tutorial, I'll use the second form to make the steps easier to follow,
 but in real life (and on video) I usually use Vim to write the commit message.
 
-### §4.C. Writing .gitignore
+### §3.C. Writing .gitignore
 
 Our first substantial commit will be to make a file called `.gitignore`.
 The `.gitignore` is a special file meant to prevent unwanted files
@@ -127,7 +127,7 @@ eb7aafd (HEAD -> main) chore: add gitignore
 
 Alright! That's our first substantial commit.
 
-### §4.D. Undoing mistakes in Git
+### §3.D. Undoing mistakes in Git
 
 Just an FYI: if you make a mistake with a commit,
 and you haven't run `git push` yet, you can often repair it.

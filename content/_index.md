@@ -20,8 +20,8 @@ In total, [the HTML templates and CSS are under 250 lines of code][repo].
 ## Getting started
 
 The numbered sections should be read in order.
-So, start at [§1. Overview](/overview) for your intro briefing,
-then start getting your hands dirty from [§2. Home](/home).
+So, start at [§0. Overview](/overview) for your intro briefing,
+then start getting your hands dirty from [§1. Home](/home).
 
 You can also watch a partial speedrun at
 <https://youtu.be/SiXSYY4lBNk>.

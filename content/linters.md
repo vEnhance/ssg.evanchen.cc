@@ -1,11 +1,11 @@
 +++
 title = "§L. Linters"
-weight = 110
+weight = 100
 +++
 
 ## Linters and formatters
 
-As mentioned in [§4½ on Prek](@/prek.md),
+As mentioned in [§3½ on Prek](@/prek.md),
 linters and formatters provide a way to automatically
 check for errors and enforce a consistent code style.
 For example, these days if I'm writing code,
@@ -157,7 +157,7 @@ djLint linting.......................................Passed
 
 ### §L.C. Adding linters into Vim via ALE
 
-In [§2½ on Vim](@/vim.md), I recommended installing the
+In [§1½ on Vim](@/vim.md), I recommended installing the
 [ALE](https://github.com/dense-analysis/ale) plugin.
 ALE lets you talk to linters and formatters directly within Vim.
 If you haven't already, run the install command there.

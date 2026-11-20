@@ -1,6 +1,6 @@
 +++
 title = "FAQ"
-weight = 110
+weight = 90
 +++
 
 ## FAQ

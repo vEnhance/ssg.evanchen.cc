@@ -1,13 +1,13 @@
 +++
-title = "§3. ~/mysite"
-weight = 30
+title = "§2. ~/mysite"
+weight = 20
 +++
 
 ## ~/mysite
 
 We'll now create a new folder and initialize an empty Git repository in it.
 
-### §3.A. Making a new folder for your website
+### §2.A. Making a new folder for your website
 
 For this demo I'll put the website in `~/mysite`,
 though you're obviously free to pick any other path.
@@ -35,7 +35,7 @@ please ensure you're always working in `~/mysite`**.
 If you open a new terminal window, it might spawn in the home folder `~` instead.
 You can always use `pwd` to show where you are.
 
-### §3.B. Setting up Git for first use
+### §2.B. Setting up Git for first use
 
 If you've never used Git before, you need to tell it who you are:
 
@@ -66,7 +66,7 @@ $ git config --global push.default current
 $ git config --global push.autoSetupRemote true
 ```
 
-### §3.C. Start a new repository
+### §2.C. Start a new repository
 
 Make sure that you're in `~/mysite`, then type `git init`:
 
