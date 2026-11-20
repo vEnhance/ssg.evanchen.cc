@@ -119,7 +119,7 @@ $ vim content/_index.md content/about.md content/contact.md
 3 files to edit
 ```
 
-(In Vim, you can use `:n` and `:p` to move between files.)
+(In Vim, you can use `:n` and `:p` in command mode to move between files.)
 We'll put together three files like so:
 
 ```markdown,linenos,name=content/_index.md
