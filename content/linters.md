@@ -174,20 +174,44 @@ If you're using Homebrew, the following should work:
 $ brew install prettier uv
 …
 
-$ uv tool update-shell
-…
+$ uv tool install djlint
+Resolved 9 packages in 4.01s
+Prepared 7 packages in 456ms
+Installed 9 packages in 7ms
+ + click==8.5.1
+ + cssbeautifier==2.0.3
+ + djlint==1.54.0
+ + editorconfig==0.17.1
+ + jsbeautifier==2.0.3
+ + json5==0.17.3
+ + pathspec==1.1.1
+ + pyyaml==6.0.3
+ + regex==2026.11.19
+Installed 1 executable: djlint
 
-$ uv tool install djlint rumdl
-…
+$ uv tool install rumdl
+Resolved 1 package in 678ms
+Prepared 1 package in 851ms
+Installed 1 package in 9ms
+ + rumdl==0.3.5
+Installed 1 executable: rumdl
+
+$ which djlint
+/home/evan/.local/bin/djlint
+
+$ which rumdl
+/home/evan/.local/bin/rumdl
 ```
 
 If you're using a different package manager (`apt` on Ubunt,
 `pacman` on Arch Linux, etc.), replace the first line accordingly.
+And if you get a warning about `uv tool update-shell`,
+you should run that and restart the shell.
 
-One warning: the versions of the linters you get may not match the versions
-in `prek.toml`.
-If so, you may want to bump the versions in `prek.toml` to match.
-Otherwise the editor and pre-commit hooks may have subtly different results,
+One warning: the versions of the linters
+you get may not match the versions in `prek.toml`.
+If so, you probably want to bump the versions in `prek.toml` to match.
+Otherwise, the editor and pre-commit hooks may have subtly different results,
 which can be fairly annoying.
 
 #### ALE and configuration
@@ -200,13 +224,13 @@ You can install it like this:
 $ mkdir -p ~/.vim/pack/git-plugins/start
 
 $ git clone --depth 1 https://github.com/dense-analysis/ale.git ~/.vim/pack/git-plugins/start/ale
-'/home/evan/.vim/pack/git-plugins/start/ale'에 복제합니다...
+Cloning into '/home/evan/.vim/pack/git-plugins/start/ale'...
 remote: Enumerating objects: 2678, done.
 remote: Counting objects: 100% (2678/2678), done.
-remote: Compressing objects: 100% (1814/1814), done.
-remote: Total 2678 (delta 600), reused 1909 (delta 445), pack-reused 0 (from 0)
-오브젝트를 받는 중: 100% (2678/2678), 1.16 MiB | 8.03 MiB/s, 완료.
-델타를 알아내는 중: 100% (600/600), 완료.
+remote: Compressing objects: 100% (1812/1812), done.
+remote: Total 2678 (delta 601), reused 1909 (delta 447), pack-reused 0 (from 0)
+Receiving objects: 100% (2678/2678), 1.16 MiB | 7.87 MiB/s, done.
+Resolving deltas: 100% (601/601), done.
 ```
 
 If this works correctly, linters should already be working when you open Vim.
