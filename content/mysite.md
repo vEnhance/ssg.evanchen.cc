@@ -90,15 +90,15 @@ drwxrwx---  8 evan evan 4096 Nov 15 20:47 .git
 ```
 
 Personally, I like to start with an initial totally empty commit,
-which you can do with:
+which you can do with the following.
+We'll explain how commits work in the next section.
 
 ```console
 $ git commit -m "root: Initial commit" --allow-empty
 [main (root-commit) 054b8b5] root: Initial commit
 ```
 
-You can see the history of your commits with the following command
-(right now, just that one first commit):
+If you did that right, then `git log --oneline` will show this:
 
 ```console
 $ git log --oneline
