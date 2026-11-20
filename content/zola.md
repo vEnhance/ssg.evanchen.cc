@@ -191,15 +191,14 @@ it'll make more sense to look at some examples first.
 
 Zola has three distinguished templates:
 
-- `index.html`, for the homepage at top-level `_index.md`;
-- `section.html`, for subdirectories of `content/` (we won't use this);
-- `page.html`, for individual pages like About or Contact in our example.
+- `templates/index.html`, for the homepage at top-level `content/_index.md`;
+- `templates/section.html`, for subdirectories of `content/` (we won't use this);
+- `templates/page.html`, for individual pages like About or Contact in our example.
 
-However, we often actually want the homepage and the subpages to look pretty
-much the same.
-So we're going to define a basic template called `layout.html`
-(the name `base.html` is common too, you can pick that too) as a foundation;
-then we'll have `index.html` and `page.html` inherit it.
+However, here we want the homepage and About/Contact page to look similar.
+So we're going to define a base template called `templates/layout.html`
+(the name `base.html` is a common alternative) as a foundation;
+then we'll have `templates/index.html` and `templates/page.html` inherit it.
 Let's go there:
 
 ```console

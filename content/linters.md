@@ -160,55 +160,16 @@ To get this setup to work,
 - Install the Tools into your _system_, and then
 - Install ALE itself and turn on the formatters.
 
-#### Installing the linters
+#### Installing the tools
 
-The `prettier` formatter is popular enough you should be able to install
-it using your system package manager.
-But `rumdl` and `djlint` might not be.
-Fortunately, Astral's `uv` tool can get the others,
-and is _also_ popular enough that your package manager should have it.
-
-If you're using Homebrew, the following should work:
+We won't bother installing `codespell` since ALE doesn't support it.
+The others are all on Homebrew too:
 
 ```console
-$ brew install prettier uv
-…
-
-$ uv tool install djlint
-Resolved 9 packages in 4.01s
-Prepared 7 packages in 456ms
-Installed 9 packages in 7ms
- + click==8.5.1
- + cssbeautifier==2.0.3
- + djlint==1.54.0
- + editorconfig==0.17.1
- + jsbeautifier==2.0.3
- + json5==0.17.3
- + pathspec==1.1.1
- + pyyaml==6.0.3
- + regex==2026.11.19
-Installed 1 executable: djlint
-
-$ uv tool install rumdl
-Resolved 1 package in 678ms
-Prepared 1 package in 851ms
-Installed 1 package in 9ms
- + rumdl==0.3.5
-Installed 1 executable: rumdl
-
-$ which djlint
-/home/evan/.local/bin/djlint
-
-$ which rumdl
-/home/evan/.local/bin/rumdl
+$ brew install prettier rumdl djlint
 ```
 
-If you're using a different package manager (`apt` on Ubunt,
-`pacman` on Arch Linux, etc.), replace the first line accordingly.
-And if you get a warning about `uv tool update-shell`,
-you should run that and restart the shell.
-
-One warning: the versions of the linters
+One warning: the versions of the linters you install from this
 you get may not match the versions in `prek.toml`.
 If so, you probably want to bump the versions in `prek.toml` to match.
 Otherwise, the editor and pre-commit hooks may have subtly different results,

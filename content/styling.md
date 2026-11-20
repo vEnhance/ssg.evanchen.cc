@@ -99,6 +99,15 @@ Update the `<head>` block with the new line:
 </head>
 ```
 
+(If you took my advice to install `vim-gitgutter` back in [§2½ on Vim](@/vim.md),
+then you might notice as you do these edits that there are plus signs
+appearing in the left of Vim as you edit the text.
+I can explain what those are now.
+The `vim-gitgutter` plugin puts markers for edited and added lines
+relative to what's been staged or committed.
+This makes easier to see what is new since the last commit.
+You're welcome.)
+
 The `get_url` is another Zola built-in.
 You could just type `href="/tlayout.css"`, but using `get_url`
 has the advantage that Zola will yell at you if you typo the file name
