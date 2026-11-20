@@ -236,9 +236,10 @@ Resolving deltas: 100% (601/601), done.
 If this works correctly, linters should already be working when you open Vim.
 Open one of the Markdown files and see if `:ALEInfo` shows you anything.
 
-Formatters take extra configuration in `~/.vimrc`:
+Formatters are more disruptive, since they'll actually change your file,
+so those need configuration in`~/.vimrc`.
 
-```vimscript,linenostart=7,name=~/.vimrc
+```vimscript,linenostart=12,name=~/.vimrc
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'htmldjango': ['djlint'],
