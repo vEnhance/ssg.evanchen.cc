@@ -51,6 +51,9 @@ In addition, it has three stylesheets for visual effects:
 - [`sass/images.scss`](sass/images.scss) (~10 lines of code):
   Styles the screenshots shown in the tutorial.
 
+This code is intentionally really heavily commented so that beginners can read it.
+(If I was writing for myself, I wouldn't bother with most of the comments.)
+
 ## Prek files
 
 There are four more files that are used to configure some quality checks
