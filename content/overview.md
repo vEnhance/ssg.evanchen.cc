@@ -29,7 +29,7 @@ Here are the pieces of technology that were used to build this site.
 
 And here is a picture showing how they all fit together.
 (You should [download the full-size diagram](/d2/bigpicture.svg);
-it's likely to small to read inline.)
+it's likely too small to read inline.)
 
 [![Overview of the entire system](/d2/bigpicture.svg)](/d2/bigpicture.svg)
 
