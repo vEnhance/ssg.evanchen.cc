@@ -1,6 +1,6 @@
 +++
 title = "§C. CloudFlare"
-weight = 70
+weight = 80
 +++
 
 ## Connecting CloudFlare

@@ -1,18 +1,18 @@
 +++
-title = "FAQ"
+title = "§F. FAQ"
 weight = 90
 +++
 
-## FAQ
+## Frequently Asked Questions
 
 My defense of some decisions made in writing this tutorial.
 
-### FAQ 1. What motivated this tutorial??
+### What motivated this tutorial??
 
 I had the idea on [post #364 on my microblog](https://wall.evanchen.cc/364/).
 After running this a few times I decided to actually write a full tutorial.
 
-### FAQ 2. Why static sites?
+### Why static sites?
 
 I like how Loris Cro describes it in the post
 [The Static Site Paradox](https://kristoff.it/blog/static-site-paradox/):
@@ -47,7 +47,7 @@ In that case, I think your learning will go much better
 starting from an empty repository with parts added in one at a time,
 so you can understand every step of the process.
 
-### FAQ 3. Why teach caveman technology in 2026? Why not an IDE?
+### Why teach caveman technology in 2026? Why not an IDE?
 
 Because most of the people who read my stuff are math students,
 and **math students learn bottom-up, not top-down**.
@@ -74,6 +74,6 @@ The following is a real question I got from such a victim:
 
 > I'm confused, why do people use GitHub? Why not just use Overleaf?
 
-### FAQ 4. AI??
+### AI??
 
 ¯\\\_(ツ)\_/¯
