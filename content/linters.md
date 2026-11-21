@@ -24,82 +24,72 @@ Then I'll describe the two places you can put these:
 
 ### §L.A. Four examples of tools
 
-Note that each tool has a configuration file that you should `git add`
-if you are planning to use it.
+Each tool has a configuration file that you should `git add` if you use it.
 
-#### codespell: the spell-checker
+- **[codespell](https://github.com/codespell-project/codespell)**
+  is a spell-checker.
+  It uses a _list of common misspellings_ rather than a dictionary of bad ones,
+  so it doesn't tend to generate as many false-positives.
 
-[codespell](https://github.com/codespell-project/codespell)
-uses a _list of common misspellings_ rather than a dictionary of bad ones,
-so it doesn't tend to generate as many false-positives.
+  If you did hit a false-positive, you'll need to tell codespell to ignore it.
+  To do this, you add `.codespellrc` to `~/mysite` with something like:
 
-If you did hit a false-positive, you'll need to tell codespell to ignore it.
-To do this, you add `.codespellrc` to `~/mysite` with something like:
+  ```ini,linenos,name=.codespellrc
+  [codespell]
+  skip = **.svg
+  ignore-words-list = foo,bar
+  ```
 
-```ini,linenos,name=.codespellrc
-[codespell]
-ignore-words-list=foo,bar
-```
+- **[prettier](https://prettier.io/)** is a JavaScript and CSS formatter.
+  It works pretty well with default settings;
+  I usually don't add a configuration file for this one.
 
-#### prettier: the JavaScript and CSS formatter
+- **[djlint](https://djlint.com/)** is a formatter for HTML templates.
+  It supports Tera, the language Zola uses,
+  but you'll need to create a single file `djlint.toml`
+  that tells djlint we're using Tera-style templates.
 
-[prettier](https://prettier.io/)
-works pretty well with default settings;
-I usually don't add a configuration file for this one.
+  ```ini,linenos,name=djlint.toml
+  profile = "tera"
+  ```
 
-#### djlint: the Tera HTML template formatter
+- **[rumdl](https://rumdl.dev/)** is a comprehensive Markdown formatter.
+  It uses `rumdl.toml` for configuration.
+  This is the one that you may want to tune a lot, because `rumdl` has
+  a _lot_ of rules out of the box and you might want to disable some
+  (or enable some optional ones).
+  Here's the configuration this project is using:
 
-[djlint](https://djlint.com/) is a formatter for the Tera HTML templates
-that we'll be using with Zola.
-For it to work, you need to create a single file `djlint.toml`
-that tells djlint that we're using Tera-style templates.
+  ```toml,linenos,name=rumdl.toml
+  [global]
+  disable = [
+    "MD014", # Permit $ with no output in code listings
+    "MD025", # Allow multiple h1 headings
+    "MD026", # Permit punctuation in heading
+    "MD033", # Permit inline HTML
+    "MD041", # Allow first line to be anything (not just h1)
+  ]
+  extend-enable = [
+    "MD060", # Table alignment
+    "MD088", # Insist on ASCII quotes
+  ]
+  respect-gitignore = true
 
-```ini,linenos,name=djlint.toml
-profile = "tera"
-```
+  [MD013] # Line length
+  line-length = 160
+  code-blocks = false
+  tables = false
+  headings = false
 
-#### rumdl: the Markdown formatter
+  [MD060] # Table alignment
+  enabled = true
+  style = "aligned"
 
-[rumdl](https://rumdl.dev/) is a comprehensive Markdown formatter.
-It is controlled using the configuration `rumdl.toml`.
-
-There are a _lot_ of rules used in this one.
-You'll probably want to turn some of the rules on and off to taste.
-Here's the configuration this project is using.
-This configuration disables some builtin rules that I personally don't like,
-then enables two optional rules (MD060, MD088)
-and then tweaks some knobs on some other rules
-
-```toml,linenos,name=rumdl.toml
-[global]
-disable = [
-  "MD014", # Permit $ with no output in code listings
-  "MD025", # Allow multiple h1 headings
-  "MD026", # Permit punctuation in heading
-  "MD033", # Permit inline HTML
-  "MD041", # Allow first line to be anything (not just h1)
-]
-extend-enable = [
-  "MD060", # Table alignment
-  "MD088", # Insist on ASCII quotes
-]
-respect-gitignore = true
-
-[MD013] # Line length
-line-length = 160
-code-blocks = false
-tables = false
-headings = false
-
-[MD060] # Table alignment
-enabled = true
-style = "aligned"
-
-[MD088] # Insist on ASCII quotes
-enabled = true
-normalize-quotes = true
-normalize-dashes = false
-```
+  [MD088] # Insist on ASCII quotes
+  enabled = true
+  normalize-quotes = true
+  normalize-dashes = false
+  ```
 
 ### §L.B. Adding linters and formatters into prek
 
