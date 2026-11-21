@@ -1,5 +1,5 @@
 +++
-title = "§7. CloudFlare"
+title = "§C. CloudFlare"
 weight = 70
 +++
 

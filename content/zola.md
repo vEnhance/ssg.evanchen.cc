@@ -19,10 +19,17 @@ We'll handle the first two now and then move on to styling on the next page.
 
 ### §4.A. Getting `zola serve` running
 
-To kick things off, in `~/mysite`, run `zola init -f`,
-type in the target website name
-(if you haven't decided on a domain name yet,
-change this later) and accept the defaults for the two questions.
+To kick things off, in `~/mysite`, run `zola init -f`.
+The target website name is going to be
+`[your lowercase github name].github.io`,
+because that's where GitHub pages will deploy to.
+(If you're planning to use your own custom domain name,
+you can input that here too.
+But in that case, you should flip ahead to [§C on CloudFlare](@/cloudflare.md)
+and actually _purchase_ the domain you want first,
+so you know it's available.)
+
+Accept the defaults for the two questions.
 This will create a bunch of empty folders and a `zola.toml`.
 Then, finally type `zola serve`.
 
@@ -37,7 +44,7 @@ $ zola init -f
 Welcome to Zola!
 Please answer a few questions to get started quickly.
 Any choices made can be changed by modifying the `zola.toml` file later.
-> What is the URL of your site? (https://example.com): https://mysite.dev
+> What is the URL of your site? (https://example.com): https://venhance.github.io
 > Do you want to enable Sass compilation? [Y/n]:
 > Do you want to build a search index of the content? [y/N]:
 
@@ -59,6 +66,13 @@ Press Ctrl+C to stop
 
 Web server is available at http://127.0.0.1:1111 (bound to 127.0.0.1:1111)
 ```
+
+Note the tricky thing here is that Zola asks what URL you _eventually_
+want the website to be one.
+If you haven't thought about that, you might want to think about it now,
+or skip ahead quickly to [§7.A.](@/cloudflare.md)
+and purchase the domain you want (just to make sure it really is for sale).
+For this tutorial, we'll pretend that you purchased <https://example.com>.
 
 Now point your web browser to <http://127.0.0.1:1111>.
 You should see a welcome page: you have an empty site running!
