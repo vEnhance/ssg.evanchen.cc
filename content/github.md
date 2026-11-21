@@ -166,6 +166,7 @@ If that works, and you look at the repository on GitHub,
 you'll see an orange circle
 and eventually a green one next to the commit if it passes.
 If so, going to <https://venhance.github.io/> should show the website.
+
 You're done! 🎉
 
 [gh-docs-ssh-new]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
