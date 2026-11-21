@@ -1,6 +1,6 @@
 +++
-title = "§4. Zola"
-weight = 40
+title = "§5. Zola"
+weight = 50
 +++
 
 ## Using Zola
@@ -17,7 +17,7 @@ There are three types of files we'll use within Zola:
 
 We'll handle the first two now and then move on to styling on the next page.
 
-### §4.A. Getting `zola serve` running
+### §5.A. Getting `zola serve` running
 
 To kick things off, in `~/mysite`, run `zola init -f`.
 The target website name is going to be
@@ -111,7 +111,7 @@ trim trailing whitespace.............................Passed
   create mode 100644 zola.toml
 ```
 
-### §4.B. Pages in `content/`
+### §5.B. Pages in `content/`
 
 We'll start by creating an index page.
 Zola uses [Markdown](https://commonmark.org/),
@@ -197,7 +197,7 @@ trim trailing whitespace.............................Passed
   create mode 100644 content/contact.md
 ```
 
-### §4.C. Tera HTML templates in `templates/`
+### §5.C. Tera HTML templates in `templates/`
 
 Zola uses the [Tera HTML template engine](https://www.getzola.org/documentation/templates/overview/).
 These are files that look like HTML but have a bit of extra syntax;

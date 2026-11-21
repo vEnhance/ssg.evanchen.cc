@@ -1,20 +1,20 @@
 +++
-title = "§6. GitHub"
-weight = 60
+title = "§7. GitHub"
+weight = 70
 +++
 
 ## Wiring up GitHub
 
 At this point, we have a minimally functional website.
-To recall the picture of [§0.A.](@/overview.md),
+To recall the picture of [§1.A.](@/overview.md),
 we've now covered all the steps inside "Your Computer"
 from the [big picture](/d2/bigpicture.svg).
 
-![A repeat of the picture from §0.A. We've now done the left half.](/d2/bigpicture.svg).
+![A repeat of the picture from §1.A. We've now done the left half.](/d2/bigpicture.svg).
 
 This final section will publish our website onto `venhance.github.io`.
 
-### §6.A. Creating a repository on GitHub
+### §7.A. Creating a repository on GitHub
 
 Register an account on <https://github.com> if you haven't already,
 and then set up a new repository.
@@ -37,7 +37,7 @@ and change "Source" to "GitHub Actions".
 under "General > Pull Requests", uncheck "Allow merge commits".
 I really don't like merge commits.)
 
-### §6.B. Setting up an SSH key
+### §7.B. Setting up an SSH key
 
 The recommended protocol for talking to GitHub is not HTTPS,
 but rather a different one called [SSH](https://en.wikipedia.org/wiki/SSH).
@@ -72,7 +72,7 @@ Hi vEnhance! You've successfully authenticated,
 but GitHub does not provide shell access.
 ```
 
-### §6.C. Push the repository
+### §7.C. Push the repository
 
 You can now configure `~/mysite` to have GitHub as a remote.
 This means you can now `git push` to the repository (to send your updates to GitHub)
@@ -93,7 +93,7 @@ the usual best practice is to consider it _set in stone_.
 Treat pushed commits as permanently published
 and don't rewrite them with `git commit --amend`, `git rebase -i`, etc.)
 
-### §6.D. Setting up the GitHub Action
+### §7.D. Setting up the GitHub Action
 
 We earlier set up GitHub Pages to use a so-called "Action".
 In GitHub, this means adding a certain file that tells GitHub

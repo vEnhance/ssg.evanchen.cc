@@ -1,6 +1,6 @@
 +++
 title = "Where to next?"
-weight = 70
+weight = 80
 +++
 
 ## Where to go from here
@@ -27,7 +27,7 @@ See Amy Hoy's [How the Blog Broke The Web](https://stackingthebricks.com/how-blo
 
 For <https://ssg.evanchen.cc> itself,
 we put a few small embellishments
-that we didn't get to in [§5 on Sass](@/styling.md).
+that we didn't get to in [§6 on Sass](@/styling.md).
 Some examples:
 
 - In the templates:
@@ -55,7 +55,7 @@ Some examples:
 
 ### Even more CSS and other frameworks
 
-As I said, [§5 on Sass](@/styling.md) is so minimalistic I don't think
+As I said, [§6 on Sass](@/styling.md) is so minimalistic I don't think
 it even qualifies as "Introduction to CSS", just "here's some random commands".
 If you want to get more serious about web design,
 that's something you can really deep dive into.
@@ -118,7 +118,7 @@ but here are some things that more experienced users might consider an upgrade.
   Or just ditch Git for [jujutsu](https://github.com/jj-vcs/jj)
   (which is compatible with Git).
 
-- We mentioned this in [§3½ on prek](@/prek.md),
+- We mentioned this in [§4½ on prek](@/prek.md),
   but linters and formatters are pretty cool.
   Some hints are in [§L on those tools](@/linters.md).
 

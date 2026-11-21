@@ -1,6 +1,6 @@
 +++
-title = "§5. Styling"
-weight = 50
+title = "§6. Styling"
+weight = 60
 +++
 
 ## Styling with SCSS
@@ -24,7 +24,7 @@ Again, this should be treated more like
 "this is what a few lines of CSS can do as a demo",
 not even "an introduction to CSS".
 
-### §5.A. A T-shaped layout
+### §6.A. A T-shaped layout
 
 **Text is most readable with no more than 80 or so characters per line.**
 If you look at any website I've built,
@@ -99,7 +99,7 @@ Update the `<head>` block with the new line:
 </head>
 ```
 
-(If you took my advice to install `vim-gitgutter` back in [§1½ on Vim](@/vim.md),
+(If you took my advice to install `vim-gitgutter` back in [§2½ on Vim](@/vim.md),
 then you might notice as you do these edits that there are plus signs
 appearing in the left of Vim as you edit the text.
 I can explain what those are now.
@@ -170,7 +170,7 @@ trim trailing whitespace.............................Passed
   create mode 100644 sass/tlayout.scss
 ```
 
-### §5.B. Colors and fonts
+### §6.B. Colors and fonts
 
 We can go back to `sass/tlayout.scss` and add more.
 Let's do colors and fonts.
@@ -265,7 +265,7 @@ trim trailing whitespace.............................Passed
   2 files changed, 30 insertions(+)
 ```
 
-### §5.C. Mobile support
+### §6.C. Mobile support
 
 People view websites on cell phones.
 Drives me nuts, but that's how it is.

@@ -1,6 +1,6 @@
 +++
-title = "§3½. Prek"
-weight = 35
+title = "§4½. Prek"
+weight = 45
 +++
 
 ## Prek
@@ -20,7 +20,7 @@ For this tutorial,
 we'll use the [prek framework](https://prek.j178.dev/),
 which manages pre-commit hooks in an organized fashion.
 
-### §3½.A. Setting up Prek
+### §4½.A. Setting up Prek
 
 To start, run `prek init` inside `~/mysite` which creates `prek.toml`.
 That can then be edited to specify which kinds of hooks you want.
@@ -86,7 +86,7 @@ trim trailing whitespace.............................Passed
 You can see `prek` is doing its work now!
 That's what each "Passed" is, one for each hook we chose.
 
-### §3½.B. Linters and formatters
+### §4½.B. Linters and formatters
 
 In addition to the builtin prek hooks,
 you can add a _lot_ more guards into your work.
