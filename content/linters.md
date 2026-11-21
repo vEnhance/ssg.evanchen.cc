@@ -1,6 +1,6 @@
 +++
 title = "§L. Linters"
-weight = 100
+weight = 90
 +++
 
 ## Linters and formatters

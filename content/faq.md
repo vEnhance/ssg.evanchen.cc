@@ -1,6 +1,6 @@
 +++
-title = "§F. FAQ"
-weight = 90
+title = "§Q. FAQ"
+weight = 100
 +++
 
 ## Frequently Asked Questions
