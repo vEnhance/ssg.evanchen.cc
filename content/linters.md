@@ -22,7 +22,7 @@ Then I'll describe the two places you can put these:
 - How to integrate these tools into Vim,
   so that while editing files, you can get changes applied live.
 
-### §L.A. Four examples of tools
+### §L.1. Four examples of tools
 
 Each tool has a configuration file that you should `git add` if you use it.
 
@@ -91,7 +91,7 @@ Each tool has a configuration file that you should `git add` if you use it.
   normalize-dashes = false
   ```
 
-### §L.B. Adding linters and formatters into prek
+### §L.2. Adding linters and formatters into prek
 
 The four tools above all have pre-commit support,
 so you can add whichever sections you want at the bottom of your `prek.toml`:
@@ -145,7 +145,7 @@ djLint formatting....................................Passed
 djLint linting.......................................Passed
 ```
 
-### §L.C. Adding linters into Vim via ALE
+### §L.3. Adding linters into Vim via ALE
 
 In [§2½ on Vim](@/vim.md), I recommended installing the
 [ALE](https://github.com/dense-analysis/ale) plugin.

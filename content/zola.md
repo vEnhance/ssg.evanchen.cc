@@ -23,6 +23,7 @@ To kick things off, in `~/mysite`, run `zola init -f`.
 The target website name is going to be
 `[your lowercase github name].github.io`,
 because that's where GitHub pages will deploy to.
+
 (If you're planning to use your own custom domain name,
 you can input that here too.
 But in that case, you should flip ahead to [§C on CloudFlare](@/cloudflare.md)
@@ -66,13 +67,6 @@ Press Ctrl+C to stop
 
 Web server is available at http://127.0.0.1:1111 (bound to 127.0.0.1:1111)
 ```
-
-Note the tricky thing here is that Zola asks what URL you _eventually_
-want the website to be one.
-If you haven't thought about that, you might want to think about it now,
-or skip ahead quickly to [§7.A.](@/cloudflare.md)
-and purchase the domain you want (just to make sure it really is for sale).
-For this tutorial, we'll pretend that you purchased <https://example.com>.
 
 Now point your web browser to <http://127.0.0.1:1111>.
 You should see a welcome page: you have an empty site running!
