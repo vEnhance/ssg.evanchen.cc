@@ -12,9 +12,7 @@ from the [big picture](/d2/bigpicture.svg).
 
 ![A repeat of the picture from §0.A. We've now done the left half.](/d2/bigpicture.svg).
 
-§6 and §7 will in contrast be pretty straightforward,
-mostly just clicking some buttons in GitHub and CloudFlare.
-We're almost at the finish line!
+This final section will publish our website onto `venhance.github.io`.
 
 ### §6.A. Creating a repository on GitHub
 
@@ -28,7 +26,7 @@ A standard practice is to pick the repo name to be the same as the
 URL you want to publish the site to.
 If you're using the free `github.io` domain,
 that means `venhance.github.io` as the repository name.
-So the repository page should look like `vEnhance/venhance.github.io`.
+So the repository's full name should look like `vEnhance/venhance.github.io`.
 
 Our plan is to use GitHub Pages, so while you're here,
 let's turn that in the repository settings.
@@ -89,11 +87,11 @@ $ git push -u origin main
 TODO
 ```
 
-(A word of warning: once you `git push` work (at least to the `main` branch,
-but we only have the `main` branch in this tutorial),
-the usual best practice is to consider it set in stone.
-Treat pushed commits as published and don't rewrite them with things
-like `git commit --amend` or `git rebase -i`.)
+(A word of warning: once you `git push` work — at least to the `main` branch,
+but we only have the `main` branch in this tutorial —
+the usual best practice is to consider it _set in stone_.
+Treat pushed commits as permanently published
+and don't rewrite them with `git commit --amend`, `git rebase -i`, etc.)
 
 ### §6.D. Setting up the GitHub Action
 
