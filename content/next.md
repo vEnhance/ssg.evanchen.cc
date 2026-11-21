@@ -45,15 +45,18 @@ Some examples:
     from [`images.scss`][repo:images.scss].
     (The SVG diagrams are via [d2](https://d2lang.com/), if you're curious).
 
+Zola also has [theme support][zola:theme] for more packaged styling.
+
 [zola:toc]: https://www.getzola.org/documentation/content/table-of-contents/
 [zola:syn]: https://www.getzola.org/documentation/content/syntax-highlighting/
+[zola:theme]: https://www.getzola.org/documentation/themes/installing-and-using-themes/
 [repo:codeblocks.scss]: https://github.com/vEnhance/ssg.evanchen.cc/blob/main/sass/codeblocks.scss
 [repo:images.scss]: https://github.com/vEnhance/ssg.evanchen.cc/blob/main/sass/images.scss
 [repo:tlayout.scss]: https://github.com/vEnhance/ssg.evanchen.cc/blob/main/sass/tlayout.scss
 [repo:page.html]: https://github.com/vEnhance/ssg.evanchen.cc/blob/main/templates/page.html
 [repo:index.html]: https://github.com/vEnhance/ssg.evanchen.cc/blob/main/templates/index.html
 
-### Even more CSS and other frameworks
+### Even more CSS (and CSS frameworks, etc.)
 
 As I said, [§6 on Sass](@/styling.md) is so minimalistic I don't think
 it even qualifies as "Introduction to CSS", just "here's some random commands".
@@ -127,3 +130,6 @@ but here are some things that more experienced users might consider an upgrade.
   And then there are other editors like Helix or Visual Studio Code.
 
 - AI agents exist. Usual warnings apply.
+  Here's one example of a
+  [blog post on AI workflows by Mitchell Hashimoto](https://mitchellh.com/writing/my-ai-adoption-journey),
+  written in February 2026.
