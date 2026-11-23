@@ -10,7 +10,7 @@ To recall the picture of [§1.A.](@/overview.md),
 we've now covered all the steps inside "Your Computer"
 from the [big picture](/d2/bigpicture.svg).
 
-![A repeat of the picture from §1.A. We've now done the left half.](/d2/bigpicture.svg).
+![A repeat of the picture from §1.A. We've now done the left half.](/d2/bigpicture.svg)
 
 This final section will publish our website onto `venhance.github.io`.
 
