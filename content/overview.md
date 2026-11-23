@@ -5,12 +5,7 @@ weight = 10
 
 ## Overview
 
-### §1.A. Register a GitHub username if you don't have one already
-
-If you don't have a username on GitHub yet, register one now.
-For this tutorial `vEnhance` will always be the account name.
-
-### §1.B. The pieces we'll use
+### §1.A. The pieces we'll use
 
 Here are the pieces of technology that were used to build this site.
 
@@ -48,7 +43,7 @@ and your friend might prefer a different one.
 
 [ssg-basin]: https://rakhim.org/honestly-undefined/19/
 
-### §1.C. How to use this guide
+### §1.B. How to use this guide
 
 Recommendation: **find a friend who can spare a few hours to sit by you
 and walk you through this guide**.
@@ -66,7 +61,7 @@ I still want to encourage you to spend time with the people in your life.
 When's the last time you got to learn something together over a cup of coffee?
 Anyway, I tried.
 
-### §1.D. This isn't a cookbook!
+### §1.C. This isn't a cookbook!
 
 Accordingly, this guide will _not_ be just a list of commands to copy and paste.
 I want to do this more with broad strokes, like,

@@ -14,6 +14,13 @@ from the [big picture](/d2/bigpicture.svg).
 
 This final section will publish our website onto `venhance.github.io`.
 
+A quick warning: as of 2026, GitHub has been
+[struggling with reliability](https://mrshu.github.io/github-statuses/),
+and a lot of prominent projects have recently left GitHub
+(e.g. [Zig](https://ziglang.org/news/migrating-from-github-to-codeberg/),
+[ghostty](https://mitchellh.com/writing/ghostty-leaving-github)).
+The trend seems to be to move towards [Codeberg](https://codeberg.org/).
+
 ### §7.A. Creating a repository on GitHub
 
 Register an account on <https://github.com> if you haven't already,

@@ -20,17 +20,23 @@ We'll handle the first two now and then move on to styling on the next page.
 ### §5.A. Getting `zola serve` running
 
 To kick things off, in `~/mysite`, run `zola init -f`.
-The target website name is going to be
-`[your lowercase github name].github.io`,
-because that's where GitHub pages will deploy to.
 
-(If you're planning to use your own custom domain name,
-you can input that here too.
-But in that case, you should flip ahead to [§C on CloudFlare](@/cloudflare.md)
-and actually _purchase_ the domain you want first,
-so you know it's available.)
+This will ask you for the URL of your website.
+This can be changed later, but some hints:
 
-Accept the defaults for the two questions.
+- If you're using GitHub Pages, the target website name is going to be
+  `[your lowercase github name].github.io`,
+  because that's where GitHub pages will deploy to.
+  If you don't have a username on GitHub yet,
+  go ahead and register one so you know what it is.
+
+- If you're planning to use your own custom domain name,
+  you can input that here too.
+  But in that case, you should flip ahead to [§C on CloudFlare](@/cloudflare.md)
+  and actually _purchase_ the domain you want first,
+  so you know it's available.
+
+Accept the defaults for the other two questions.
 This will create a bunch of empty folders and a `zola.toml`.
 Then, finally type `zola serve`.
 
