@@ -7,13 +7,29 @@ weight = 110
 
 My defense of some decisions made in writing this tutorial.
 
-### §Q.1. What motivated this tutorial?
+### §Q.1. What if I don't want my GitHub repository to be public?
+
+In cases where I wanted a publicly accessible static site
+whose source code was a _private_ GitHub repository,
+I usually used [Cloudflare Pages](https://developers.cloudflare.com/pages/) instead.
+The changes are:
+
+- Don't set up any GitHub Pages options
+  or the [`deploy.yml` workflow in §7.D](@/github.md).
+- Instead, connect the repository to a new
+  [Cloudflare Pages](https://developers.cloudflare.com/pages/) project.
+- Set the CNAME to the associated `*.pages.dev` instead.
+  I think this might be done automatically for you during setup of
+  Cloudflare Pages, when it asks if you want a custom domain, but I'm not 100% sure.
+  Anyway, orange cloud is fine; no need to switch to gray cloud.
+
+### §Q.2. What motivated this tutorial?
 
 I had the idea in [post #364 on my microblog](https://wall.evanchen.cc/364/),
 and tried this tutorial a couple times IRL.
 It went okay, so I decided to actually write it out in full.
 
-### §Q.2. Why static sites?
+### §Q.3. Why static sites?
 
 I like how Loris Cro describes it in the post
 [The Static Site Paradox](https://kristoff.it/blog/static-site-paradox/):
@@ -48,7 +64,7 @@ In that case, I think your learning will go much better
 starting from an empty repository with parts added in one at a time,
 so you can understand every step of the process.
 
-### §Q.3. Why teach caveman technology in 2026? Why not an IDE?
+### §Q.4. Why teach caveman technology in 2026? Why not an IDE?
 
 Because most of the people who read my stuff are math students,
 and **math students learn bottom-up, not top-down**.
@@ -75,22 +91,6 @@ The following is a real question I got from such a victim:
 
 > I'm confused, why do people use GitHub? Why not just use Overleaf?
 
-### §Q.4. AI??
+### §Q.5. AI??
 
 ¯\\\_(ツ)\_/¯
-
-### §Q.5. What if I don't want my GitHub repository to be public?
-
-In cases where I wanted a publicly accessible static site
-whose source code was a _private_ GitHub repository,
-I usually used [Cloudflare Pages](https://developers.cloudflare.com/pages/) instead.
-The changes are:
-
-- Don't set up any GitHub Pages options
-  or the [`deploy.yml` workflow in §7.D](@/github.md).
-- Instead, connect the repository to a new
-  [Cloudflare Pages](https://developers.cloudflare.com/pages/) project.
-- Set the CNAME to the associated `*.pages.dev` instead.
-  I think this might be done automatically for you during setup of
-  Cloudflare Pages, when it asks if you want a custom domain, but I'm not 100% sure.
-  Anyway, orange cloud is fine; no need to switch to gray cloud.

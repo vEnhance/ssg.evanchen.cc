@@ -28,7 +28,7 @@ and then set up a new repository.
 You can name the repository as you see fit.
 For this tutorial to work, you should make it a **public repository**,
 since GitHub Pages (at the time of writing) is only free there.
-(If you want to use a private repository, see [FAQ §Q.5](@/faq.md).)
+(If you want to use a private repository, see [FAQ §Q.1](@/faq.md).)
 
 A standard practice is to pick the repo name to be the same as the
 URL you want to publish the site to.
