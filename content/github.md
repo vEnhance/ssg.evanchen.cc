@@ -3,7 +3,7 @@ title = "§7. GitHub"
 weight = 70
 +++
 
-## Wiring up GitHub
+## Wiring up GitHub Pages
 
 At this point, we have a minimally functional website.
 To recall the picture of [§1.A.](@/overview.md),
