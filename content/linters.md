@@ -28,7 +28,7 @@ Each tool has a configuration file that you should `git add` if you use it.
 
 - **[codespell](https://github.com/codespell-project/codespell)**
   is a spell-checker.
-  It uses a _list of common misspellings_ rather than a dictionary of bad ones,
+  It uses a _list of common misspellings_ rather than a dictionary of correct words,
   so it doesn't tend to generate as many false-positives.
 
   If you did hit a false-positive, you'll need to tell codespell to ignore it.
@@ -154,10 +154,10 @@ If you haven't already, run the install command there.
 
 ALE has two different functionalities:
 
-- _linters_, which provide diagnostics if you make mistakes
+- _linters_, which provide diagnostics if you make mistakes;
 - _formatters_, which run the formatter whenever you save.
 
-ALE doesn't support every tool in both capacaties.
+ALE doesn't support every tool in both capacities.
 For the four tools above, here is the support chart:
 
 | Tool      | Linter        | Formatter     |
@@ -177,8 +177,8 @@ support it anyway:
 $ brew install prettier rumdl djlint
 ```
 
-One warning: the versions of the linters you install from this
-you get may not match the versions in `prek.toml`.
+One warning: the versions of the linters you install this way
+may not match the versions in `prek.toml`.
 If so, you probably want to bump the versions in `prek.toml` to match.
 Otherwise, the editor and pre-commit hooks may have subtly different results,
 which can be fairly annoying.
@@ -201,4 +201,4 @@ That should enable format-on-save.
 
 If set up correctly, Vim will now provide diagnostics from `djlint` and `rumdl`
 directly inside the editor, and apply all the formatters on save.
-You can use `:ALEInfo` in command line mode to get a pulse on if ALE is working.
+You can use `:ALEInfo` in command line mode to check whether ALE is working.

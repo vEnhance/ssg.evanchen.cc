@@ -29,9 +29,9 @@ If you want a quick refresher or cheat sheet:
 - `cd` changes the current directory, and you can use tab-completion for it.
 - `pwd` prints the current directory.
 - `ls` prints the contents of the current directory.
-  - `ls -l` prints one entry per line
+  - `ls -l` prints one entry per line.
   - `ls -la` prints hidden files and folders as well
-    (those whose name starts with a `.`)
+    (those whose name starts with a `.`).
 - `mkdir` creates an empty directory.
 - Remember the tilde `~` is an abbreviation for `/home/yourusername/`,
   your home folder. (Might be `/Users/yourusername` on macOS.)
@@ -91,7 +91,7 @@ If you're installing with Homebrew, those paths will likely be different.)
 
 All of these commands happen to support `--version`.
 I think most of this tutorial will work for any non-ancient versions,
-but just to have in writing the versions that I'm writing this with:
+but for posterity, here are the versions I have now:
 
 ```console
 $ vim --version

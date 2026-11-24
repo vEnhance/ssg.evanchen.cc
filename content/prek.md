@@ -88,13 +88,13 @@ That's what each "Passed" is, one for each hook we chose.
 
 ### §4½.B. Linters and formatters
 
-In addition to the builtin prek hooks,
+In addition to the built-in prek hooks,
 you can add a _lot_ more guards into your work.
 You can broadly sort these into **linters**
 (which usually look for errors related to a specific language)
 and **formatters** (which handle things like indentation style).
 
 If that sounds enticing to you,
-you can check [§L on linters and formatters](@/linters.md) page
+you can check [§L on linters and formatters](@/linters.md)
 for examples used by `ssg.evanchen.cc` that you might want to borrow.
 You can do that now, later, or not at all; this is optional.

@@ -7,7 +7,7 @@ Welcome!
 This is a short guide on how to set up a website the old-fashioned way,
 working mostly from a terminal, using old-school technology.
 We use a [**static site generator** (SSG)][ssg],
-suitable for say a personal site, blog, or product page.
+suitable for, say, a personal site, blog, or product page.
 (See [The Static Site Paradox](https://kristoff.it/blog/static-site-paradox/)
 for why.)
 It's intentionally barebones, to make things as simple as possible.

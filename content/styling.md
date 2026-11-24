@@ -18,7 +18,7 @@ the file extension we'll use for Sass is `*.scss`.
 but there's no real cost here to using Sass,
 since all valid CSS is also valid SCSS.)
 
-**I am going to do only a few small things here as a proof-of-principle.**
+**I am going to do only a few small things here as a proof of concept.**
 CSS is a real beast; you can do a _lot_ with CSS.
 Again, this should be treated more like
 "this is what a few lines of CSS can do as a demo",
@@ -54,7 +54,7 @@ Recall the overall skeleton of `templates/layout.html`:
 </div>
 ```
 
-We gave four elements unique ID's that will let us refer to them as
+We gave four elements unique IDs that will let us refer to them as
 `#wrapper`, `#layout-header`, and so on.
 Those are the selectors we'll use in our stylesheet.
 
@@ -105,7 +105,7 @@ appearing in the left of Vim as you edit the text.
 I can explain what those are now.
 The `vim-gitgutter` plugin puts markers for edited and added lines
 relative to what's been staged or committed.
-This makes easier to see what is new since the last commit.
+This makes it easier to see what is new since the last commit.
 You're welcome.)
 
 The `get_url` is another Zola built-in.
@@ -197,7 +197,7 @@ h6 {
 a {
   color: #0033ff;
   text-decoration: underline dotted;
-  text-decoration-thickness: from-font; // FF and chrome differ without this
+  text-decoration-thickness: from-font; // Firefox and Chrome differ without this
 }
 a:hover {
   color: #33aaff;
@@ -220,10 +220,10 @@ above your existing stylesheet.
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block html_title %}MySite{% endblock html_title %}</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?…[long URL goes here]…"
-          rel="stylesheet">
+          rel="stylesheet" />
     <link rel="stylesheet"
           href="{{ get_url(path='tlayout.css', cachebust=true) }}" />
 </head>

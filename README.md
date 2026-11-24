@@ -16,7 +16,7 @@ Here's a rundown of all the files that are in here and what they do:
 | [`static/`](static/)                                           | Static files    | Files copied as-is; images like <https://ssg.evanchen.cc/d2/bigpicture.svg>.   |
 | [`templates/*.html`](templates/)                               | Tera templates  | Used by Zola to specify how HTML is built for each page. See below.            |
 | [`zola.toml`](zola.toml)                                       | Zola config     | Options read by Zola                                                           |
-| [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) | Github workflow | Used by GitHub Pages to set up deployment to `venhance.github.io`              |
+| [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) | GitHub workflow | Used by GitHub Pages to set up deployment to `venhance.github.io`              |
 | [`.gitignore`](.gitignore)                                     | gitignore       | Tells Git about files to ignore. No effect on deployed website.                |
 | [README.md](README.md)                                         | README          | This file. Documentation for the contents here. No effect on deployed website. |
 | [LICENSE](LICENSE)                                             | LICENSE         | [Open source license][osl] for using this code. No effect on deployed website. |
@@ -46,7 +46,7 @@ In addition, it has three stylesheets for visual effects:
   Also switches the layout on a smaller screen.
 
 - [`sass/codeblocks.scss`](sass/codeblocks.scss) (~40 lines of code):
-  Stylistic tweaks to made the inline code blocks look nicer.
+  Stylistic tweaks to make the inline code blocks look nicer.
 
 - [`sass/images.scss`](sass/images.scss) (~10 lines of code):
   Styles the screenshots shown in the tutorial.

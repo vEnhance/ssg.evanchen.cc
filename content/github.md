@@ -6,7 +6,7 @@ weight = 70
 ## Wiring up GitHub Pages
 
 At this point, we have a minimally functional website.
-To recall the picture of [§1.A.](@/overview.md),
+To recall the picture of [§1.A](@/overview.md),
 we've now covered all the steps inside "Your Computer"
 from the [big picture](/d2/bigpicture.svg).
 
@@ -28,12 +28,7 @@ and then set up a new repository.
 You can name the repository as you see fit.
 For this tutorial to work, you should make it a **public repository**,
 since GitHub Pages (at the time of writing) is only free there.
-
-(If you want to use a private repository,
-I suggest using [Cloudflare Pages](https://developers.cloudflare.com/pages/)
-instead of GitHub Pages.
-This means to skip §7.D here,
-and flip to [§C on Cloudflare](@/cloudflare.md) instead.)
+(If you want to use a private repository, see [FAQ §Q.5](@/faq.md).)
 
 A standard practice is to pick the repo name to be the same as the
 URL you want to publish the site to.
@@ -42,9 +37,9 @@ that means `venhance.github.io` as the repository name.
 So the repository's full name should look like `vEnhance/venhance.github.io`.
 
 Our plan is to use GitHub Pages, so while you're here,
-let's turn that in the repository settings.
-Go under Settings, then to Pages, and under GitHub Pages,
-and change "Source" to "GitHub Actions".
+let's turn that on in the repository settings.
+Go to Settings, then Pages, and under GitHub Pages,
+change "Source" to "GitHub Actions".
 
 (One other setting I always change right away when I create a new repository:
 under "General > Pull Requests", uncheck "Allow merge commits".
@@ -62,7 +57,7 @@ Follow the [GitHub documentation][gh-docs-ssh-top] to do the following:
    To do this, you can just run `ssh-keygen -t ed25519 -C user@example.com`
    anywhere in your terminal, with `user@example.com` being the email
    you registered on GitHub with.
-   Using a passphrase is recommended, pick something you'll remember.
+   Using a passphrase is recommended; pick something you'll remember.
 2. [Add the SSH public key][gh-docs-ssh-add], so GitHub knows about it.
    This probably means copying the content of `~/.ssh/id_ed25519.pub`
    and then pasting it into your Account Settings on GitHub.
@@ -72,7 +67,7 @@ All told:
 
 ```console
 $ ssh-keygen -t ed25519 -C "user@example.com"
-Generating public/private ALGORITHM key pair.
+Generating public/private ed25519 key pair.
 Enter a file in which to save the key (/home/evan/.ssh/id_ed25519):
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
@@ -177,7 +172,7 @@ Commit this, and push it to GitHub.
 ```console
 $ git add .github/workflows/deploy.yml
 
-$ git commit -a -m "ci: Set up GitHub Pages workflow for Zola"
+$ git commit -m "ci: set up GitHub Pages workflow for Zola"
 check for merge conflicts............................Passed
 check toml.......................(no files to check)Skipped
 detect private key...................................Passed
@@ -185,7 +180,7 @@ fix end of files.....................................Passed
 fix utf-8 byte order marker..........................Passed
 mixed line ending....................................Passed
 trim trailing whitespace.............................Passed
-[main 9c2e7f1] ci: Set up GitHub Pages workflow for Zola
+[main 9c2e7f1] ci: set up GitHub Pages workflow for Zola
   1 file changed, 44 insertions(+)
   create mode 100644 .github/workflows/deploy.yml
 

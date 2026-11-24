@@ -42,7 +42,7 @@ blockquote {
 a {
   color: #0033ff;
   text-decoration: underline dotted;
-  text-decoration-thickness: from-font; // FF and chrome differ without this
+  text-decoration-thickness: from-font; // Firefox and Chrome differ without this
 }
 a:hover {
   color: #33aaff;

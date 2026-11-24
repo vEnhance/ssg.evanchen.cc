@@ -26,18 +26,18 @@ There is some good news and bad news.
   For example, in real life,
   [web](https://web.evanchen.cc), [ssg](https://ssg.evanchen.cc),
   [blog](https://blog.evanchen.cc), [wall](https://wall.evanchen.cc),
-  [list](https://list.evanchen.cc), are five different unrelated projects,
+  and [list](https://list.evanchen.cc) are five different unrelated projects,
   but I only pay annually for `evanchen.cc` itself.
 - The bad news is that you can probably only _rent_ a domain.
   You usually can't permanently own a domain;
   instead, you have to keep paying annual costs to renew it.
 
 But anyway, picking a domain, right.
-Besides the classical `.com` and `.org`, there are a lot of new domains
+Besides the classical `.com` and `.org`, there are a lot of new top-level domains
 out there that you can register for these days:
 
 - Generic domains include `.cc`, `.page`, `.site`, `.xyz`, etc.
-- Meanwhile, `.dev`, `.io`, `.sh`, seem to be trendy among programmers.
+- Meanwhile, `.dev`, `.io`, `.sh` seem to be trendy among programmers.
   (I would totally have taken `.dev` if it had been available,
   but `.dev` only became purchasable in 2019; I registered my site in 2017.)
 - And then there's `.lol`, `.meme`, `.wtf` too now, apparently.
@@ -49,14 +49,14 @@ In this tutorial we'll assume you purchased `example.com`.
 
 Now, at this point, you have to make up your mind on something:
 what part of `example.com` do you want your project to live under?
-There's three kinds of choices:
+There are three kinds of choices:
 
 - The apex domain `https://example.com`.
 - The www subdomain `https://www.example.com`.
 - Another subdomain like `https://blog.example.com`, say.
 
 The first two options are, from a technical standpoint,
-actually completely unrelated --- there isn't anything special about `www`.
+actually completely unrelated — there isn't anything special about `www`.
 If you're deciding between apex and `www`,
 you should firmly pick one now and never change it.
 These days, in 2026, apex seems to be more popular.
@@ -69,7 +69,7 @@ This is not standard.
 I don't remember why I decided on this, but I'm stuck with it forever now.)
 
 Once you finally choose,
-double check your `base_url` in `zola.toml` has the choice you decided on.
+double-check that your `base_url` in `zola.toml` has the choice you decided on.
 (You were required to choose a value with `zola init` back in [§5 on Zola](@/zola.md).)
 If this value is out-of-date, update it, commit, and push.
 
@@ -93,10 +93,10 @@ Helped me with organizing my head to have only one possible name.)
 With the domain purchased, Cloudflare gives you access to its
 [DNS records](https://www.cloudflare.com/learning/dns/dns-records/).
 You can have many of these, which do a lot of different things.
-For us, we just want to a single `CNAME` record to start.
+For us, we just want a single `CNAME` record to start.
 
 Hit whatever button says "Add record", and choose CNAME for the type.
-The target should be the `venhance.github.io`, and:
+The target should be `venhance.github.io`, and:
 
 - For an apex domain, pick name `@`.
   (This is a [nice Cloudflare feature](https://developers.cloudflare.com/dns/cname-flattening/)
@@ -107,7 +107,7 @@ Finally, when you add this record, Cloudflare will ask whether the proxy status 
 "Proxied" (orange cloud) or "DNS only" (gray cloud).
 **You typically actually want the DNS only (gray cloud)**, at least at first.
 (The orange cloud can support some extra features by making
-everything go through Cloudflare
+everything go through Cloudflare,
 but last I checked they don't play well with GitHub Pages,
 and can cause issues with later steps in the process.)
 
@@ -122,12 +122,12 @@ so another GitHub user can't hijack your domain.
 
 Officially, people have always told me DNS changes can take up to 24 hours.
 But I've never had to wait more than a few minutes before.
-Still, this step may take some time after you complete it to activate.
+Still, it may take a while for these changes to take effect.
 
 ### §C.4. Finishing up
 
 Finally, go back to your GitHub repository, go to "Pages"
-and type in the "Custom domain" box and hit "Save".
+type your domain into the "Custom domain" box, and hit "Save".
 If the DNS is working (and again, you may have to wait a bit),
 you'll get a green check mark.
 You should also make sure "Enforce HTTPS" is on.

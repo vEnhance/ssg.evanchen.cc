@@ -16,17 +16,16 @@ See [§C. Cloudflare](@/cloudflare.md) if you want to purchase your own domain!
 
 If you're thinking about writing essays or a blog, I like
 [Blogging Advice for People Exactly Like Me](https://blog.vero.site/post/blogging-advice).
-In particular, one thing that's pointed it in there
+In particular, one thing that's pointed out in there
 (that won't be obvious from the title!)
-is that you don't _need_ to take for granted
-that you need to frame your thoughts and content
+is that you don't _have_ to frame your thoughts and content
 as a reverse-chronological list of posts.
-See Amy Hoy's [How the Blog Broke The Web](https://stackingthebricks.com/how-blogs-broke-the-web/).
+See Amy Hoy's [How the Blog Broke the Web](https://stackingthebricks.com/how-blogs-broke-the-web/).
 
 ### Embellishments
 
 For <https://ssg.evanchen.cc> itself,
-we put a few small embellishments
+we added a few small embellishments
 that we didn't get to in [§6 on Sass](@/styling.md).
 Some examples:
 
@@ -101,7 +100,7 @@ We used the most primitive tools in this tutorial,
 but here are some things that more experienced users might consider an upgrade.
 
 - Bash is the most basic shell,
-  but there are others like [ZShell](https://zsh.org)
+  but there are others like [Zsh](https://zsh.org)
   (now the default on macOS) and [fish](https://fishshell.com/).
   These can get nice plugins and themes as well.
   For example, you can have the directory and Git status automatically printed
@@ -121,7 +120,7 @@ but here are some things that more experienced users might consider an upgrade.
   Or just ditch Git for [jujutsu](https://github.com/jj-vcs/jj)
   (which is compatible with Git).
 
-- We mentioned this in [§4½ on prek](@/prek.md),
+- We mentioned this in [§4½ on Prek](@/prek.md),
   but linters and formatters are pretty cool.
   Some hints are in [§L on those tools](@/linters.md).
 

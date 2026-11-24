@@ -11,7 +11,7 @@ Okay, so Git has a bit of a reputation,
 ### §4.A. A 100-word TL;DR
 
 - Git tracks history in _commits_ and only takes responsibility for committed code.
-- Every commit gets a user-specified message and assigned hash.
+- Every commit gets a user-specified message and an assigned hash.
 - **Best practice is making a commit for each _logical_ change**.
   A good litmus test is whether it's easy to write the commit message.
   ([Here's xkcd again](https://xkcd.com/1296/).)
@@ -32,7 +32,7 @@ so you can see this happening in practice**.
 For commit messages, a lot of people (including me) use
 [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/),
 which prefaces each commit message with `fix:` (bugfix) or `feat:` (new feature)
-or other word (like `root`, `refactor`, …)
+or another word (like `root`, `refactor`, …)
 to indicate what "kind" of commit it is.
 We'll follow that for this tutorial.
 

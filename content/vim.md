@@ -10,7 +10,7 @@ in the world's best text editor.
 
 ### §2½.A. Learning Vim
 
-You can launch a Vim instance, together with a builtin tutor, by using
+You can launch a Vim instance, together with a built-in tutor, by using
 
 ```console
 $ vimtutor
@@ -54,10 +54,10 @@ This is sort of the _absolute minimum_ that you could use to type in Vim.
 However, **I don't recommend using only the survival chart**.
 Rather, I think it's worth learning at least a few more normal mode keys.
 It's a bit like riding a bicycle: it takes a while to get used to,
-but as you add get used to more and more commands in normal mode,
+but as you get used to more and more commands in normal mode,
 you'll be able to do editing faster and faster.
 
-Rather than redo a manual of common normal mode keys, you have a couple options.
+Rather than redo a manual of common normal mode keys, you have a couple of options.
 One is to look through the `vimtutor` I told you to open, which starts with:
 
 ```text
@@ -89,7 +89,7 @@ That will also teach you a lot of normal mode commands.
 ### §2½.B. Writing a `.vimrc`
 
 By default, Vim doesn't enable some very basic QoL features
-such as syntax highlighting (on Mac) or line numbers.
+such as line numbers, or (on macOS) even syntax highlighting.
 You probably want to get those for your sanity.
 
 Let's see if you remember what you learned from `vimtutor`.
@@ -117,15 +117,15 @@ colorscheme retrobox
 
 (If you're trying to use copy/paste in Vim rather than typing these 11 lines by
 hand, first enter _Insert mode_ with `i`, then use whatever paste sequence
-you would use if you were trying to copy paste a command into the shell.)
+you would use if you were trying to copy-paste a command into the shell.)
 
 The first two lines turn on the default settings;
 the `set …` lines change some basic settings I think should be on by default.
 (If you're curious about any of them, you can type, say, `:help cursorline`
-to learn what `cursorline` option works.)
-Also, I picked a builtin color scheme (`retrobox`)
+to learn what the `cursorline` option does.)
+Also, I picked a built-in color scheme (`retrobox`)
 for you since the default scheme is hideous;
-you can change to a [different builtin color scheme](https://justinjoyce.dev/every-built-in-vim-color-scheme-with-screenshots/)
+you can change to a [different built-in color scheme](https://justinjoyce.dev/every-built-in-vim-color-scheme-with-screenshots/)
 if you don't like my taste in colors.
 Save and quit the file.
 
@@ -133,7 +133,7 @@ If you open `~/.vimrc` again, you should now have line numbers and colors.
 
 ### §2½.C. Installing Vim plugins
 
-Vim has a builtin plugin system.
+Vim has a built-in plugin system.
 If you put plugins in `~/.vim/pack/git-plugins/start/`
 (or any folder name in place of `git-plugins`),
 Vim will automatically load them on startup.
@@ -180,7 +180,7 @@ Here's a picture on my computer:
 
 Throughout this tutorial we will suggest a couple more plugins
 you could install:
-[vim-gitgutter](@/styling.md) in §6 and [ale](@/linters.md) in the Linters section.
+[vim-gitgutter](@/styling.md) in §6 and [ALE](@/linters.md) in §L.
 Since you're already in this directory,
 if you want you could just install them now too;
 but until we get to the relevant sections these plugins won't do anything.

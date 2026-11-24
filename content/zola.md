@@ -26,7 +26,7 @@ This can be changed later, but some hints:
 
 - If you're using GitHub Pages, the target website name is going to be
   `[your lowercase github name].github.io`,
-  because that's where GitHub pages will deploy to.
+  because that's where GitHub Pages will deploy to.
   If you don't have a username on GitHub yet,
   go ahead and register one so you know what it is.
 
@@ -84,8 +84,7 @@ So leave this process running, and **open a new terminal** pointing at `~/mysite
 where we'll continue to do our Git/Vim/etc. work.
 
 Before going on, let's keep our habit of committing after every logical change.
-We'll commit the newly added `zola.toml`.
-Since all the folders are empty, we just commit `zola.toml` to Git.
+Since all the new folders are empty, we just commit `zola.toml` to Git.
 (Git doesn't care about empty folders, only files.)
 
 ```console
@@ -161,7 +160,7 @@ title = "Contact"
 weight = 20
 +++
 
-Call me! (323) 634–5667.
+Call me! (323) 634-5667.
 ```
 
 The `+++` header is a mandatory header section that Zola uses on each post.
@@ -183,7 +182,7 @@ Changes to be committed:
   new file:   content/contact.md
 
 
-$ git commit -m "feat: Three new pages"
+$ git commit -m "feat: three new pages"
 check for merge conflicts............................Passed
 check toml.......................(no files to check)Skipped
 detect private key...................................Passed
@@ -191,7 +190,7 @@ fix end of files.....................................Passed
 fix utf-8 byte order marker..........................Passed
 mixed line ending....................................Passed
 trim trailing whitespace.............................Passed
-[main 4cf98d5] feat: Three new pages
+[main 4cf98d5] feat: three new pages
   3 files changed, 18 insertions(+)
   create mode 100644 content/_index.md
   create mode 100644 content/about.md

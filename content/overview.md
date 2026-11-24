@@ -38,7 +38,7 @@ An important thing to note is that
 If you have a friend helping you out, for example,
 they might decide Vim is ~~a trial by fire~~ too complicated for newbies,
 and tell you to use VSCode instead.
-Or, there are an [ocean of static site generators][ssg-basin] (Jekyll, Hugo, …)
+Or, there is an [ocean of static site generators][ssg-basin] (Jekyll, Hugo, …)
 and your friend might prefer a different one.
 
 [ssg-basin]: https://rakhim.org/honestly-undefined/19/
