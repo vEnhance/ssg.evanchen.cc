@@ -35,10 +35,10 @@ You can also watch a partial speedrun at
 - [ssg.evanchen.cc](/), this website ([source code][repo])
 - [wall.evanchen.cc](https://wall.evanchen.cc), Evan's microblog ([source code](https://github.com/vEnhance/wall.evanchen.cc))
 
-### Issues and pull requests
+### Contributing
 
 This repository is at [vEnhance/ssg.evanchen.cc][repo].
-If you spot a mistake or something that needs attention,
+If you spot a mistake or have suggestions,
 [file an issue](https://github.com/vEnhance/ssg.evanchen.cc/issues/new) or
 [propose a pull request](https://github.com/vEnhance/ssg.evanchen.cc/pulls).
 
