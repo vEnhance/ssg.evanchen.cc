@@ -71,7 +71,7 @@ Enter a file in which to save the key (/home/evan/.ssh/id_ed25519):
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 
-$ cat ~/.
+$ cat ~/.ssh/id_ed25519.pub
 ssh-ed25519 AAAA… user@example.com
 
 $ ssh -T git@github.com
@@ -88,10 +88,19 @@ and conversely `git pull` (if you want to pull updates from GitHub).
 ```console
 $ cd ~/mysite
 
-$ git remote add origin git@github.com:vEnhance/example.com
+$ git remote add origin git@github.com:vEnhance/venhance.github.io
 
 $ git push -u origin main
-TODO
+Enumerating objects: 41, done.
+Counting objects: 100% (41/41), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (33/33), done.
+Writing objects: 100% (41/41), 5.87 KiB | 1.96 MiB/s, done.
+Total 41 (delta 9), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (9/9), done.
+To github.com:vEnhance/venhance.github.io
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
 ```
 
 (A word of warning: once you `git push` work — at least to the `main` branch,
@@ -163,10 +172,27 @@ Commit this, and push it to GitHub.
 $ git add .github/workflows/deploy.yml
 
 $ git commit -a -m "ci: Set up GitHub Pages workflow for Zola"
-TODO
+check for merge conflicts............................Passed
+check toml.......................(no files to check)Skipped
+detect private key...................................Passed
+fix end of files.....................................Passed
+fix utf-8 byte order marker..........................Passed
+mixed line ending....................................Passed
+trim trailing whitespace.............................Passed
+[main 9c2e7f1] ci: Set up GitHub Pages workflow for Zola
+  1 file changed, 44 insertions(+)
+  create mode 100644 .github/workflows/deploy.yml
 
 $ git push
-TODO
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (5/5), 1.04 KiB | 1.04 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:vEnhance/venhance.github.io
+   ba666af..9c2e7f1  main -> main
 ```
 
 If that works, and you look at the repository on GitHub,
