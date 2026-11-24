@@ -7,28 +7,125 @@ weight = 90
 
 In [§7 on GitHub Pages](@/github.md), we wired up an action that meant
 GitHub would host our compiled output at `venhance.github.io`.
-What if you want your own domain like `ssg.evanchen.cc`, though?
-
-Well, first you have to buy a domain,
-and then configure what are called
-[DNS records](https://www.cloudflare.com/learning/dns/dns-records/) for it.
+This section covers how to use a customized domain like `ssg.evanchen.cc` instead.
 
 ### §C.1. Purchasing a domain
 
 The first thing you have to do is purchase a domain name.
 My recommended vendor for that is Cloudflare, which does so at-cost.
+You should register an account at <https://cloudflare.com>
+and then follow the obvious instructions
+to purchase a domain, which should be self-explanatory.
 
-Note it's more accurate to say you _rent_ a domain rather than purchase it.
+Unlike all the other parts of this tutorial (which used free technology),
+you do have to actually pay money here; there is no way around it.
+Also, it's more accurate to say you _rent_ a domain rather than purchase it.
 You usually can't permanently own a domain.
+The good news is that you only pay for the base domain
+and can have many subdomains `*.example.com`.
+For example, in real life,
+[web](https://web.evanchen.cc), [ssg](https://ssg.evanchen.cc),
+[blog](https://blog.evanchen.cc), [wall](https://wall.evanchen.cc),
+[list](https://list.evanchen.cc), are five different unrelated projects,
+but I only pay annually for `evanchen.cc` itself.
 
 Besides the classical `.com` and `.org`, there are a lot of new domains
-out there that you can register for these days,
-like `.cc` or `.page` or `.site`.
-Some more hip programmers seem to move towards `.io`, `.sh`, and `.dev`.
-(And then there's `.lol`, `.meme`, `.wtf`.)
-(Myself, I would totally have taken `evanchen.dev` if I still could,
-but `.dev` wasn't open for public purchasing at the time I started my own site.)
+out there that you can register for these days:
 
-### §C.2. Updating the DNS
+- Generic domains include `.cc`, `.page`, `.site`, `.xyz`, etc.
+- Meanwhile, `.dev`, `.io`, `.sh`, seem to be trendy among programmers.
+  (I would totally have taken `.dev` if it had been available,
+  but `.dev` only became purchasable in 2019; I registered my site in 2017.)
+- And then there's `.lol`, `.meme`, `.wtf` too now, apparently.
+  Don't ask me why.
 
-### §C.3. Updating `zola.toml` and GitHub
+In this tutorial we'll assume you purchased `example.com`.
+
+### §C.2. Pick the apex or subdomain, once and for all
+
+Now, at this point, you have to make up your mind on something:
+what part of `example.com` do you want your project to live under?
+There's three kinds of choices:
+
+- The apex domain `https://example.com`.
+- The www subdomain `https://www.example.com`.
+- Another subdomain like `https://blog.example.com`, say.
+
+The first two options are, from a technical standpoint,
+actually completely unrelated --- there isn't anything special about `www`.
+If you're deciding between apex and `www`,
+you should firmly pick one now and never change it.
+These days, in 2026, apex seems to be more popular.
+In that case, you may want to also
+[make www just redirect to the apex][cf-www].
+
+(For some reason, when setting up my site I decided to make both the apex
+and `www` redirect to [web.evanchen.cc](https://web.evanchen.cc).
+This is not standard.
+I don't remember why I decided on this, but I'm stuck with it forever now.)
+
+Once you finally choose,
+double check your `base_url` in `zola.toml` has the choice you decided on.
+(You were required to choose a value with `zola init` back in [§5 on Zola](@/zola.md).)
+If this value is out-of-date, update it, commit, and push.
+
+```toml,linenos,name=zola.toml,hl_lines=2
+# The URL the site will be built for
+base_url = "https://example.com"
+```
+
+(Optionally, you might also want to rename your GitHub repository at this point
+to match the domain name, as I did with
+[ssg.evanchen.cc](https://github.com/vEnhance/ssg.evanchen.cc).
+I think my life became easier once I decided that every repository,
+if it corresponded to a live website,
+must be named exactly the same as the website URL.
+Helped me with organizing my head to have only one possible name.)
+
+[cf-www]: https://developers.cloudflare.com/pages/how-to/www-redirect/
+
+### §C.3. Updating the DNS
+
+With the domain purchased, Cloudflare gives you access to its
+[DNS records](https://www.cloudflare.com/learning/dns/dns-records/).
+You can have many of these, which do a lot of different things.
+For us, we just want to a single `CNAME` record to start.
+
+Hit whatever button says "Add record", and choose CNAME for the type.
+The target should be the `venhance.github.io`, and:
+
+- For an apex domain, pick name `@`.
+  (This is a [nice Cloudflare feature](https://developers.cloudflare.com/dns/cname-flattening/)
+  that makes this work here; not all DNS providers allow this!).
+- For a subdomain like `www` or `blog`, use that for the name.
+
+Finally, when you add this record, Cloudflare will ask whether the proxy status should be
+"Proxied" (orange cloud) or "DNS only" (gray cloud).
+**You typically actually want the DNS only (gray cloud)**, at least at first.
+(The orange cloud can support some extra features by making
+everything go through Cloudflare
+but last I checked they don't play well with GitHub Pages,
+and can cause issues with later steps in the process.)
+
+For GitHub Pages users, as long as you're here,
+you should also add a GitHub Pages challenge TXT record.
+[See instructions here for this verification process][gh-docs-verify].
+(Note that this is _Account Settings_ rather than repository settings.)
+This is a security measure that ensures that `example.com` belongs only to you,
+so another GitHub user can't hijack your domain.
+
+Officially, people have always told me DNS changes can take up to 24 hours.
+But I've never had to wait more than a few minutes before.
+Still, this step may take some time.
+
+[gh-docs-verify]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages
+
+### §C.4. Updating the GitHub repository
+
+Finally, in the repository settings, go to "Pages"
+and type in the "Custom domain" box and hit "Save".
+If the DNS is working (and again, you may have to wait a bit),
+you'll get a green check mark.
+You should also make sure "Enforce HTTPS" is on.
+
+That's it!

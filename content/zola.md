@@ -32,7 +32,8 @@ This can be changed later, but some hints:
 
 - If you're planning to use your own custom domain name,
   you can input that here too.
-  But in that case, you should flip ahead to [§C on Cloudflare](@/cloudflare.md)
+  But in that case, you should flip ahead to
+  [§C.1 and §C.2 on Cloudflare](@/cloudflare.md)
   and actually _purchase_ the domain you want first,
   so you know it's available.
 
