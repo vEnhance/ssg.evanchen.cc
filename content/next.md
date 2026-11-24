@@ -10,7 +10,7 @@ Here are some suggestions for directions you might want to explore next.
 
 ### Custom domains
 
-See [§C. CloudFlare](@/cloudflare.md) if you want to purchase your own domain!
+See [§C. Cloudflare](@/cloudflare.md) if you want to purchase your own domain!
 
 ### What to write on your website (it doesn't have to be a blog!)
 
