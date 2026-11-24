@@ -18,17 +18,21 @@ and then follow the obvious instructions
 to purchase a domain, which should be self-explanatory.
 
 Unlike all the other parts of this tutorial (which used free technology),
-you do have to actually pay money here; there is no way around it.
-Also, it's more accurate to say you _rent_ a domain rather than purchase it.
-You usually can't permanently own a domain.
-The good news is that you only pay for the base domain
-and can have many subdomains `*.example.com`.
-For example, in real life,
-[web](https://web.evanchen.cc), [ssg](https://ssg.evanchen.cc),
-[blog](https://blog.evanchen.cc), [wall](https://wall.evanchen.cc),
-[list](https://list.evanchen.cc), are five different unrelated projects,
-but I only pay annually for `evanchen.cc` itself.
+you do have to actually pay money here; there is no way around this.
+There is some good news and bad news.
 
+- The good news is that you only pay for the apex domain
+  and can have many subdomains `*.example.com`.
+  For example, in real life,
+  [web](https://web.evanchen.cc), [ssg](https://ssg.evanchen.cc),
+  [blog](https://blog.evanchen.cc), [wall](https://wall.evanchen.cc),
+  [list](https://list.evanchen.cc), are five different unrelated projects,
+  but I only pay annually for `evanchen.cc` itself.
+- The bad news is that you can probably only _rent_ a domain.
+  You usually can't permanently own a domain;
+  instead, you have to keep paying annual costs to renew it.
+
+But anyway, picking a domain, right.
 Besides the classical `.com` and `.org`, there are a lot of new domains
 out there that you can register for these days:
 
@@ -107,22 +111,22 @@ everything go through Cloudflare
 but last I checked they don't play well with GitHub Pages,
 and can cause issues with later steps in the process.)
 
-For GitHub Pages users, as long as you're here,
+As long as you're here,
 you should also add a GitHub Pages challenge TXT record.
 [See instructions here for this verification process][gh-docs-verify].
 (Note that this is _Account Settings_ rather than repository settings.)
 This is a security measure that ensures that `example.com` belongs only to you,
 so another GitHub user can't hijack your domain.
 
-Officially, people have always told me DNS changes can take up to 24 hours.
-But I've never had to wait more than a few minutes before.
-Still, this step may take some time.
-
 [gh-docs-verify]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages
 
-### §C.4. Updating the GitHub repository
+Officially, people have always told me DNS changes can take up to 24 hours.
+But I've never had to wait more than a few minutes before.
+Still, this step may take some time after you complete it to activate.
 
-Finally, in the repository settings, go to "Pages"
+### §C.4. Finishing up
+
+Finally, go back to your GitHub repository, go to "Pages"
 and type in the "Custom domain" box and hit "Save".
 If the DNS is working (and again, you may have to wait a bit),
 you'll get a green check mark.

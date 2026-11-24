@@ -77,3 +77,19 @@ The following is a real question I got from such a victim:
 ### §Q.4. AI??
 
 ¯\\\_(ツ)\_/¯
+
+### §Q.5. What if I don't want my GitHub repository to be public?
+
+In cases where I wanted a publicly accessible static site
+whose source code was a _private_ GitHub repository,
+I usually used [Cloudflare Pages](https://developers.cloudflare.com/pages/) instead.
+The changes are:
+
+- Don't set up any GitHub Pages options
+  or the [`deploy.yml` workflow in §7.D](@/cloudflare.md).
+- Instead, connect the repository to a new
+  [Cloudflare Pages](https://developers.cloudflare.com/pages/) project.
+- Set the CNAME to the associated `*.pages.dev` instead.
+  I think this might be done automatically for you during setup of
+  Cloudflare Pages, when it asks if you want a custom domain, but I'm not 100%.
+  Anyway, orange cloud is fine; no need to switch to gray cloud.

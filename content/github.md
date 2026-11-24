@@ -28,9 +28,12 @@ and then set up a new repository.
 You can name the repository as you see fit.
 For this tutorial to work, you should make it a **public repository**,
 since GitHub Pages (at the time of writing) is only free there.
+
 (If you want to use a private repository,
-connecting [Cloudflare Pages](https://developers.cloudflare.com/pages/)
-to the repository is the approach I'd use, but this takes a bit more work.)
+I suggest using [Cloudflare Pages](https://developers.cloudflare.com/pages/)
+instead of GitHub Pages.
+This means to skip §7.D here,
+and flip to [§C on Cloudflare](@/cloudflare.md) instead.)
 
 A standard practice is to pick the repo name to be the same as the
 URL you want to publish the site to.
@@ -112,7 +115,7 @@ the usual best practice is to consider it _set in stone_.
 Treat pushed commits as permanently published
 and don't rewrite them with `git commit --amend`, `git rebase -i`, etc.)
 
-### §7.D. Setting up the GitHub Action
+### §7.D. Setting up the action for GitHub Pages
 
 We earlier set up GitHub Pages to use a so-called "Action".
 In GitHub, this means adding a certain file that tells GitHub
