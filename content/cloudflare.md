@@ -14,8 +14,7 @@ This section covers how to use a customized domain like `ssg.evanchen.cc` instea
 The first thing you have to do is purchase a domain name.
 My recommended vendor for that is Cloudflare, which does so at-cost.
 You should register an account at <https://cloudflare.com>
-and then follow the obvious instructions
-to purchase a domain, which should be self-explanatory.
+and then follow the obvious instructions to purchase a domain.
 
 Unlike all the other parts of this tutorial (which used free technology),
 you do have to actually pay money here; there is no way around this.
@@ -26,8 +25,8 @@ There is some good news and bad news.
   For example, in real life,
   [web](https://web.evanchen.cc), [ssg](https://ssg.evanchen.cc),
   [blog](https://blog.evanchen.cc), [wall](https://wall.evanchen.cc),
-  and [list](https://list.evanchen.cc) are five different unrelated projects,
-  but I only pay annually for `evanchen.cc` itself.
+  and [list](https://list.evanchen.cc) are five different unrelated projects on
+  `evanchen.cc`, but I only pay annually for `evanchen.cc` itself.
 - The bad news is that you can probably only _rent_ a domain.
   You usually can't permanently own a domain;
   instead, you have to keep paying annual costs to renew it.
@@ -100,7 +99,7 @@ The target should be `venhance.github.io`, and:
 
 - For an apex domain, pick name `@`.
   (This is a [nice Cloudflare feature](https://developers.cloudflare.com/dns/cname-flattening/)
-  that makes this work here; not all DNS providers allow this!).
+  that makes this work here; not all DNS providers allow this!)
 - For a subdomain like `www` or `blog`, use that for the name.
 
 Finally, when you add this record, Cloudflare will ask whether the proxy status should be
