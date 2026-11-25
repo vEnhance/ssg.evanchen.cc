@@ -36,6 +36,12 @@ If you want a quick refresher or cheat sheet:
 - Remember the tilde `~` is an abbreviation for `/home/yourusername/`,
   your home folder. (Might be `/Users/yourusername` on macOS.)
 
+(In this tutorial, the prompt on the command line is just `$`.
+The default prompt on your computer might be a little more informative,
+e.g. always printing the name of the folder in front of `$`,
+so you don't have to keep issuing `pwd`.
+And some systems `%` instead of `$`.)
+
 ### §2.A. Package manager
 
 To work through this tutorial, you'll need to be able to install things.
