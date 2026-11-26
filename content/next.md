@@ -24,8 +24,13 @@ See Amy Hoy's [How the Blog Broke the Web](https://stackingthebricks.com/how-blo
 
 ### Embellishments
 
-For <https://ssg.evanchen.cc> itself,
-we added a few small embellishments
+If you haven't already, it might be worth poking around in
+[vEnhance/ssg.evanchen.cc](https://github.com/vEnhance/ssg.evanchen.cc)
+itself to learn more!
+If you're curious how something on this site is done,
+you can often get an answer from looking at the code there.
+
+For example, there are quite a few small embellishments
 that we didn't get to in [§6 on Sass](@/styling.md).
 Some examples:
 
