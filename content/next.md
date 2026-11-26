@@ -132,3 +132,6 @@ but here are some things that more experienced users might consider an upgrade.
   Here's one example of a
   [blog post on AI workflows by Mitchell Hashimoto](https://mitchellh.com/writing/my-ai-adoption-journey),
   written in February 2026.
+  If you're going to do this, you should consider using
+  a sandbox like [Bubblewrap](https://patrickmccanna.net/a-better-way-to-limit-claude-code-and-other-coding-agents-access-to-secrets/),
+  a separate user account, or a separate physical machine.
